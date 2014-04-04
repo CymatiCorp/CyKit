@@ -40,6 +40,7 @@ Python Usage
       try:
         while True:
           packet = headset.dequeue()
+          # packet.byteCode --- See Byte Codes below. 
           print packet.gyroX, packet.gyroY
           gevent.sleep(0)
       except KeyboardInterrupt:
@@ -102,6 +103,50 @@ have to change the type in emotiv.py's setupCrypto function.
 
 Raspberry Pi is not required, just plug dongle into USB.
 
+
+Byte Codes
+----------
+
+This is a list of the byte names you can receive through packet.
+( For example print packet.AF4 )
+
+Sensor Bits {
+  
+  F3
+  FC5
+  AF3
+  F7
+  T7
+  P7
+  O1
+  O2
+  P8
+  T8
+  F8
+  AF4
+  FC6
+  F4
+  
+}
+
+Gyro Bits {
+
+  GYRO_X
+  GYRO_Y
+
+}
+
+Other {
+
+   INTERPOLATED
+   COUNTER
+   BATTERY
+   RESERVED
+   ETE1
+   ETE2
+   ETE3
+
+}
 
 Credits & Original Code
 =======================
