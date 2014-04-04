@@ -1,49 +1,25 @@
-Emotkit 1.0
-===========
+EmotKit 1.0 for Python 2.7.6 in Windows
+=======================================
 
 Description
 ===========
 
-Emokit is a set of language for user space access to the raw stream
-data from the Emotiv EPOC headset. Note that this will not give you
-processed data (i.e. anything available in the Emo Suites in the
-software), just the raw sensor data.
+EmotKit 1.0 is specifically for Python development in Windows to 
+give access to the raw data stream from the Emotiv EPOC headset.  
 
-The C library is backed by hidapi, and should work on any platform
-that hidapi also works on.
-
-Information
-===========
-
-FAQ (READ BEFORE FILING ISSUES): https://github.com/openyou/emokit/blob/master/FAQ.md
-
-If you have a problem not covered in the FAQ, file it as an
-issue on the github project.
-
-PLEASE DO NOT EMAIL OR OTHERWISE CONTACT THE DEVELOPERS DIRECTLY.
-Seriously. I'm sick of email and random facebook friendings asking for
-help. What happens on the project stays on the project.
-
-Issues: http://github.com/openyou/emokit/issues
-
-If you are using the Python library and a research headset you may have to change the type in emotiv.py's setupCrypto function. 
+Note that this will not give you processed data. 
 
 
+EmotKit Dependancies
+--------------------
 
-Required Libraries
-==================
+* pywinusb
+* pycrypto
+* gevent 
+* greenlet
 
-Python
-------
-
-* pywinhid  - https://pypi.python.org/pypi/pywinusb/
-* pyusb (OS X, Optional for Linux) - http://sourceforge.net/projects/pyusb/
-* pycrypto - https://www.dlitz.net/software/pycrypto/
-* gevent - http://gevent.org
-* realpath - http://?   sudo apt-get install realpath
-
-Python library
---------------
+Python Usage
+------------
 
   Code:
   
@@ -63,3 +39,72 @@ Python library
         headset.close()
       finally:
         headset.close()
+
+
+Direct links for Windows(x86) Dependancies
+------------------------------------------
+
+* pywinusb - https://pypi.python.org/packages/source/p/pywinusb/pywinusb-0.2.9.zip
+* pycrypto - http://www.voidspace.org.uk/downloads/pycrypto26/pycrypto-2.6.win32-py2.7.exe
+* gevent   - http://www.lfd.uci.edu/~gohlke/pythonlibs/sn5ub7d9/gevent-1.0.win32-py2.7.exe
+* greenlet -  https://pypi.python.org/packages/2.7/g/greenlet/greenlet-0.4.2.win32-py2.7.exe#md5=0ea8f5a14f8554919e1a136bc042d76c
+
+
+Installation Instructions
+-------------------------
+
+* Install Python 2.6.7
+
+Extract pywinusb to any folder,  and copy 
+
+                                       \pywinusb 
+                                       
+                                  from \pywinusb-0.2.9 to
+                                        
+                                 Drive:\Python27\Lib\site-packages
+                                       
+* Install following dependancies:
+ gevent
+ greenlet
+ pycrypto 
+ 
+  Install to python2.7.6
+
+Navigate to the Python directory extracted from emotkit10.zip
+
+C:\Python27\Python.exe C:\emotkit10\Python\example.py
+
+If your Emotiv USB dongle is not connected it will throw several errors ending with:
+
+
+
+                                       AttributeError: 'Emotiv' object has no attribute 'device'
+
+
+Connect the Emotiv dongle and run again, and it should begin streaming you data.
+
+Note: Python 3 requires some cosmetic updates to work properly. 
+   
+
+Notes 
+-----
+If you are using the Python library and a research headset you may
+have to change the type in emotiv.py's setupCrypto function. 
+
+Raspberry Pi is not required, just plug dongle into USB.
+
+
+Credits & Original Code
+=======================
+
+* Cody Brocious (http://github.com/daeken)
+* Kyle Machulis (http://github.com/qdot)
+
+Contributions by
+
+* Severin Lemaignan - Base C Library and mcrypt functionality
+* Sharif Olorin  (http://github.com/fractalcat) - hidapi support
+* Bill Schumacher (http://github.com/bschumacher) - Fixed the Python library
+* Bryan Bishop and others in #hplusroadmap on Freenode.
+
+
