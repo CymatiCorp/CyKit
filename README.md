@@ -17,10 +17,13 @@ Note that this will not give you processed data.
 EmotKit Dependancies
 --------------------
 
-* pywinusb
+* pywinusb 
 * pycrypto
 * gevent 
 * greenlet
+* pygame (Only required if you want to use render.py
+   which shows the EEG graph)
+* ctypes (Only required for mouse_control.py)
 
 Python Usage
 ------------
@@ -52,8 +55,9 @@ Direct links for Windows(x86) Dependancies
 * pycrypto - http://www.voidspace.org.uk/downloads/pycrypto26/pycrypto-2.6.win32-py2.7.exe
 * gevent   - http://www.lfd.uci.edu/~gohlke/pythonlibs/sn5ub7d9/gevent-1.0.win32-py2.7.exe
 * greenlet -  https://pypi.python.org/packages/2.7/g/greenlet/greenlet-0.4.2.win32-py2.7.exe#md5=0ea8f5a14f8554919e1a136bc042d76c
-
-
+* Pygame(optional) - http://pygame.org/ftp/pygame-1.9.1.win32-py2.7.msi
+* Ctypes(optional) - http://downloads.sourceforge.net/project/ctypes/gccxml/2008-08-12/gccxml-0.9.0-win32-x86.exe
+ 
 Installation Instructions
 -------------------------
 
@@ -74,9 +78,9 @@ Extract pywinusb to any folder,  and copy
  
   Install to python2.7.6
 
-Navigate to the Python directory extracted from emotkit10.zip
+Navigate to the Python directory extracted from EmotKit-master.zip
 
-C:\Python27\Python.exe C:\emotkit10\Python\example.py
+C:\Python27\Python.exe C:\EmotKit-master\Python\example.py
 
 If your Emotiv USB dongle is not connected it will throw several errors ending with:
 
