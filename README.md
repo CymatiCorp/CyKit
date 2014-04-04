@@ -8,6 +8,7 @@ Description
 -----------
 
 EmotKit 1.0 is specifically for Python development in Windows to 
+
 give access to the raw data stream from the Emotiv EPOC headset.  
 
 Note that this will not give you processed data. 
@@ -92,6 +93,7 @@ Note: Python 3 requires some cosmetic updates to work properly.
 Notes 
 -----
 If you are using the Python library and a research headset you may
+
 have to change the type in emotiv.py's setupCrypto function. 
 
 Raspberry Pi is not required, just plug dongle into USB.
