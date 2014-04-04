@@ -1,8 +1,11 @@
-EmotKit 1.0 for Python 2.7.6 in Windows
-=======================================
+ <img src="http://www.blueskynet.org/EmotKit/emotkit.png" width="200px" height="200px"></img>
+EmotKit 1.0
+===========
+for Python 2.7.6 (Windows x86)
+
 
 Description
-===========
+-----------
 
 EmotKit 1.0 is specifically for Python development in Windows to 
 give access to the raw data stream from the Emotiv EPOC headset.  
