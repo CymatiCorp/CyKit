@@ -7,8 +7,8 @@ emokit - emotiv epoc reverse engineering
 :license: ???
 """
 
-__title__ = "emokit"
-__version__ = "0.0.1"
+__title__ = "EmotKit"
+__version__ = "1.0"
 __build__ = 0x000001
 __author__ = "Bryan Bishop <kanzure@gmail.com>"
 __license__ = "???"
