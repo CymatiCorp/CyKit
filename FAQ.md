@@ -20,6 +20,6 @@ Emokit FAQ
   happens on the USB key, and not the headset. It is tied into
   whatever you have plugged in regardless of the headset.
 
-* Do I need an arduino controller?
+* Do I need an arduino controller (i.e. Raspberry Pi)?
 
  No. Plug in Emotiv USB dongle and it should connect.
