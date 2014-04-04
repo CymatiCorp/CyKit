@@ -6,7 +6,7 @@ import sys
 import platform
 import gevent
 
-from emokit.emotiv import Emotiv
+from EmotKit.emotiv import Emotiv
 
 class Xlib:
     def __init__(self):
