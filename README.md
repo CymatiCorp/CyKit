@@ -1,4 +1,4 @@
- <img src="http://www.blueskynet.org/EmotKit/emotkit.png" width="200px" height="200px"></img>
+ <img src="http://www.blueskynet.org/EmotKit/emotkit2.png" width="200px" height="200px"></img>
 EmotKit 1.0
 ===========
 for Python 2.7.6 (Windows x86)
