@@ -12,7 +12,7 @@ from pygame import FULLSCREEN
 import gevent
 import sys
 
-from EmotKit.emotiv import Emotiv
+from emotiv import Emotiv
 
 class Grapher(object):
     def __init__(self, screen, name, i):
