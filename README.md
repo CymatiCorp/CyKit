@@ -150,6 +150,32 @@ Other {
 
 }
 
+Server Support
+==============
+
+Added ability to stream the data to a TCP connection.
+
+Type RunServer.bat
+
+     (runs: Python.exe streamdata.py)
+
+It will pause waiting for a connection. 
+When a connection is made, the server will stream
+the data to the client. The EEG render graph also
+displays (May remove it later for server support only)
+
+Type RunClient.bat
+
+    (runs: Python.exe client.py)
+
+Once the server is running, run this and it will establish
+a connection and print the data.  Sending first the ByteCode
+of which sensor it is, and then trailing will be the data
+from the sensor.
+
+Note, the batch files adjust the PATH to run Python27, useful
+if you have multiple versions of Python.  Adjust as necessary.
+
 Credits & Original Code
 =======================
 
