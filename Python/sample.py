@@ -6,4 +6,3 @@ import unittest
 class TestEmotiv(unittest.TestCase):
     def test_emotiv(self):
         emotiv = Emotiv()
-
