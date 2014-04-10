@@ -9,7 +9,7 @@ Description
 
 EmotKit 1.0 is specifically for Python development in Windows to 
 
-give access to the raw data stream from the Emotiv EPOC headset.  
+give access to the raw data stream from the Emotiv EPOC headset.  <img src="http://www.blueskynet.org/EmotKit/emotiv.jpg"></img>
 
 Note that this will not give you processed data. 
 
@@ -109,6 +109,8 @@ Byte Codes
 
 This is a list of the byte names you can receive through packet.
 ( For example print packet.AF4 )
+
+<img src="http://www.blueskynet.org/EmotKit/emotivContacts.png"></img>
 
 Sensor Bits {
   
