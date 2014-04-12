@@ -155,6 +155,14 @@ Server Support
 
 Added ability to stream the data to a TCP connection.
 
+
+Updated a cleaner streaming server, with no EEG/graph.
+
+Type RunStream.bat
+
+    (runs: Python.exe stream.py)
+
+
 Type RunServer.bat
 
      (runs: Python.exe streamdata.py)
@@ -162,7 +170,7 @@ Type RunServer.bat
 It will pause waiting for a connection. 
 When a connection is made, the server will stream
 the data to the client. The EEG render graph also
-displays (May remove it later for server support only)
+displays 
 
 Type RunClient.bat
 
@@ -175,6 +183,7 @@ from the sensor.
 
 Note, the batch files adjust the PATH to run Python27, useful
 if you have multiple versions of Python.  Adjust as necessary.
+
 
 Credits & Original Code
 =======================
