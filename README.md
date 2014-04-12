@@ -185,6 +185,17 @@ Note, the batch files adjust the PATH to run Python27, useful
 if you have multiple versions of Python.  Adjust as necessary.
 
 
+mIRC Support
+=============
+
+Added a mIRC script that will connect to the TCP server and display
+in a simple graph the activity of the sensors. Will update later.
+
+post loading instructions here.
+
+<img src='http://www.blueskynet.org/EmotKit/emotivmirc.png' width=50% height=50%></img>
+
+
 Credits & Original Code
 =======================
 
