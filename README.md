@@ -191,9 +191,20 @@ mIRC Support
 Added a mIRC script that will connect to the TCP server and display
 in a simple graph the activity of the sensors. Will update later.
 
-post loading instructions here.
+In Command Prompt type RunStream.bat
 
-<img src='http://www.blueskynet.org/EmotKit/emotivmirc.png' width=50% height=50%></img>
+     (runs: Python.exe stream.py)
+
+In mIRC "Status Window" type 
+
+     /load -rs emotClient.mrc
+
+This loads emotClient to remotes. Alternatives ALT+R and load manually.
+then in "Status Window" type.
+
+     /eClient
+
+<img src='http://www.blueskynet.org/EmotKit/emotivmirc.png' width=80% height=80%></img>
 
 
 Credits & Original Code
