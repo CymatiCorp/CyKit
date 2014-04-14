@@ -206,7 +206,17 @@ then in "Status Window" type.
 
 <img src='http://www.blueskynet.org/EmotKit/emotivmirc.png' width=80% height=80%></img>
 
-Update to emotivIRC.mrc
+Update to emotivIRC.mrc  Testing using Sin/Cos waves to display data.  Not convinced
+its working properly as it produces similar results when headset is taken off. (will update later.)  
+
+Fixed an issue in stream.py sending data in an incorrect format. Must investigate whether
+its losing precious data.
+
+Added a mIRC routine to save data in hash tables.  Could be used to match patterns.
+Hesitant to try this as I have had experience in the past with searching through
+hash tables. Speed is dramatically reduced. Probably not a viable solution. Hash files
+could potentially be searched/outsourced to other applications better suited for the
+task.
 
 <img src='http://www.blueskynet.org/EmotKit/emotivIRC1.png' width=80% height=80%></img>
 
