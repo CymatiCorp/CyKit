@@ -206,6 +206,9 @@ then in "Status Window" type.
 
 <img src='http://www.blueskynet.org/EmotKit/emotivmirc.png' width=80% height=80%></img>
 
+Update to emotivIRC.mrc
+<img src='http://www.blueskynet.org/EmotKit/emotivIRC1.png' width=80% height=80%></img>
+
 
 Credits & Original Code
 =======================
