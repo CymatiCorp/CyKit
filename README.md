@@ -206,11 +206,11 @@ then in "Status Window" type.
 
 <img src='http://www.blueskynet.org/EmotKit/emotivmirc.png' width=80% height=80%></img>
 
-Update to emotivIRC.mrc  Testing using Sin/Cos waves to display data.  Not convinced
-its working properly as it produces similar results when headset is taken off. (will update later.)  
+Update to emotivIRC.mrc  had to revamp the script to read chunks of packet data.
+Now uses Signal event to handle the chunks as lines of data.  There is an obvious
+increase in resolution as its no longer missing packet data.
 
-Fixed an issue in stream.py sending data in an incorrect format. Must investigate whether
-its losing precious data.
+* Fixed stream.py skipping some packet data.
 
 Added a mIRC routine to save data in hash tables.  Could be used to match patterns.
 Hesitant to try this as I have had experience in the past with searching through
