@@ -198,9 +198,13 @@ In Command Prompt type RunStream.bat
 In mIRC "Status Window" type 
 
      /load -rs emotClient.mrc
+     /load -rs emotSignal.mrc
 
-This loads emotClient to remotes. Alternatives ALT+R and load manually.
-then in "Status Window" type.
+This loads scripts to the remotes. Alternatives ALT+R and load manually.
+then in "Status Window" type. 
+
+emotClient connects to the socket server and breaks large packets into smaller ones.
+emotSignal receives the smaller packets and handles displaying results.
 
      /eClient
 
