@@ -1,4 +1,5 @@
-; RunStream.bat (stream.py)
+; RunStream.bat 
+;
 ;  Load this to mIRC remotes 
 ;  /load -rs emotClient.mrc  
 ;  /eclient 
@@ -6,14 +7,27 @@
 ;
 ;  A picture window will show the active data nodes blinking.
 ;
-;  Will update later.
+; /eclient  - eeg graph
+; /optwin   - training options
+; /rec_     - begin training.
 
-alias eclient {
-  sockopen ecc 127.0.0.1 50008
+
+alias rec_ {
+  inc %training
+  set %segment 0
+  hmake $+(train,%training) 100
 }
 
+alias optwin {
+  window -p @options -1 -1 500 500
+  drawrect @options 
+}
+
+
 alias vgraph {
-  window -epa @vgraph -1 -1 500 500
+  window -ep @vgraph -1 -1 500 500
+  window -p @ugraph -1 -1 500 800
+
   ; Left Hemisphere
   set %NC.AF3 150 30 
   set %NC.F3 180 45
@@ -35,31 +49,41 @@ alias vgraph {
   set %NC.O2 240 180
   ; NC = Node Coords
 
-  set %nodes AF3 F3 F7 FC5 T7 P7 O1 AF4 F4 F8 FC6 T8 P8 O2 
+  set %nodes AF3 F7 F3 FC5 T7 P7 O1 O2 P8 T8 FC6 F4 F8 AF4 
 
   drawfill @vgraph 1 2 1 1
+
   var %i 0
   while (%i < $gettok(%nodes,0,32)) {
     inc %i
-    drawdot @vgraph 15 10 %NC. [ $+ [ $gettok(%nodes,%i,32) ] ]
+    drawdot -i @vgraph 15 10 %NC. [ $+ [ $gettok(%nodes,%i,32) ] ]
 
   }
 }
-
+alias eclient {
+  sockopen ecc 127.0.0.1 25013
+  set %uGr 0
+}
 on *:sockopen:ecc: {
   echo -s :: Connected! 
-  egraph
+  unset %ND.*
+  unset %NA
+  vgraph
 }
 
 on *:sockread:ecc: {
   sockread -f %ecc
+  var %totalSegments $calc($gettok(%ecc,0,32) /14)
+
+  if ($chr(46) isin %totalSegments) { return }
 
   var %i 0
-  var %s = $gettok(%ecc,0,32)
-  while (%i < %s) {
-    inc %i
-    var %dataColor = $gettok(%ecc,%i,32)
-
-    drawdot -r @vgraph %dataColor 10 %NC. [ $+ [ $gettok(%nodes,%i,32) ] ]
+  while (%i < %totalsegments) {
+    inc %i 
+    var %a = $calc(14 * (%i -1) +1) 
+    var %b = $calc(14 * (%i -1) +14)
+    ;  echo -s :: %totalsegments :: %a - %b  
+    .signal -n emotkit $gettok(%ecc, %a - %b ,32)  
   }
+
 }
