@@ -62,7 +62,8 @@ Direct links for Windows(x86) Dependancies
 Installation Instructions
 -------------------------
 
-* Install Python 2.6.7
+* Install Python 2.6.7 https://www.python.org/ftp/python/2.7.6/python-2.7.6.msi
+
 
 Extract pywinusb to any folder,  and copy 
 
