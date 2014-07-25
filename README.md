@@ -54,7 +54,7 @@ Direct links for Windows(x86) Dependancies
 
 * pywinusb - https://pypi.python.org/packages/source/p/pywinusb/pywinusb-0.2.9.zip
 * pycrypto - http://www.voidspace.org.uk/downloads/pycrypto26/pycrypto-2.6.win32-py2.7.exe
-* gevent   - http://www.lfd.uci.edu/~gohlke/pythonlibs/sn5ub7d9/gevent-1.0.win32-py2.7.exe
+* gevent   - www.lfd.uci.edu/~gohlke/pythonlibs/#gevent ->  gevent‑1.0.1.win32‑py2.7.exe
 * greenlet -  https://pypi.python.org/packages/2.7/g/greenlet/greenlet-0.4.2.win32-py2.7.exe#md5=0ea8f5a14f8554919e1a136bc042d76c
 * Pygame(optional) - http://pygame.org/ftp/pygame-1.9.1.win32-py2.7.msi
 * Ctypes(optional) - http://downloads.sourceforge.net/project/ctypes/gccxml/2008-08-12/gccxml-0.9.0-win32-x86.exe
