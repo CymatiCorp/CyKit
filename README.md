@@ -75,11 +75,11 @@ Extract pywinusb to any folder,  and copy
                                        
 * Install following dependancies:
 
- gevent
+ gevent 1.0.1
 
- greenlet
+ greenlet 0.4.2
  
- pycrypto 
+ pycrypto 2.6
  
   
   Install to python2.7.6 folder.
