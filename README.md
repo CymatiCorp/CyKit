@@ -1,9 +1,9 @@
- <img src="http://www.blueskynet.org/EmotKit/emotkit2.png" width="200px" height="200px"></img>
+ <img src="http://www.blueskynet.org/edu/emotkit2.png" width="200px" height="200px"></img>
 EmotKit 1.0
 ===========
 for Python 2.7.6 (Windows x86)
 
-<img src="http://www.blueskynet.org/EmotKit/emotiv.jpg" width=50% height=50% ></img>
+<img src="http://www.blueskynet.org/edu/emotiv.jpg" width=50% height=50% ></img>
 
 Description
 -----------
@@ -111,7 +111,7 @@ Byte Codes
 This is a list of the byte names you can receive through packet.
 ( For example print packet.AF4 )
 
-<img src="http://www.blueskynet.org/EmotKit/emotivContacts.png"></img>
+<img src="http://www.blueskynet.org/edu/emotivContacts.png"></img>
 
 Sensor Bits {
   
@@ -209,7 +209,7 @@ emotSignal receives the smaller packets and handles displaying results.
 
      /eClient
 
-<img src='http://www.blueskynet.org/EmotKit/emotivmirc.png' width=80% height=80%></img>
+<img src='http://www.blueskynet.org/edu/emotivmirc.png' width=80% height=80%></img>
 
 Update to emotivIRC.mrc  had to revamp the script to read chunks of packet data.
 Now uses Signal event to handle the chunks as lines of data.  There is an obvious
@@ -223,7 +223,7 @@ hash tables. Speed is dramatically reduced. Probably not a viable solution. Hash
 could potentially be searched/outsourced to other applications better suited for the
 task.
 
-<img src='http://www.blueskynet.org/EmotKit/emotivIRC1.png' width=80% height=80%></img>
+<img src='http://www.blueskynet.org/edu/emotivIRC1.png' width=80% height=80%></img>
 
 
 Credits & Original Code
