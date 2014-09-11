@@ -74,11 +74,15 @@ Extract pywinusb to any folder,  and copy
                                  Drive:\Python27\Lib\site-packages
                                        
 * Install following dependancies:
+
  gevent
+
  greenlet
+ 
  pycrypto 
  
-  Install to python2.7.6
+  
+  Install to python2.7.6 folder.
 
 Navigate to the Python directory extracted from EmotKit-master.zip
 
