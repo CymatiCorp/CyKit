@@ -1,96 +1,130 @@
 #!/usr/bin/python
-
+# Renders a window with graph values for each sensor and a box for gyro values.
 try:
     import psyco
-
     psyco.full()
-except:
-    print 'No psyco.  Expect poor performance. Not really...'
+except ImportError:
+    print 'No psyco. Expect poor performance. Not really...'
 
 import pygame
 from pygame import FULLSCREEN
 import gevent
-import sys
-
 from emotiv import Emotiv
+import sockets
+
+quality_color = {
+    "0": (0, 0, 0),
+    "1": (255, 0, 0),
+    "2": (255, 0, 0),
+    "3": (255, 255, 0),
+    "4": (255, 255, 0),
+    "5": (0, 255, 0),
+    "6": (0, 255, 0),
+    "7": (0, 255, 0),
+}
+
+old_quality_color = {
+    "0": (0, 0, 0),
+    "1": (255, 0, 0),
+    "2": (255, 255, 0),
+    "3": (0, 255, 0),
+    "4": (0, 255, 0),
+}
+
 
 class Grapher(object):
+    """
+    Worker that draws a line for the sensor value.
+    """
     def __init__(self, screen, name, i):
+        """
+        Initializes graph worker
+        """
         self.screen = screen
         self.name = name
         self.range = float(1 << 13)
-        self.xoff = 40
+        self.x_offset = 40
         self.y = i * gheight
         self.buffer = []
         font = pygame.font.Font(None, 24)
         self.text = font.render(self.name, 1, (255, 0, 0))
-        self.textpos = self.text.get_rect()
-        self.textpos.centery = self.y + gheight
+        self.text_pos = self.text.get_rect()
+        self.text_pos.centery = self.y + gheight
+        self.first_packet = True
+        self.y_offset = 0
 
     def update(self, packet):
-        if len(self.buffer) == 800 - self.xoff:
+        """
+        Appends value and quality values to drawing buffer.
+        """
+        if len(self.buffer) == 800 - self.x_offset:
             self.buffer = self.buffer[1:]
-        self.buffer.append([packet.sensors[self.name]['value'], packet.sensors[self.name]['quality'], ])
+        self.buffer.append([packet.sensors[self.name]['value'], packet.sensors[self.name]['quality'], packet.old_model])
 
-    def calcY(self, val):
-        return int(val / self.range * gheight)
+    def calc_y(self, val):
+        """
+        Calculates line height from value.
+        """
+        return (val / 1.1) - self.y_offset + gheight
 
     def draw(self):
+        """
+        Draws a line from values stored in buffer.
+        """
         if len(self.buffer) == 0:
             return
-        pos = self.xoff, self.calcY(self.buffer[0][0]) + self.y
-        for i, (value, quality ) in enumerate(self.buffer):
-            y = self.calcY(value) + self.y
-            if quality == 0:
-                color = (0, 0, 0)
-            elif quality == 1:
-                color = (255, 0, 0)
-            elif quality == 2:
-                color = (255, 165, 0)
-            elif quality == 3:
-                color = (255, 255, 0)
-            elif quality == 4:
-                color = (0, 255, 0)
-            else:
-                color = (255, 255, 255)
-            pygame.draw.line(self.screen, color, pos, (self.xoff + i, y))
-            pos = (self.xoff + i, y)
-        self.screen.blit(self.text, self.textpos)
 
-def main(debug=False):
+        if self.first_packet:
+            self.y_offset = self.buffer[0][0] / 1.1
+            self.first_packet = False
+        pos = self.x_offset, self.calc_y(self.buffer[0][0]) + self.y
+        for i, (value, quality, old_model) in enumerate(self.buffer):
+            y = self.calc_y(value) + self.y
+            if old_model:
+                color = old_quality_color[str(quality)]
+            else:
+                color = quality_color[str(quality)]
+            pygame.draw.line(self.screen, color, pos, (self.x_offset + i, y))
+            pos = (self.x_offset + i, y)
+        self.screen.blit(self.text, self.text_pos)
+
+
+def main():
+    """
+    Creates pygame window and graph drawing workers for each sensor.
+    """
     global gheight
     pygame.init()
-    screen = pygame.display.set_mode((1600, 900))
+    screen = pygame.display.set_mode((800, 600))
     graphers = []
     recordings = []
     recording = False
     record_packets = []
     updated = False
-    curX, curY = 400, 300
-
+    cursor_x, cursor_y = 400, 300
     for name in 'AF3 F7 F3 FC5 T7 P7 O1 O2 P8 T8 FC6 F4 F8 AF4'.split(' '):
         graphers.append(Grapher(screen, name, len(graphers)))
     fullscreen = False
-    emotiv = Emotiv(displayOutput=False)
+    emotiv = Emotiv(display_output=True)
     gevent.spawn(emotiv.setup)
-    gevent.sleep(1)
-    while True:
+    gevent.sleep(0)
+    while emotiv.running:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 emotiv.close()
                 return
-            if (event.type == pygame.KEYDOWN):
-                if (event.key == pygame.K_ESCAPE):
-                    emotiv.close()
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_ESCAPE:
+                    gevent.GreenletExit
                     return
-                elif (event.key == pygame.K_f):
+                elif event.key == pygame.K_f:
                     if fullscreen:
-                        screen = pygame.display.set_mode((1600, 900))
+                        screen = pygame.display.set_mode((800, 600))
                         fullscreen = False
                     else:
-                        screen = pygame.display.set_mode((1600,900), FULLSCREEN, 16)
+                        screen = pygame.display.set_mode((800, 600), FULLSCREEN, 16)
                         fullscreen = True
-                elif (event.key == pygame.K_r):
+                elif event.key == pygame.K_r:
                     if not recording:
                         record_packets = []
                         recording = True
@@ -98,37 +132,35 @@ def main(debug=False):
                         recording = False
                         recordings.append(list(record_packets))
                         record_packets = None
-        packetsInQueue = 0
+        packets_in_queue = 0
         try:
-            while packetsInQueue < 8:
+            while packets_in_queue < 8:
                 packet = emotiv.dequeue()
-                if abs(packet.gyroX) > 1:
-                    curX = max(0, min(curX, 1600))
-                    curX -= packet.gyroX
-                if abs(packet.gyroY) > 1:
-                    curY += packet.gyroY
-                    curY = max(0, min(curY, 900))
+                if abs(packet.gyro_x) > 1:
+                    cursor_x = max(0, min(cursor_x, 800))
+                    cursor_x -= packet.gyro_x
+                if abs(packet.gyro_y) > 1:
+                    cursor_y += packet.gyro_y
+                    cursor_y = max(0, min(cursor_y, 600))
                 map(lambda x: x.update(packet), graphers)
                 if recording:
                     record_packets.append(packet)
                 updated = True
-                packetsInQueue += 1
-        except Exception, e:
-            print e
+                packets_in_queue += 1
+        except Exception, ex:
+            print ex
 
         if updated:
             screen.fill((75, 75, 75))
             map(lambda x: x.draw(), graphers)
-            pygame.draw.rect(screen, (255, 255, 255), (curX - 5, curY - 5, 10, 10), 0)
+            pygame.draw.rect(screen, (255, 255, 255), (cursor_x - 5, cursor_y - 5, 10, 10), 0)
             pygame.display.flip()
             updated = False
         gevent.sleep(0)
 
 try:
-    gheight = 600 / 14
-    hgheight = gheight >> 1
-    main(*sys.argv[1:])
+    gheight = 580 / 14
+    main()
 
 except Exception, e:
     print e
-
