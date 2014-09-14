@@ -1,29 +1,18 @@
-on *:signal:emotkit: {
-  inc %uGr
-  if (%uGr > 500) { dec %uGr %uGr | 
-    drawrect -f @ugraph 1 1 0 0 $window(@ugraph).w $window(@ugraph).h 
+on *:signal:emotKit: {
+  inc %emot.X
+  if (%emot.X > 500) { 
+    dec %emot.X %emot.X
+    drawrect -f @emot 1 1 0 0 $window(@emot).w $window(@emot).h 
   }
-  if ($hget($+(train,%training)) != $null) { 
-    inc %segment 
-    hadd $+(train,%training) %segment $1- 
+  var %emot.index 0
+  var %emot.str = $gettok($1-,0,32)
+  while (%emot.index < %emot.str) {
+    inc %emot.index
+    var %emot.data = $gettok($1-,%emot.index,32)
+    var %emot.newXY = $calc((%emot.index * 50) + (%emot.data / 3.1) - 2800)
+    var %emot.oldXY = $calc((%emot.index * 50) + ($gettok(%emot.oldData,%emot.index,32) / 3.1) - 2800)
+    drawline -i @emot %emot.index 1 %emot.X %emot.newXY %emot.X %emot.oldXY
   }
-  var %i 0
-  var %s = $gettok($1-,0,32)
-  ; echo -s ::: %s
-  ; echo -s ::: $base($gettok($1-,1,32),10,2,4)
-
-  while (%i < %s) {
-    inc %i
-    var %zline = $gettok($1-,%i,32)
-    var %dataLine = $left(%zline,2)
-    var %Qline = $right(%zline,2)
-    var %Mline = $calc(%zline - 800)
-    var %dataColor $calc(%dataline * 25)
-    ;  drawdot -r @vgraph %dataColor 10 %NC. [ $+ [ $gettok(%nodes,%i,32) ] ]
-
-    ; drawdot  @ugraph %i 1 %uGr $calc( (%dataline + (%qline /2))  + ((%i * 30) -20) )
-    drawdot  @ugraph %i 1 %uGr $calc((%i * 40) + (%dataline /.51) - (%qline /.5))
-
-  }
-  drawdot @ugraph
+  set %emot.oldData $1-
+  drawdot @emot
 }
