@@ -225,8 +225,15 @@ increase in resolution as its no longer missing packet data.
 
 * Fixed emotSignal.mrc displaying data incorrectly.
 
-It turns out I was displaying the data values incorrectly. 
+It turns out I was displaying the data values incorrectly.
+I had been splitting the data into two segments thinking one
+was quality and one was data, when they were both data.
+
+as you can see in the image below, the dips indicate a subtle movement
+such as blinking.
+<br>
 Special thanks to Bill Schumacher for fixing the Render.py
+
 <img src='http://blueskynet.org/edu/emotKit1.png' width=80% height=80%></img>
 
 
