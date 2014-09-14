@@ -228,6 +228,7 @@ increase in resolution as its no longer missing packet data.
 It turns out I was displaying the data values incorrectly.
 I had been splitting the data into two segments thinking one
 was quality and one was data, when they were both data.
+i just had to divide the 8000 value and reposition and it was all set.
 
 as you can see in the image below, the dips indicate a subtle movement
 such as blinking.
@@ -246,8 +247,8 @@ Credits & Original Code
 Contributions by
 
 * Severin Lemaignan - Base C Library and mcrypt functionality
-* Sharif Olorin  (http://github.com/fractalcat) - hidapi support
-* Bill Schumacher (http://github.com/bschumacher) - Fixed the Python library
+* Sharif Olorin  (http://github.com/fractalcat) - hidapi support and project guru
+* Bill Schumacher (http://github.com/bschumacher) - Fixed the Python library (again)
 * Bryan Bishop and others in #hplusroadmap on Freenode.
 
 
