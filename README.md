@@ -215,19 +215,19 @@ emotSignal receives the smaller packets and handles displaying results.
 
 <img src='http://www.blueskynet.org/edu/emotivmirc.png' width=80% height=80%></img>
 
-Update to emotivIRC.mrc  had to revamp the script to read chunks of packet data.
+Update to emotClient.mrc  had to revamp the script to read chunks of packet data.
 Now uses Signal event to handle the chunks as lines of data.  There is an obvious
 increase in resolution as its no longer missing packet data.
 
 * Fixed stream.py skipping some packet data.
 
-Added a mIRC routine to save data in hash tables.  Could be used to match patterns.
-Hesitant to try this as I have had experience in the past with searching through
-hash tables. Speed is dramatically reduced. Probably not a viable solution. Hash files
-could potentially be searched/outsourced to other applications better suited for the
-task.
-
 <img src='http://www.blueskynet.org/edu/emotivIRC1.png' width=80% height=80%></img>
+
+* Fixed emotSignal.mrc displaying data incorrectly.
+
+It turns out I was displaying the data values incorrectly. 
+Special thanks to Bill Schumacher for fixing the Render.py
+<img src='http://blueskynet.org/edu/emotKit1.png' width=80% height=80%></img>
 
 
 Credits & Original Code
