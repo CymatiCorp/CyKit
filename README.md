@@ -1,4 +1,6 @@
- <img src="http://www.blueskynet.org/edu/emotkit2.png" width="200px" height="200px"></img>
+You may communicate freely with me, I offer no grant that I may help you, but I will try.
+
+<img src="http://www.blueskynet.org/edu/emotkit2.png" width="200px" height="200px"></img>
 EmotKit 1.0
 ===========
 for Python 2.7.6 (Windows x86)
