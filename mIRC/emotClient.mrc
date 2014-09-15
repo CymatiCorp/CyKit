@@ -21,7 +21,7 @@
 alias emot {
   if ($sock(emotKit)) { sockclose emotKit }
   sockopen emotKit 127.0.0.1 21013
-  set %uGr 0
+  set %emot.X 0
 }
 
 on *:sockopen:emotKit: {
