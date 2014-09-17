@@ -3,7 +3,7 @@ EmotKit 1.0
 ===========
 for Python 2.7.6 (Windows x86)
 
-https://github.com/warrenarea/EmotKit/wiki/EEG-emotKit-1.0-updates
+https://github.com/CymatiCorp/EmotKit/wiki/EEG-emotKit-1.0-updates
 
 <img src="http://www.blueskynet.org/edu/emotiv.jpg" width=50% height=50% ></img>
 
@@ -16,7 +16,7 @@ give access to the raw data stream from the Emotiv EPOC headset.
 Note that this will not give you processed data. 
 
 
-EmotKit Dependancies
+EmotKit Dependencies
 --------------------
 
 * pywinusb 
@@ -51,7 +51,7 @@ Python Usage
         headset.close()
 
 
-Direct links for Windows(x86) Dependancies
+Direct links for Windows(x86) Dependencies
 ------------------------------------------
 
 * pywinusb - https://pypi.python.org/packages/source/p/pywinusb/pywinusb-0.2.9.zip
