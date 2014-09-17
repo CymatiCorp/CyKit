@@ -3,6 +3,8 @@ EmotKit 1.0
 ===========
 for Python 2.7.6 (Windows x86)
 
+https://github.com/warrenarea/EmotKit/wiki/EEG-emotKit-1.0-updates
+
 <img src="http://www.blueskynet.org/edu/emotiv.jpg" width=50% height=50% ></img>
 
 Description
