@@ -213,30 +213,6 @@ emotSignal receives the smaller packets and handles displaying results.
 
      /eClient
 
-<img src='http://www.blueskynet.org/edu/emotivmirc.png' width=80% height=80%></img>
-
-Update to emotClient.mrc  had to revamp the script to read chunks of packet data.
-Now uses Signal event to handle the chunks as lines of data.  There is an obvious
-increase in resolution as its no longer missing packet data.
-
-* Fixed stream.py skipping some packet data.
-
-<img src='http://www.blueskynet.org/edu/emotivIRC1.png' width=80% height=80%></img>
-
-* Fixed emotSignal.mrc displaying data incorrectly.
-
-It turns out I was displaying the data values incorrectly.
-I had been splitting the data into two segments thinking one
-was quality and one was data, when they were both data.
-i just had to divide the 8000 value and reposition and it was all set.
-
-as you can see in the image below, the dips indicate a subtle movement
-such as blinking.
-<br>
-Special thanks to Bill Schumacher for fixing the Render.py
-
-<img src='http://blueskynet.org/edu/emotKit1.png' width=80% height=80%></img>
-
 
 Credits & Original Code
 =======================
