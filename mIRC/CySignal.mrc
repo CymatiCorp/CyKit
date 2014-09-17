@@ -1,4 +1,4 @@
-on *:signal:CyKit: {
+on *:signal:Cy-EEG: {
   inc %Cy.X
   if (%Cy.X > 500) { 
     dec %Cy.X %Cy.X
