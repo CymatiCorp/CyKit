@@ -1,7 +1,7 @@
 <img src="http://www.blueskynet.org/edu/emotkit2.png" width="200px" height="200px"></img>
 CyKit 1.0
 ===========
-for Python 2.7.6 (Windows x86)
+for Python 2.7.6 (Windows x86)<br>
 
 https://github.com/CymatiCorp/CyKit/wiki/EEG-CyKit-1.0-updates
 
@@ -10,10 +10,11 @@ https://github.com/CymatiCorp/CyKit/wiki/EEG-CyKit-1.0-updates
 Description
 -----------
 
-CyKit 1.0 is specifically for Python development in Windows to 
+CyKit 1.0 is specifically for Python development in Windows to
+give access to the raw data stream from the Emotiv EPOC headset.  <br>
+CyKit 1.0 is an unofficial branch to the OpenYou emoKit, check it out here<br>
+ https://github.com/openyou/emokit 
 
-give access to the raw data stream from the Emotiv EPOC headset.  
-Note that this will not give you processed data. 
 
 
 EmotKit Dependencies
