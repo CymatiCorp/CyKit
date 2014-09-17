@@ -1,16 +1,16 @@
 <img src="http://www.blueskynet.org/edu/emotkit2.png" width="200px" height="200px"></img>
-EmotKit 1.0
+CyKit 1.0
 ===========
 for Python 2.7.6 (Windows x86)
 
-https://github.com/CymatiCorp/EmotKit/wiki/EEG-emotKit-1.0-updates
+https://github.com/CymatiCorp/CyKit/wiki/EEG-emotKit-1.0-updates
 
 <img src="http://www.blueskynet.org/edu/emotiv.jpg" width=50% height=50% ></img>
 
 Description
 -----------
 
-EmotKit 1.0 is specifically for Python development in Windows to 
+CyKit 1.0 is specifically for Python development in Windows to 
 
 give access to the raw data stream from the Emotiv EPOC headset.  
 Note that this will not give you processed data. 
@@ -86,7 +86,7 @@ Extract pywinusb to any folder,  and copy
   
   Install to python2.7.6 folder.
 
-Navigate to the Python directory extracted from EmotKit-master.zip
+Navigate to the Python directory extracted from CyKit-master.zip
 
 C:\Python27\Python.exe C:\EmotKit-master\Python\example.py
 
@@ -204,8 +204,8 @@ In Command Prompt type RunStream.bat
 
 In mIRC "Status Window" type 
 
-     /load -rs emotClient.mrc
-     /load -rs emotSignal.mrc
+     /load -rs CyClient.mrc
+     /load -rs CySignal.mrc
 
 This loads scripts to the remotes. Alternatives ALT+R and load manually.
 then in "Status Window" type. 
@@ -213,7 +213,7 @@ then in "Status Window" type.
 emotClient connects to the socket server and breaks large packets into smaller ones.
 emotSignal receives the smaller packets and handles displaying results.
 
-     /emot
+     /Cy
 
 
 Credits & Original Code
