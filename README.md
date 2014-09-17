@@ -213,7 +213,7 @@ then in "Status Window" type.
 emotClient connects to the socket server and breaks large packets into smaller ones.
 emotSignal receives the smaller packets and handles displaying results.
 
-     /eClient
+     /emot
 
 
 Credits & Original Code
