@@ -20,13 +20,13 @@ CyKit 1.0 is an unofficial branch to the OpenYou emoKit, check it out here<br>
 CyKit Dependencies
 --------------------
 
-* pywinusb 
-* pycrypto
-* gevent 
-* greenlet
-* pygame (Only required if you want to use render.py
+* pywinusb 0.2.9
+* pycrypto 2.6
+* gevent 1.0.1
+* greenlet 0.4.2
+* pygame 1.9.1 (Only required if you want to use render.py
    which shows the EEG graph)
-* ctypes (Only required for mouse_control.py)
+* ctypes (included in gccxml-0.9.0)-(Only required for mouse_control.py)
 
 Python Usage
 ------------
