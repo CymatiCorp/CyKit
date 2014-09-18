@@ -101,19 +101,19 @@ Sensor Questions
    only 5 sensors.  It also has superior sensors not available in other models,  they
    use a "Long life semi-dry polymer"  that contains liquid in them, but it reportedly
    lasts for a very long time. This means no watering your contacts with saline or
-   trying to fiddle with your contacts in general.
+   trying to fiddle with your contacts in general. Also capable of using extention
+   accessory. 
 
    The scientific model, called epoc+ is the same as the epoc model, with a few minor
    differences. one being slightly better resolution, bluetooth which may be good for
    security reasons.  It also features a 9 axis sensor (3x gyro, 3x accelerometer, 3x magnetometer)
    which I'm sure there may be some uses for that, particularly in the area of virtual
-   reality entertainment perhaps. For me, this is not a feature I can not live without.
+   reality entertainment perhaps. For me, this is a feature I can live without.
    One positive for epoc+ is the ability for wired USB, with an "extention" accessory.
    This accessory also has an "extender hardware trigger", where you press a button and
    you are able to mark the exact point in the EEG where you pressed the button, this
    can be useful for corrolating EEG with the environment.  Also with the extention 
-   accessory is the ability to record to an SD card, this could be useful for mobility,
-   or just sake of format. 
+   accessory is the ability to record to an SD card.
    
    the developer model is pretty straight forward, and if you have a budget in mind, may
    be your best option. it has 14 sensors and covers 3x more surface area of the brain
@@ -123,6 +123,6 @@ Sensor Questions
    really want a headset, I recommend the developer model, but thinking long-term it may be 
    more prudent to wait for the next model. Perhaps they can solve their materials issue 
    and will have support for the new semi-dry polymer contacts in addition to all of the 
-   other great features (if not a new headset design entirely). ALthough You can be sure
+   other great features (if not a new headset design entirely). Although You can be sure
    that the next model will be equally expensive as Insight or even the scientific model.
    
