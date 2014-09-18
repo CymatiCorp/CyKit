@@ -4,17 +4,18 @@ CyKit FAQ
 
 Sensor Questions
 ================
-* Can I remove the felt pads in the contact sensors?
+* Can I remove the felt pads in the contact sensors?<br>
    Yes.
 
-* How do I remove the sensor contact?
+* How do I remove the sensor contact?<br>
    Turn the black contact a quarter-turn, do not over-tighten!
 
-* What are the sensor contacts made out of?
-   gold coated with a polymer
+* What are the sensor contacts made out of?<br>
+   gold coated with a polymer.
 
-* Is the (green)Oxidation of the Contacts normal?
-   Yes. The polymer is just a host for elecrochemically active material which reacts with the salt water. This is normal
+* Is the (green)Oxidation of the Contacts normal?<br>
+   Yes. The polymer is just a host for elecrochemically active material<br>
+   which reacts with the salt water. This is normal.
 
 * What maintenance can i perform on my sensors? 
 
@@ -39,45 +40,50 @@ Sensor Questions
    While the above process has worked very well for me, it is your responsibility to enure it is suitable for your needs.
    
    
-* Do the sensor wires contain voltage?
-  No. The battery operates the detection electronics, signal processing microprocessor and the wireless transmitter.
+* Do the sensor wires contain voltage?<br>
+   No. The battery operates the detection electronics, 
+   signal processing microprocessor and the wireless transmitter.
 
-* Is it possible to damage my gold sensor contact?
- Yes! Do not clean the contact plate with anything. There is a polymer layer there which contains the materials required for low-noise electrolytic contact. A bit of green on it does no harm at all. 
+* Is it possible to damage my gold sensor contact?<br>
+   Yes! Do not clean the contact plate with anything. There is a polymer layer there which contains the materials required for
+   low-noise electrolytic contact. A bit of green on it does no harm at all. 
 
-* What is the headset made out of?
-   a polypropylene
+* What is the headset made out of?<br>
+   polypropylene
 
-* What is the headset arms made of?
-   a  polycarbonate
+* What is the headset arms made of?<br>
+   polycarbonate
 
-* What frequency does the epoc headset operate at?
-   2.4ghz, same as a cordless phone or wireless device.
-   epoc+ and Insight utilizes bluetooth
+* What frequency does the epoc headset operate at?<br>
+   2.4ghz, same as a cordless phone or wireless device.<br>
+   epoc+ and Insight utilizes bluetooth 4.0 LE. (Low Energy standard)
    
 
-* Why is there 16 contacts?
-   There are 14 voltage sensor points on EPOC, measuring voltages relative to one of the two reference points. The other reference     point is used to cancel background noise, which is why there are 16 sensors. 
+* Why is there 16 contacts?<br>
+   There are 14 voltage sensor points on EPOC, measuring voltages relative to one of the two reference points. The other reference
+   point is used to cancel background noise, which is why there are 16 sensors. 
 
-* What data does Cykit give me?
-  
-  Same functionality as emoKit.
-  Streams the raw data from the channels of the headset
+* What data does Cykit give me?<br>
+    Same functionality as emoKit.<br>
+    Streams the raw data from the channels of the headset<br>
 
-* What data does Cykit not give me?
+* What data does Cykit not give me?<br>
+   Processed data, i.e data that has been sifted through identifying<br>
+   key patterns related to facial expressions and muscle movements.
 
- Processed data, i.e data that has been sifted through identifying
-  key patterns related to facial expressions and muscle movements.
+* Do I need an arduino controller (i.e. Raspberry Pi)?<br>
+   No. Plug in Emotiv USB dongle and it should connect.
 
-* Do I need an arduino controller (i.e. Raspberry Pi)?
-
- No. Plug in Emotiv USB dongle and it should connect.
-
-* Why did you change emoKit to CyKit?
-  
+* Why did you change the emoKit name to CyKit?<br>
    I've been wanting to change it for a long time and I thought
    CyKit sounded cool. I take absolutely no credit in creating the core 
    emoKit files (Except for the socket streaming.) I also mean no
    disrespect to the authors by changing the name and would like to 
-   thank them for their work.
+   thank them for their hard work.
+
+* What measurement of voltage from the mind am I getting back from the data?<br>
+    The least-significant-bit(LSB)(ie the far right place of a binary digit)
+    of the fourteen-bit value<br>
+    developer headset is equivelant to 0.51µV (microvolts).
+    the scientific headset is equivelant to 0.31µV (microvolts).
 
