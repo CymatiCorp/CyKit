@@ -1,6 +1,33 @@
 CyKit FAQ
 ==========
 
+Battery Questions
+=================
+
+* What is my average battery lifetime?
+   developer edition is about 12 hours.
+   insight edition is about 4 hours.
+   scientific edition is about 12 hours in dev mode,<br>
+   6 hours in scientific mode, which uses bluetooth LE which uses less energy
+   however sends a higher resolution of data that costs more energy.
+
+* What is the amount of charge the battery can hold?
+   680 milliamps per hour.
+
+* Could this device shock me? 
+   You can not get shocked from the sensor contact as there is no electricity
+   (from the headset) going through the contact wires. The battery and microchip
+   is self-contained. However if they somehow did get wet, it is possible, but 
+   its more likely it would short out the connections first and many key points
+   would have to be covered in water. I strongly advise against submerging this in water.
+
+
+* What measurement of voltage from the mind am I getting back from the data?<br>
+    The least-significant-bit(LSB)(ie the far right place of a binary digit)
+    of the fourteen-bit value<br>
+    developer headset is equivelant to 0.51µV (microvolts).
+    the scientific headset & insight models is equivelant to 0.31µV (microvolts).
+
 
 Sensor Questions
 ================
@@ -65,14 +92,6 @@ Sensor Questions
    There are 14 voltage sensor points on EPOC, measuring voltages relative to one of the two reference points. The other
    reference point is used to cancel background noise, which is why there are 16 sensors. 
 
-* What data does Cykit give me?<br>
-    Same functionality as emoKit.<br>
-    Streams the raw data from the channels of the headset<br>
-
-* What data does Cykit not give me?<br>
-   Processed data, i.e data that has been sifted through identifying<br>
-   key patterns related to facial expressions and muscle movements.
-
 * Do I need an arduino controller (i.e. Raspberry Pi)?<br>
    No. Plug in Emotiv USB dongle and it should connect.
 
@@ -82,19 +101,6 @@ Sensor Questions
    emoKit files (Except for the socket streaming.) I also mean no
    disrespect to the authors by changing the name and would like to 
    thank them for their hard work.
-
-* What measurement of voltage from the mind am I getting back from the data?<br>
-    The least-significant-bit(LSB)(ie the far right place of a binary digit)
-    of the fourteen-bit value<br>
-    developer headset is equivelant to 0.51µV (microvolts).
-    the scientific headset & insight models is equivelant to 0.31µV (microvolts).
-
-* What is my average battery lifetime?
-   developer edition is about 12 hours.
-   insight edition is about 4 hours.
-   scientific edition is about 12 hours in dev mode,<br>
-   6 hours in scientific mode, which uses bluetooth LE which uses less energy
-   however sends a higher resolution of data that costs more energy.
 
 * What model of epoc should I get?<br>
    It depends on your needs,  the Insight model is more of a commercial version and
@@ -128,3 +134,30 @@ Sensor Questions
    other great features (if not a new headset design entirely). Although You can be sure
    that the next model will be equally expensive as Insight or even the scientific model.
    
+Data Questions
+==============
+
+* What data does Cykit give me?<br>
+    Same functionality as emoKit.<br>
+    Streams the raw data from the channels of the headset<br>
+
+* What data does Cykit not give me?<br>
+   Processed data, i.e data that has been sifted through identifying<br>
+   key patterns related to facial expressions and muscle movements.
+
+* How do I read the data from the emotiv script?
+   Try an example script, or render.py
+   you first dequeue the buffer, this places all the packet into your
+   packet variable. You also specify which sensor you want to read from
+   that packet variable.
+
+* What format and range of data am I getting back? 
+   Emokit parses the sensor values as an unsigned integer.
+   Thus, to get values between -8192 and 8192, subtract 8192. 
+
+* What measurement of voltage from the mind am I getting back from the data?<br>
+    The least-significant-bit(LSB)(ie the far right place of a binary digit)
+    of the fourteen-bit value<br>
+    developer headset is equivelant to 0.51µV (microvolts).
+    the scientific headset & insight models is equivelant to 0.31µV (microvolts).
+
