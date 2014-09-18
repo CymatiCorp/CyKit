@@ -78,20 +78,34 @@ Sensor Questions
    Yes! Do not clean the contact plate with anything. There is a polymer layer there which contains the materials required for
    low-noise electrolytic contact. A bit of green on it does no harm at all. 
 
+Headset Questions
+=================
+
 * What is the headset made out of?<br>
    polypropylene
 
 * What is the headset arms made of?<br>
    polycarbonate
 
+
+Wireless Questions
+========================
 * What frequency does the epoc headset operate at?<br>
    2.4ghz, same as a cordless phone or wireless device.<br>
    epoc+ and Insight utilizes bluetooth 4.0 LE. (Low Energy standard)
    
+* How is my data encrypted?
+   The encryption is rjindael which is a form of AES encryption.
+   emotiv.py imports this.
+
+
 
 * Why is there 16 contacts?<br>
    There are 14 voltage sensor points on EPOC, measuring voltages relative to one of the two reference points. The other
    reference point is used to cancel background noise, which is why there are 16 sensors. 
+
+General Questions
+=================
 
 * Do I need an arduino controller (i.e. Raspberry Pi)?<br>
    No. Plug in Emotiv USB dongle and it should connect.
@@ -104,36 +118,29 @@ Sensor Questions
    thank them for their hard work.
 
 * What model of epoc should I get?<br>
-   It depends on your needs,  the Insight model is more of a commercial version and
-   may be more equiped for casual users, also I believe its design to be more mobile
-   and suited for the outdoors.  Although its collection of data is very limited with
-   only 5 sensors.  It also has superior sensors not available in other models,  they
-   use a "Long life semi-dry polymer"  that contains liquid in them, but it reportedly
-   lasts for a very long time. This means no watering your contacts with saline or
-   trying to fiddle with your contacts in general. Also capable of using extention
-   accessory. 
-
-   The scientific model, called epoc+ is the same as the epoc model, with a few minor
-   differences. one being slightly better resolution, bluetooth which may be good for
-   security reasons.  It also features a 9 axis sensor (3x gyro, 3x accelerometer, 3x magnetometer)
-   which I'm sure there may be some uses for that, particularly in the area of virtual
-   reality entertainment perhaps. For me, this is a feature I can live without.
-   One positive for epoc+ is the ability for wired USB, with an "extention" accessory.
-   This accessory also has an "extender hardware trigger", where you press a button and
-   you are able to mark the exact point in the EEG where you pressed the button, this
-   can be useful for corrolating EEG with the environment.  Also with the extention 
-   accessory is the ability to record to an SD card.
    
-   the developer model is pretty straight forward, and if you have a budget in mind, may
-   be your best option. it has 14 sensors and covers 3x more surface area of the brain
-   than the insight. I believe its an all around good choice, but I have seen lots of
-   reports and experienced first-hand the headset plastic breaking from casual use. Which
-   is not to say any other model will be any different (than perhaps the insight).  If you
-   really want a headset, I recommend the developer model, but thinking long-term it may be 
-   more prudent to wait for the next model. Perhaps they can solve their materials issue 
-   and will have support for the new semi-dry polymer contacts in addition to all of the 
-   other great features (if not a new headset design entirely). Although You can be sure
-   that the next model will be equally expensive as Insight or even the scientific model.
+   Insight model - is designed for the casual consumer on the go, its bluetooth capable and
+   can connect with other wireless devices, as well can make use of the "extention
+   accessory" which is able to record to an SSD.  another feature is its "Long Life
+   Semi-dry Polymer" contact sensor, which does not require saline as its a type of
+   sealed wet gelpak.  This device can send twice the data (sample rate), however its
+   limitation is that it only has 5 sensors.
+
+   EPOC+ or the Scientific model - is the same as the EPOC model with some improvements.
+   It has 4x the resolution than the EPOC picking up 0.14 microvolts.  
+   Bluetooth capable, it also features a 9 axis sensor (3x gyro, 3x accelerometer, 3x magnetometer)
+   Could find some use in virtual Reality entertainment perhaps, or users with low mobility
+   Also the ability for wired USB, with an "extention" accessory". Like the insight
+   it also features double the sample rate, 256 samples, opposed to EPOCs 128 samples.
+   It has ability to disable some of its channels as well for extended power life.
+   
+   Developer model - If you have a budget in mind, may be your best option.
+   it has 14 sensors and covers 3x more surface area of the brain than the insight,
+   but at half the sample rate.  I believe its an all around good choice. I do have
+   some issues with its durability. If you really need one. I recommend the developer
+   model, and might even spring for an EPOC+. If you can hold off, I'd wait until they
+   come out with a new model, maybe one that has a more solid headset, makes use of the
+   long life contacts and the improved sample rates. 
    
 Data Questions
 ==============
