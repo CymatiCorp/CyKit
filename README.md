@@ -111,45 +111,7 @@ Byte Codes
 This is a list of the byte names you can receive through packet.
 ( For example print packet.AF4 )
 
-<img src="http://www.blueskynet.org/edu/emotivContacts.png"></img>
-
-Sensor Bits {
-  
-  F3
-  FC5
-  AF3
-  F7
-  T7
-  P7
-  O1
-  O2
-  P8
-  T8
-  F8
-  AF4
-  FC6
-  F4
-  
-}
-
-Gyro Bits {
-
-  GYRO_X
-  GYRO_Y
-
-}
-
-Other {
-
-   INTERPOLATED
-   COUNTER
-   BATTERY
-   RESERVED
-   ETE1
-   ETE2
-   ETE3
-
-}
+  F3  FC5  AF3  F7  T7  P7  O1  O2  P8  T8  F8  AF4  FC6  F4
 
 Server Support
 ==============
