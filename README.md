@@ -97,15 +97,6 @@ Connect the EPOC USB dongle and run again, and it should begin streaming you dat
 Note: Python 3 requires some cosmetic updates to work properly. 
    
 
-Notes 
------
-If you are using the Python library and a research headset you may
-
-have to change the type in emotiv.py's setupCrypto function. 
-
-Raspberry Pi is not required, just plug dongle into USB.
-
-
 Byte Codes
 ----------
 This is a list of the byte names you can receive through packet.
@@ -115,43 +106,18 @@ This is a list of the byte names you can receive through packet.
 
 Server Support
 ==============
-Added ability to stream the data to a TCP connection.
-
-
-Updated a cleaner streaming server, with no EEG/graph.
-
+Added ability to stream the data to a TCP connection. <br>
+Adjust Python PATH in batch files as necessary.
 Type RunStream.bat
 
     (runs: Python.exe stream.py)
-
-
-Type RunServer.bat
-
-     (runs: Python.exe streamdata.py)
-
-It will pause waiting for a connection. 
-When a connection is made, the server will stream
-the data to the client. The EEG render graph also
-displays 
-
-Type RunClient.bat
-
-    (runs: Python.exe client.py)
-
-Once the server is running, run this and it will establish
-a connection and print the data.  Sending first the ByteCode
-of which sensor it is, and then trailing will be the data
-from the sensor.
-
-Note, the batch files adjust the PATH to run Python27, useful
-if you have multiple versions of Python.  Adjust as necessary.
 
 
 mIRC Support
 =============
 
 Added a mIRC script that will connect to the TCP server and display
-in a simple graph the activity of the sensors. Will update later.
+in a simple graph the activity of the sensors. 
 
 In Command Prompt type RunStream.bat
 
@@ -183,5 +149,5 @@ Contributions by
 * Sharif Olorin  (http://github.com/fractalcat) - hidapi support and project guru
 * Bill Schumacher (http://github.com/bschumacher) - Fixed the Python library (again)
 * Bryan Bishop and others in #hplusroadmap on Freenode.
-
+* Warren - basic socket server.
 
