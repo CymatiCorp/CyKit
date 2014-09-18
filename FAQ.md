@@ -141,7 +141,20 @@ General Questions
    model, and might even spring for an EPOC+. If you can hold off, I'd wait until they
    come out with a new model, maybe one that has a more solid headset, makes use of the
    long life contacts and the improved sample rates. 
+
+* What is the "extention accessory" ?<br>
+   This is an accessory that can record to an SD card
+   hooks up directly to the EPOC+ and Insight models.
+   Can hook up a "extention hardware trigger"
+
+* What is an "extention hardware trigger" ?<br>
+   This is more or less a wired remote that has a button/trigger you press,
+   when its pressed, it communicates with the EEG software, (most likely testbench).
+   It then places 'markers' indicating exactly when the trigger was pressed, this
+   can be useful in determining interaction with the environment and the corrolating
+   brain activity that followed.
    
+
 Data Questions
 ==============
 
@@ -174,4 +187,11 @@ Data Questions
     of the fourteen-bit value<br>
     developer headset is equivelant to 0.51µV (microvolts).
     the scientific headset & insight models is equivelant to 0.31µV (microvolts).
+
+Programming Questions
+=====================
+ 
+ * What are the sensor bytes for the packet buffer? 
+    F3 FC5 AF3 F7 T7 P7 O1 O2 P8 T8 F8 AF4 FC6 F4
+    example packet.AF3
 
