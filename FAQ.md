@@ -85,5 +85,44 @@ Sensor Questions
     The least-significant-bit(LSB)(ie the far right place of a binary digit)
     of the fourteen-bit value<br>
     developer headset is equivelant to 0.51µV (microvolts).
-    the scientific headset is equivelant to 0.31µV (microvolts).
+    the scientific headset & insight models is equivelant to 0.31µV (microvolts).
 
+* What is my average battery lifetime?
+   developer edition is about 12 hours.
+   insight edition is about 4 hours.
+   scientific edition is about 12 hours in dev mode,<br>
+   6 hours in scientific mode, which uses bluetooth LE
+   but sends a higher resolution of data.
+
+* What model of epoc should I get? 
+   It depends on your needs,  the Insight model is more of a commercial version and
+   may be more equiped for casual users, also I believe its design to be more mobile
+   and suited for the outdoors.  Although its collection of data is very limited with
+   only 5 sensors.  It also has superior sensors not available in other models,  they
+   use a "Long life semi-dry polymer"  that contains liquid in them, but it reportedly
+   lasts for a very long time. This means no watering your contacts with saline or
+   trying to fiddle with your contacts in general.
+
+   The scientific model, called epoc+ is the same as the epoc model, with a few minor
+   differences. one being slightly better resolution, bluetooth which may be good for
+   security reasons.  It also features a 9 axis sensor (3x gyro, 3x accelerometer, 3x magnetometer)
+   which I'm sure there may be some uses for that, particularly in the area of virtual
+   reality entertainment perhaps. For me, this is not a feature I can not live without.
+   One positive for epoc+ is the ability for wired USB, with an "extention" accessory.
+   This accessory also has a "extender hardware trigger", where you press a button and
+   you are able to mark the exact point in the EEG where you pressed the button, this
+   can be useful for corrolating EEG with the environment.  Also with the extention 
+   accessory is the ability to record to an SD card, this could be useful for mobility,
+   or just sake of format. 
+   
+   the developer model is pretty straight forward, and if you have a budget in mind, may
+   be your best option. it has 14 sensors and covers 3x more surface area of the brain
+   than the insight. I believe its an all around good choice, but I have seen lots of
+   reports and experienced first-hand the headset plastic breaking from casual use. Not
+   to say any other model (than perhaps the insight) will offer.  If you really want a
+   headset, I recommend the developer model, but long-term it may be more prudent to
+   wait for the next model. Perhaps they can solve their materials issue and will have
+   support the new semi-dry polymer contacts with all the other great features (if not
+   a new headset design entirely). Though You can be sure the next model will be 
+   equally expensive as the insight or the scientific model.
+   
