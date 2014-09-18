@@ -18,12 +18,27 @@ Sensor Questions
 
 * What maintenance can i perform on my sensors? 
 
-  Quantity of 0.4% to 0.9% saline.
-  Small quantity (50 mil) pure isopropyl alcohol.
- Six good quality cotton (ear) buds.
+  Quantity of 0.4% to 0.9% saline.<br>
+  Small quantity (50 mil) pure isopropyl alcohol.<br>
+ Six good quality cotton (ear) buds.<br>
 
-Following the instructions provided by Emotiv systems, remove all of the contacts from the headset arms (or fingers). Remove the felt pads and soak them in a flat dish with about 2 mm of saline on the bottom. While the felt pads are soaking, wet a cotton bud with the alcohol and rub the gold contact in the felt pad holder. If there is a buildup of salts, let it soak a while and try again later. If necessary, flush out any debris from the salts using either alcohol or saline. IMPORTANT: Never use any type of sharp item to scrape the salts off. Even the smallest scratch will damage the contact and the underlying metal will be destroyed in time by the electrolysys process. Once all the gold contacts have been cleaned, you should now revive the felt pads. I have noticed (in the dry Australian summer) that the salts build up within the internal felt structure as vertical columns. You can often detect this by squeezing the pad sideways and then comparing that to squeezing it vertically. If it appears brittle or is noticeably stiffer when you compress it vertically, this is a good indication there is a columnar buildup. If needed, fully saturate the pad in saline for ten minutes then carefully squeeze it vertically to half its height then reshape it round again. If you flatten it too much, the pad may break apart. Repeat this a few times for each pad. You should notice a significant increase in comfort when you next use the headset. One at a time, shake off the excess saline from the pad and re-insert it into itâ€™s holder. Screw the holder and pad assembly into the socket on the headset arm. At all times, you should avoid letting any liquid get into the electronics. Connect   everything up again and test the headset with the Emotiv Control Panel. DISCLAIMER: While the above process has worked very well for me, it is your responsibility to enure it is suitable for your needs.
-
+   Following the instructions provided by Emotiv systems, remove all of the contacts from the headset arms (or fingers). Remove the
+   felt pads and soak them in a flat dish with about 2 mm of saline on the bottom. While the felt pads are soaking, wet a cotton bud
+   with the alcohol and rub the gold contact in the felt pad holder. If there is a buildup of salts, let it soak a while and try
+   again later. If necessary, flush out any debris from the salts using either alcohol or saline. IMPORTANT: Never use any type of
+   sharp item to scrape the salts off. Even the smallest scratch will damage the contact and the underlying metal will be destroyed
+   in time by the electrolysys process. Once all the gold contacts have been cleaned, you should now revive the felt pads. I have
+   noticed (in the dry Australian summer) that the salts build up within the internal felt structure as vertical columns. You can
+   often detect this by squeezing the pad sideways and then comparing that to squeezing it vertically. If it appears brittle or is
+   noticeably stiffer when you compress it vertically, this is a good indication there is a columnar buildup. If needed, fully
+   saturate the pad in saline for ten minutes then carefully squeeze it vertically to half its height then reshape it round again.
+   If you flatten it too much, the pad may break apart. Repeat this a few times for each pad. You should notice a significant
+   increase in comfort when you next use the headset. One at a time, shake off the excess saline from the pad and re-insert it into
+   itâ€™s holder. Screw the holder and pad assembly into the socket on the headset arm. At all times, you should avoid letting any
+   liquid get into the electronics. Connect   everything up again and test the headset with the Emotiv Control Panel. DISCLAIMER:
+   While the above process has worked very well for me, it is your responsibility to enure it is suitable for your needs.
+   
+   
 * Do the sensor wires contain voltage?
   No. The battery operates the detection electronics, signal processing microprocessor and the wireless transmitter.
 
