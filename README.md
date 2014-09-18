@@ -1,5 +1,5 @@
 
-<img src="http://blueskynet.org/edu/cykit3.png" width=15% height=15% ></img><img src="http://www.blueskynet.org/edu/emotiv.jpg" width=15% height=15% ></img><br>
+<img src="http://blueskynet.org/edu/cykit4.png" width=25% height=25% ><br>
 CyKit 1.0 for Python 2.7.6 (Windows x86) using Emotiv EPOC headset.<br>
 https://github.com/CymatiCorp/CyKit/wiki/EEG-CyKit-1.0-updates
 
