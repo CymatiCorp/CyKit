@@ -1,16 +1,10 @@
 
-<img src="http://blueskynet.org/edu/cykit3.png" width=50% height=50% ></img>
-CyKit 1.0
-===========
-for Python 2.7.6 (Windows x86)<br>
-
+<img src="http://blueskynet.org/edu/cykit3.png" width=15% height=15% ></img><img src="http://www.blueskynet.org/edu/emotiv.jpg" width=15% height=15% ></img><br>
+CyKit 1.0 for Python 2.7.6 (Windows x86) using Emotiv EPOC headset.<br>
 https://github.com/CymatiCorp/CyKit/wiki/EEG-CyKit-1.0-updates
-
-<img src="http://www.blueskynet.org/edu/emotiv.jpg" width=50% height=50% ></img>
 
 Description
 -----------
-
 CyKit 1.0 is specifically for Python development in Windows to<br>
 give access to the raw data stream from the Emotiv EPOC headset.  <br>
 CyKit 1.0 is an unofficial branch to the OpenYou emoKit, check it out here<br>
@@ -20,7 +14,6 @@ CyKit 1.0 is an unofficial branch to the OpenYou emoKit, check it out here<br>
 
 CyKit Dependencies
 --------------------
-
 * pywinusb 0.2.9
 * pycrypto 2.6
 * gevent 1.0.1
@@ -31,7 +24,6 @@ CyKit Dependencies
 
 Python Usage
 ------------
-
   Code:
   
     import emotiv
@@ -55,7 +47,6 @@ Python Usage
 
 Direct links for Windows(x86) Dependencies
 ------------------------------------------
-
 * pywinusb - https://pypi.python.org/packages/source/p/pywinusb/pywinusb-0.2.9.zip
 * pycrypto - http://www.voidspace.org.uk/downloads/pycrypto26/pycrypto-2.6.win32-py2.7.exe
 * gevent   - www.lfd.uci.edu/~gohlke/pythonlibs/#gevent ->  gevent‑1.0.1.win32‑py2.7.exe
@@ -65,7 +56,6 @@ Direct links for Windows(x86) Dependencies
  
 Installation Instructions
 -------------------------
-
 * Install Python 2.6.7 https://www.python.org/ftp/python/2.7.6/python-2.7.6.msi
 
 
@@ -99,7 +89,7 @@ If your Emotiv USB dongle is not connected it will throw several errors ending w
                                        AttributeError: 'Emotiv' object has no attribute 'device'
 
 
-Connect the Emotiv dongle and run again, and it should begin streaming you data.
+Connect the EPOC USB dongle and run again, and it should begin streaming you data.
 
 Note: Python 3 requires some cosmetic updates to work properly. 
    
@@ -115,7 +105,6 @@ Raspberry Pi is not required, just plug dongle into USB.
 
 Byte Codes
 ----------
-
 This is a list of the byte names you can receive through packet.
 ( For example print packet.AF4 )
 
@@ -161,7 +150,6 @@ Other {
 
 Server Support
 ==============
-
 Added ability to stream the data to a TCP connection.
 
 
