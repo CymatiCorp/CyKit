@@ -89,7 +89,7 @@ Extract pywinusb to any folder,  and copy
 
 Navigate to the Python directory extracted from CyKit-master.zip
 
-C:\Python27\Python.exe C:\EmotKit-master\Python\example.py
+C:\Python27\Python.exe C:\Cy-master\Python\example.py
 
 If your Emotiv USB dongle is not connected it will throw several errors ending with:
 
@@ -211,8 +211,8 @@ In mIRC "Status Window" type
 This loads scripts to the remotes. Alternatives ALT+R and load manually.
 then in "Status Window" type. 
 
-emotClient connects to the socket server and breaks large packets into smaller ones.
-emotSignal receives the smaller packets and handles displaying results.
+CyClient.mrc - Connects to the socket server and breaks large packets into smaller ones.
+CySignal.mrc - Receives the smaller packets and handles displaying EEG results.
 
      /Cy
 
