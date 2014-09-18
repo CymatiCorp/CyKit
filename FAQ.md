@@ -94,7 +94,7 @@ Sensor Questions
    6 hours in scientific mode, which uses bluetooth LE
    but sends a higher resolution of data.
 
-* What model of epoc should I get? 
+* What model of epoc should I get?<br>
    It depends on your needs,  the Insight model is more of a commercial version and
    may be more equiped for casual users, also I believe its design to be more mobile
    and suited for the outdoors.  Although its collection of data is very limited with
