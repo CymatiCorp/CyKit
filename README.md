@@ -1,4 +1,4 @@
-<img src="http://www.blueskynet.org/edu/emotkit2.png" width="200px" height="200px"></img>
+
 CyKit 1.0
 ===========
 for Python 2.7.6 (Windows x86)<br>
