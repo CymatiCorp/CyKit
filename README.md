@@ -1,4 +1,5 @@
 
+<img src="http://blueskynet.org/edu/cykit3.png" width=50% height=50% ></img>
 CyKit 1.0
 ===========
 for Python 2.7.6 (Windows x86)<br>
