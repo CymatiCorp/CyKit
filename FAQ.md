@@ -156,6 +156,12 @@ Data Questions
    Emokit parses the sensor values as an unsigned integer.
    Thus, to get values between -8192 and 8192, subtract 8192. 
 
+* How does the scientific model have a better resolution than the developer?
+   EPOC+ advantages are: option for higher voltage resolution (4x better, 0.14 vs 0.51uV)
+   option for higher sample rate (256 vs 128 per sec), compatibility with more mobile 
+   devices via low energy Bluetooth® Smart (high res modes not available over BT) 
+   and better motion sensor 9 axis vs 2 axis gyro). 
+ 
 * What measurement of voltage from the mind am I getting back from the data?<br>
     The least-significant-bit(LSB)(ie the far right place of a binary digit)
     of the fourteen-bit value<br>
