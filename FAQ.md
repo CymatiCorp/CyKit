@@ -4,26 +4,26 @@ CyKit FAQ
 Battery Questions
 =================
 
-* What is my average battery lifetime?
-   developer edition is about 12 hours.
-   insight edition is about 4 hours.
+* What is my average battery lifetime?<br>
+   developer edition is about 12 hours.<br>
+   insight edition is about 4 hours.<br>
    scientific edition is about 12 hours in dev mode,<br>
-   6 hours in scientific mode, which uses bluetooth LE which uses less energy
-   however sends a higher resolution of data that costs more energy.
+   6 hours in scientific mode, which uses bluetooth LE which uses less energy<br>
+   however sends a higher resolution of data that costs more energy.<br>
 
-* What is the amount of charge the battery can hold?
+* What is the amount of charge the battery can hold?<br>
    680 milliamps per hour.
 
-* Could this device shock me? 
-   You can not get shocked from the sensor contact as there is no electricity
-   (from the headset) going through the contact wires. The battery and microchip
-   is self-contained. However if they somehow did get wet, it is possible, but 
-   its more likely it would short out the connections first and many key points
-   would have to be covered in water. I strongly advise against submerging this in water.
+* Could this device shock me?<br>
+   You can not get shocked from the sensor contact as there is no electricity<br>
+   (from the headset) going through the contact wires. The battery and microchip<br>
+   is self-contained. However if they somehow did get wet, it is possible, but <br>
+   its more likely it would short out the connections first and many key points<br>
+   would have to be covered in water. I strongly advise against submerging this in water.<br>
 
 
 * What measurement of voltage from the mind am I getting back from the data?<br>
-    The least-significant-bit(LSB)(ie the far right place of a binary digit)
+    The least-significant-bit(LSB)(ie the far right place of a binary digit)<br>
     of the fourteen-bit value<br>
     developer headset is equivelant to 0.51µV (microvolts).
     the scientific headset & insight models is equivelant to 0.31µV (microvolts).
@@ -35,7 +35,7 @@ Sensor Questions
    Yes.
 
 * How do I remove the sensor contact?<br>
-   Turn the black contact a quarter-turn, do not over-tighten!
+   Turn the black contact a quarter-turn, do not over-tighten! (Known to break)
 
 * What are the sensor contacts made out of?<br>
    gold coated with a polymer.
