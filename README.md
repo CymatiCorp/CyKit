@@ -20,10 +20,9 @@ CyKit Dependencies
 * pywinusb 0.2.9
 * pycrypto 2.6
 * gevent 1.0.1
-* greenlet 0.4.2
+* greenlet 0.4.2 (or Newest 0.4.5)
 * pygame 1.9.1 (Only required if you want to use render.py
    which shows the EEG graph)
-* ctypes (included in gccxml-0.9.0)-(Only required for mouse_control.py)
 
 Python Usage
 ------------
@@ -55,18 +54,17 @@ Direct links for Windows(x86) Dependencies
 * gevent   - www.lfd.uci.edu/~gohlke/pythonlibs/#gevent ->  gevent‑1.0.1.win32‑py2.7.exe
 * greenlet -  https://pypi.python.org/packages/2.7/g/greenlet/greenlet-0.4.2.win32-py2.7.exe#md5=0ea8f5a14f8554919e1a136bc042d76c
 * Pygame(optional) - http://pygame.org/ftp/pygame-1.9.1.win32-py2.7.msi
-* Ctypes(optional) - http://downloads.sourceforge.net/project/ctypes/gccxml/2008-08-12/gccxml-0.9.0-win32-x86.exe
- 
+
 Installation Instructions
 -------------------------
-* Install Python 2.6.7 https://www.python.org/ftp/python/2.7.6/python-2.7.6.msi
+* Install Python 2.7.6 https://www.python.org/ftp/python/2.7.6/python-2.7.6.msi
 
 
-Extract pywinusb to any folder,  and copy 
+Extract pywinusb to any folder,  and copy the folder
 
                                        \pywinusb 
                                        
-                                  from \pywinusb-0.2.9 to
+                                  from folder \pywinusb-0.2.9 to
                                         
                                  Drive:\Python27\Lib\site-packages
                                        
@@ -94,8 +92,40 @@ If your Emotiv USB dongle is not connected it will throw several errors ending w
 
 Connect the EPOC USB dongle and run again, and it should begin streaming you data.
 
-Note: Python 3 requires some cosmetic updates to work properly. 
+
    
+Alternate Installation (Using the PIP package installer)
+--------------------------------------------------------
+
+* Install Python 2.7.6 https://www.python.org/ftp/python/2.7.6/python-2.7.6.msi
+ 
+Extract pywinusb to any folder,  and copy the folder
+
+                                       \pywinusb 
+                                       
+                                  from folder \pywinusb-0.2.9 to
+                                        
+                                 Drive:\Python27\Lib\site-packages
+                                       
+ 
+ Install pycrypto 2.6
+ 
+ Download PIP from its website:  https://bootstrap.pypa.io/get-pip.py
+ 
+Run:
+
+                         python.exe get-pip.py
+                         python.exe -m pip install greenlet
+                         python.exe -m easy_install greenlet
+                         python.exe -m pip install gevent
+
+PIP downloads the latest versions of these projects.
+ Current versions:
+ 
+                       greenlet 0.4.5
+                       gevent 1.0.1
+
+Note: Python 3 requires some cosmetic updates to work properly. 
 
 Byte Codes
 ----------
@@ -110,7 +140,7 @@ Added ability to stream the data to a TCP connection. <br>
 Adjust Python PATH in batch files as necessary.
 Type RunStream.bat
 
-    (runs: Python.exe stream.py)
+    runs: Python.exe stream.py <server> <port>
 
 
 mIRC Support
@@ -121,7 +151,7 @@ in a simple graph the activity of the sensors.
 
 In Command Prompt type RunStream.bat
 
-     (runs: Python.exe stream.py)
+     (runs: Python.exe stream.py <ip> <port> )
 
 In mIRC "Status Window" type 
 
@@ -146,8 +176,8 @@ Credits & Original Code
 Contributions by
 
 * Severin Lemaignan - Base C Library and mcrypt functionality
-* Sharif Olorin  (http://github.com/fractalcat) - hidapi support and project guru
-* Bill Schumacher (http://github.com/bschumacher) - Fixed the Python library (again)
+* Sharif Olorin  (https://github.com/fractalcat) - hidapi support and project guru
+* Bill Schumacher (https://github.com/bschumacher) - Fixed the Python library (again)
 * Bryan Bishop and others in #hplusroadmap on Freenode.
-* Warren - basic socket server.
+* Warren - (https://github.com/CymatiCorp/CyKit) Socket server.
 
