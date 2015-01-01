@@ -6,6 +6,9 @@ https://github.com/CymatiCorp/CyKit/wiki/EEG-CyKit-1.0-updates <br>
 FAQ
 https://github.com/CymatiCorp/CyKit/blob/master/FAQ.md
 
+Questions about the project?<br>
+Contact me at warrenarea@gmail.com
+
 Description
 -----------
 CyKit 1.0 is specifically for Python development in Windows to<br>
