@@ -1,5 +1,5 @@
 # -*- encoding: utf-8 -*-
-from EmotKit.emotiv import Emotiv
+from CyKit.emotiv import Emotiv
 
 import unittest
 
