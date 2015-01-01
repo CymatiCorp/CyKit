@@ -1,4 +1,4 @@
-from EmotKit import emotiv
+from CyKit import emotiv
 import gevent
 
 if __name__ == "__main__":
