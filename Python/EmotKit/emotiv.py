@@ -1,12 +1,13 @@
-import gevent
 import os
 import platform
 system_platform = platform.system()
 if system_platform == "Windows":
+        import socket  # Needed to prevent gevent crashing on Windows. (surfly / gevent issue #459)
         import pywinusb.hid as hid
 else:
     if system_platform == "Darwin":
         import hid
+import gevent
 from Crypto.Cipher import AES
 from Crypto import Random
 from gevent.queue import Queue
@@ -15,7 +16,7 @@ from subprocess import check_output
 # How long to gevent-sleep if there is no data on the EEG.
 # To be precise, this is not the frequency to poll on the input device
 # (which happens with a blocking read), but how often the gevent thread
-# polls the real threading queue that reads the data in a separete thread
+# polls the real threading queue that reads the data in a separate thread
 # to not block gevent with the file read().
 # This is the main latency control.
 # Setting it to 1ms takes about 10% CPU on a Core i5 mobile.
@@ -287,7 +288,8 @@ class EmotivPacket(object):
         sensors['X']['value'] = self.gyro_x
         sensors['Y']['value'] = self.gyro_y
         for name, bits in sensor_bits.items():
-            value = get_level(self.raw_data, bits) 
+            #Get Level for sensors subtract 8192 to get signed value
+            value = get_level(self.raw_data, bits) - 8192
             setattr(self, name, (value,))
             sensors[name]['value'] = value
         self.old_model = model
@@ -356,7 +358,7 @@ class Emotiv(object):
     """
     Receives, decrypts and stores packets received from Emotiv Headsets.
     """
-    def __init__(self, display_output=True, is_research=False):
+    def __init__(self, display_output=True, serial_number="", is_research=False):
         """
         Sets up initial values.
         """
@@ -386,7 +388,7 @@ class Emotiv(object):
             'Y': {'value': 0, 'quality': 0},
             'Unknown': {'value': 0, 'quality': 0}
         }
-        self.serial_number = ""  # You will need to set this manually for OS X.
+        self.serial_number = serial_number  # You will need to set this manually for OS X.
         self.old_model = False
 
     def setup(self):
