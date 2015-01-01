@@ -1,13 +1,18 @@
-import sys
-sys.path.insert(0, './Python/CyKit/')
-import emotiv
-import gevent
 import socket
-
+import gevent
+import sys
+sys.path.insert(1, './Python/CyKit/')
+import emotiv
+if len(sys.argv) < 3 or len(sys.argv) < 2:
+   print "Usage:  Python.exe stream.py IP Port"
+   sys.argv = [sys.argv[0], "localhost", "55555"]
+   print "Defaulting to localhost:55555"
+   
 def main():
 
-    try:
+    try:         
          connectServer()
+                  
     except Exception, e:
          print(e)
 
@@ -19,13 +24,12 @@ def main():
 
              for name in 'AF3 F7 F3 FC5 T7 P7 O1 O2 P8 T8 FC6 F4 F8 AF4'.split(' '):
               connbuffer +=  str(packet.sensors[name]['value'])  + "."
-
              conn.sendall(connbuffer + '\n')
              connbuffer = ""
     except Exception as msg:
              print 'Error: ' + str(msg)
              conn.close()
-             #headset.kill()
+
     finally:
              print "Disconnecting . . ."
              conn.close()
@@ -36,9 +40,9 @@ def main():
 
 def connectServer():
      global conn
-     HOST = str(sys.argv[1])
-     PORT = int(sys.argv[2])
-     print "Connecting to " + HOST + " : " + str(PORT)
+     HOST = "localhost"
+     PORT = 55555
+     print "Listening to " + HOST + " : " + str(PORT)
      try:
          s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
      except socket.error as msg:
@@ -55,13 +59,12 @@ def connectServer():
          print 'Could not open socket'
          return
      
-
      conn, addr = s.accept()
      print 'Connected to', addr
 
 
 try:
-  headset = emotiv.Emotiv()
+  headset = emotiv.Emotiv(False, False)
   gevent.spawn(headset.setup)
   main()
 
