@@ -7,10 +7,12 @@ except ImportError:
     print 'No psyco. Expect poor performance. Not really...'
 
 import pygame
+import platform
 from pygame import FULLSCREEN
+if platform.system() == "Windows":
+    import socket  # Needed to prevent gevent crashing on Windows. (surfly / gevent issue #459)
 import gevent
-from emotiv import Emotiv
-import sockets
+from emokit.emotiv import Emotiv
 
 quality_color = {
     "0": (0, 0, 0),
@@ -65,7 +67,7 @@ class Grapher(object):
         """
         Calculates line height from value.
         """
-        return (val / 1.1) - self.y_offset + gheight
+        return val - self.y_offset + gheight
 
     def draw(self):
         """
@@ -75,7 +77,7 @@ class Grapher(object):
             return
 
         if self.first_packet:
-            self.y_offset = self.buffer[0][0] / 1.1
+            self.y_offset = self.buffer[0][0]
             self.first_packet = False
         pos = self.x_offset, self.calc_y(self.buffer[0][0]) + self.y
         for i, (value, quality, old_model) in enumerate(self.buffer):
@@ -115,7 +117,7 @@ def main():
                 return
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_ESCAPE:
-                    gevent.GreenletExit
+                    emotiv.close()
                     return
                 elif event.key == pygame.K_f:
                     if fullscreen:
