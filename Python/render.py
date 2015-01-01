@@ -12,7 +12,7 @@ from pygame import FULLSCREEN
 if platform.system() == "Windows":
     import socket  # Needed to prevent gevent crashing on Windows. (surfly / gevent issue #459)
 import gevent
-from CyKitt.emotiv import Emotiv
+from CyKit.emotiv import Emotiv
 
 quality_color = {
     "0": (0, 0, 0),
