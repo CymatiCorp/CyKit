@@ -4,15 +4,19 @@ try:
     import psyco
     psyco.full()
 except ImportError:
-    print 'No psyco. Expect poor performance. Not really...'
+    print '(Psyco Optional) Not imported.'
 
 import pygame
 import platform
 from pygame import FULLSCREEN
 if platform.system() == "Windows":
     import socket  # Needed to prevent gevent crashing on Windows. (surfly / gevent issue #459)
+    del socket # Can be removed now. issued for windows WSAcall.
 import gevent
-from CyKit.emotiv import Emotiv
+import sys
+sys.path.insert(0, './Python/CyKit/')
+from emotiv import Emotiv
+
 
 quality_color = {
     "0": (0, 0, 0),
