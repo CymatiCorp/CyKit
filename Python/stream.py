@@ -42,8 +42,8 @@ def main():
 
 def connectServer():
      global conn
-     HOST = sys.argv[1]
-     PORT = sys.argv[2]
+     HOST = str(sys.argv[1])
+     PORT = int(sys.argv[2])
      print "Listening to " + HOST + " : " + str(PORT)
      try:
          s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
