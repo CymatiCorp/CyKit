@@ -1,7 +1,8 @@
-from CyKit import emotiv
+import sys
+sys.path.insert(0, './Python/CyKit/')
+import emotiv
 import gevent
 import socket
-import sys
 
 def main():
 
