@@ -195,3 +195,18 @@ Programming Questions
     F3 FC5 AF3 F7 T7 P7 O1 O2 P8 T8 F8 AF4 FC6 F4
     example packet.AF3
 
+Python 3.4.2 Support
+===================
+
+the changes to emotiv.py and dependancies are a simple fix of changing
+print function syntax and Exception syntax. Cosmetic changes to crypto
+may need to be done, particularly when calling AES.
+
+However gevent is a bit more complicated, as the project hasn't been 
+updated to support it.  Particularly hub.py and perhaps the greenlet.py
+needs some work, i believe hub.py has some legacy import issues. which
+is compounded by the way it is dynamically importing.  I may try to mess
+with it in the future, but for the time being it seems fairly time 
+consuming for possibly little gain.
+
+      
