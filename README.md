@@ -58,7 +58,9 @@ Direct links for Windows(x86) Dependencies
 * greenlet -  https://pypi.python.org/packages/2.7/g/greenlet/greenlet-0.4.2.win32-py2.7.exe#md5=0ea8f5a14f8554919e1a136bc042d76c
 * Pygame(optional) - http://pygame.org/ftp/pygame-1.9.1.win32-py2.7.msi
 
-Note: Python 3.4.2 is not supported as gevent has not been updated.
+Note: Python 3.4.2 is not supported as gevent has not been updated to support it.<br>
+       please see the FAQ [here](https://github.com/CymatiCorp/CyKit/blob/master/FAQ.md#Python) for more information.
+       
 
 Installation Instructions (Using Windows binaries)
 --------------------------------------------------
