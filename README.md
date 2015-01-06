@@ -58,8 +58,10 @@ Direct links for Windows(x86) Dependencies
 * greenlet -  https://pypi.python.org/packages/2.7/g/greenlet/greenlet-0.4.2.win32-py2.7.exe#md5=0ea8f5a14f8554919e1a136bc042d76c
 * Pygame(optional) - http://pygame.org/ftp/pygame-1.9.1.win32-py2.7.msi
 
-Installation Instructions
--------------------------
+Note: Python 3.4.2 is not supported as gevent has not been updated.
+
+Installation Instructions (Using Windows binaries)
+--------------------------------------------------
 * Install Python 2.7.6 https://www.python.org/ftp/python/2.7.6/python-2.7.6.msi
 
 
@@ -113,8 +115,9 @@ Extract pywinusb to any folder,  and copy the folder
  
  Install pycrypto 2.6
  
- Download PIP from its website:  https://bootstrap.pypa.io/get-pip.py
- 
+ Download PIP from its website:  https://bootstrap.pypa.io/get-pip.py <br>
+  (Place get-pip.py in your Python folder.)
+
 Run:
 
                          python.exe get-pip.py
@@ -128,7 +131,8 @@ PIP downloads the latest versions of these projects.
                        greenlet 0.4.5
                        gevent 1.0.1
 
-Note: Python 3 requires some cosmetic updates to work properly. 
+
+
 
 Byte Codes
 ----------
