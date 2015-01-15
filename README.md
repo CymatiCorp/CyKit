@@ -1,10 +1,20 @@
 
 <img src="http://blueskynet.org/edu/cykit4.png" width=25% height=25% ><br>
-CyKit 1.0 for Python 2.7.6 (Windows x86) using Emotiv EPOC headset.<br>
-Wiki
+CyKit 1.0 for Python 2.7.6 (Windows x86) using Emotiv EPOC headset.<br><br><br>
+FAQ<br>
+https://github.com/CymatiCorp/CyKit/blob/master/FAQ.md <br>
+
+Wiki (Updated 2015)<br>
 https://github.com/CymatiCorp/CyKit/wiki/EEG-CyKit-1.0-updates <br>
-FAQ
-https://github.com/CymatiCorp/CyKit/blob/master/FAQ.md
+         
+<img src='http://blueskynet.org/edu/render11.png' width=7% height=1%></img>
+<img src='http://blueskynet.org/edu/dash/particle.png' width=10% height=10%></img>
+<img src='http://blueskynet.org/edu/dash/particle2.png' width=10% height=10%></img>
+<img src='http://blueskynet.org/edu/dash/particle3.png' width=10% height=10%></img>
+<img src='http://blueskynet.org/edu/dash/particle32.png' width=10% height=10%></img>
+
+
+
 
 Questions about the project?<br>
 Contact me at warrenarea@gmail.com
