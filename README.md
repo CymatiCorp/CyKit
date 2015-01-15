@@ -1,6 +1,6 @@
 
 <img src="http://blueskynet.org/edu/cykit4.png" width=25% height=25% ><br>
-CyKit 1.0 for Python 2.7.6 (Windows x86) using Emotiv EPOC headset.<br>
+CyKit 1.0 for Python 2.7.6 (Windows x86) using Emotiv EPOC headset.<br><br>
 FAQ<br>
 https://github.com/CymatiCorp/CyKit/blob/master/FAQ.md <br>
 
