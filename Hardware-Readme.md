@@ -1,3 +1,12 @@
+Emotiv Epoc EEG Headset<br><br>
+<img src= http://blueskynet.org/edu/emotiv.jpg width=25% height=25% />
+
+International Standard for EEG Sensor Layout <br><br>
+<img src = http://blueskynet.org/edu/emotivContacts.png width=25% height=25% />
+
+Hardware Update January 2015
+============================
+
 Reassembled my latest epoc headset.  The plastic was breaking down with minimal use<br>
    so I redesigned it.  I cut out a piece of cardboard about the size of my palm and<br>
    poked holes in the desired contact points. Then glued a layer of aluminum foil over<br>
@@ -18,6 +27,9 @@ Reassembled my latest epoc headset.  The plastic was breaking down with minimal 
    note, if you do decide to take your unit apart, heres some advice that will help you<br>
    out in the long run. 
 
+Modifying your Headset
+======================
+
    1. Take pictures of wiring asap.
    2. carefully saw the plastic, do not pry.
    3. as soon as you get to a bundle of wiring.<br>
@@ -37,12 +49,6 @@ with us. lets just say it didnt make it past step 5.
 
 The Hardware
 ============
-
-Emotiv Epoc EEG Headset<br><br>
-<img src= http://blueskynet.org/edu/emotiv.jpg width=25% height=25% />
-
-International Standard for EEG Sensor Layout <br><br>
-<img src = http://blueskynet.org/edu/emotivContacts.png width=25% height=25% />
 
 Sensor Chip for headset (Front)<br><br>
 <img src = http://blueskynet.org/edu/IMG_0004.JPG width=25% height=25% />
@@ -67,11 +73,10 @@ Epoc Headset Frame<br><br>
 <img src = http://blueskynet.org/edu/headset.JPG width=25% height=25% />
 <br><br>
 
-Modified Epoc Headset Frame<br><br>
+Retired Modified Epoc Headset Frame<br><br>
+===================================
 <img src = http://blueskynet.org/edu/headset2.JPG width=25% height=25% />
 <br><br>
-
-Modified Headset (Out of Order)<br><br>
 <img src = http://blueskynet.org/edu/i2.JPG width=25% height=25% />
 <br><br>
 
