@@ -167,6 +167,8 @@ Type RunStream.bat
 
 mIRC Support
 =============
+<img src='http://blueskynet.org/edu/emotKit1.png' width=40% height=40%></img>
+
 
 Added a mIRC script that will connect to the TCP server and display
 in a simple graph the activity of the sensors. 
