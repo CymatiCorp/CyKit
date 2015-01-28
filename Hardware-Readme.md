@@ -1,9 +1,6 @@
 Emotiv Epoc EEG Headset<br><br>
 <img src= http://blueskynet.org/edu/emotiv.jpg width=25% height=25% />
 
-International Standard for EEG Sensor Layout <br><br>
-<img src = http://blueskynet.org/edu/emotivContacts.png width=25% height=25% />
-
 Hardware Update January 2015
 ============================
 
