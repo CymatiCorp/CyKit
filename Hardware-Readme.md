@@ -1,4 +1,3 @@
-Emotiv Epoc EEG Headset<br><br>
 <img src= http://blueskynet.org/edu/emotiv.jpg width=25% height=25% />
 
 Hardware Update January 2015
