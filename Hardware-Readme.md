@@ -20,11 +20,11 @@ Reassembled my latest epoc headset.  The plastic was breaking down with minimal 
    was green across the board. Still have some quandary's of what impact the<br>
    locations of the reference sensors are playing, and whether the proximity is<br>
    an issue.<br><br>
-   note, if you do decide to take your unit apart, heres some advice that will help you<br>
-   out in the long run. 
-
+   
 Modifying your Headset
 ======================
+if you do decide to modify your unitt, please follow these instructions.<br>
+it will save you a lot of grief.
 
    1. Take pictures of wiring asap.
    2. carefully saw the plastic, do not pry.
@@ -32,13 +32,17 @@ Modifying your Headset
       tape them together in a bundle.<br>
    4. as soon as you get to the control boards. refer to step 1. <br>
       and hot glue the contact points of "all" the wires in their place.<br>
-      these wires are very brittle and the reason for step 2.   <br>
+      these wires are very brittle and is the reason for step 2.   <br>
    5. cut the battery wires one at a time, tape the ends off of the battery<br>
       and put away from your work area. <br>
    6. according to emotiv forums it is counter-intuitive to put sensors<br>
       too close in a cluster as its picking up groups of neurons firing at once.<br>
    7. elastic headband approach works well. plus can give you alternate sites<br>
       for testing.<br>
+   8. the black wires are reference point wires and are crucial to the device <br>
+      working properly.  you only need only 2 sensor nodes. (though there are 4 contact slots) <br>
+      you can always wire the 2 extra contact wires to the 2 reference points you are using.<br>
+
    
 The pictures below are images from my "old" epoc headset that is no longer
 with us. lets just say it didnt make it past step 5.
@@ -69,8 +73,10 @@ Epoc Headset Frame<br><br>
 <img src = http://blueskynet.org/edu/headset.JPG width=25% height=25% />
 <br><br>
 
-Retired Modified Epoc Headset Frame<br><br>
+Modified Epoc Headset Frame
 ===================================
+(Retired)<br><br>
+
 <img src = http://blueskynet.org/edu/headset2.JPG width=25% height=25% />
 <br><br>
 <img src = http://blueskynet.org/edu/i2.JPG width=25% height=25% />
