@@ -7,13 +7,16 @@ https://github.com/CymatiCorp/CyKit/blob/master/FAQ.md <br>
 Wiki (Updated 2015)<br>
 https://github.com/CymatiCorp/CyKit/wiki/EEG-CyKit-1.0-updates <br>
 
-<img src='http://blueskynet.org/edu/render11.png' width=7% height=1%></img>
 <img src='http://blueskynet.org/edu/dash/particle.png' width=10% height=10%></img>
 <img src='http://blueskynet.org/edu/dash/particle2.png' width=10% height=10%></img>
 <img src='http://blueskynet.org/edu/dash/particle3.png' width=10% height=10%></img>
 <img src='http://blueskynet.org/edu/dash/particle32.png' width=10% height=10%></img>
+<br><br>
 
+OpenVIBE Setup<br>
+https://github.com/CymatiCorp/CyKit/blob/master/Openvibe-Readme.md
 
+<img src='http://blueskynet.org/edu/openvibe/acquire8.png' width=37% height=31%></img>
 
 
 Questions about the project?<br>
@@ -24,8 +27,8 @@ Description
 CyKit 1.0 is specifically for Python development in Windows to<br>
 give access to the raw data stream from the Emotiv EPOC headset.  <br>
 CyKit 1.0 is an unofficial branch to the OpenYou emoKit, check it out here<br>
- https://github.com/openyou/emokit 
-
+ https://github.com/openyou/emokit <br><br>
+<img src='http://blueskynet.org/edu/render11.png' width=27% height=21%></img>
 
 
 CyKit Dependencies
