@@ -47,6 +47,33 @@ it will save you a lot of grief.
 The pictures below are images from my "old" epoc headset that is no longer
 with us. lets just say it didnt make it past step 5.
 
+Wiring Layout
+=============
+
+Top Circuit Board of Sensor Circuit.
+
+* Black (Ground)
+* Red (Battery)
+* Blue
+* Green
+* Brown
+* Yellow (Gyro)
+* Gray (Gyro)
+
+Bottom Circuit Board of Sensor Circuit.
+(Same color coding for both sides)
+
+* Brown
+* Green
+* Red
+* Black (2 wires)
+* Gray
+* Orange
+* Blue
+* Yellow
+
+
+
 The Hardware
 ============
 
