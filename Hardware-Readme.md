@@ -50,7 +50,7 @@ with us. lets just say it didnt make it past step 5.
 Wiring Layout
 =============
 
-Top Circuit Board of Sensor Circuit.
+Top Circuit Board of Sensor Circuit, to Power Driver Circuit.
 
 * Black (Ground)
 * Red (Battery)
@@ -60,7 +60,7 @@ Top Circuit Board of Sensor Circuit.
 * Yellow (Gyro)
 * Gray (Gyro)
 
-Bottom Circuit Board of Sensor Circuit.
+Bottom Circuit Board of Sensor Circuit, To Sensor Contacts.<br>
 (Same color coding for both sides)
 
 * Brown
@@ -72,10 +72,10 @@ Bottom Circuit Board of Sensor Circuit.
 * Blue
 * Yellow
 
-Driver (Power) Circuit
+Driver (Power) Circuit, to Top Sensor Circuit.
 
-* Gray 
-* Yellow
+* Gray (Gyro)
+* Yellow (Gyro)
 * Brown
 * Green
 * Blue
