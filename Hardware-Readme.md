@@ -72,7 +72,10 @@ Bottom Circuit Board of Sensor Circuit.
 * Blue
 * Yellow
 
-
+Note: The solder point for the black wire has two wires attached to it,
+ as this is the 2 reference points that can be alternated.
+ The pictures are missing a couple of wires, so this should show you the
+ exact color code ordering.
 
 The Hardware
 ============
