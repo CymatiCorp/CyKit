@@ -60,13 +60,13 @@ Top Sensor Circuit, to Power Driver Circuit.
 * Yellow (Gyro)
 * Gray (Gyro)
 
-Bottom Circuit Board of Sensor Circuit, To Sensor Contacts.<br>
+Bottom board of Sensor Circuit, To Sensor Contacts.<br>
 (Same color coding for both sides)
 
 * Brown
 * Green
 * Red
-* Black (2 wires)
+* Black (2 wires) - Reference contacts to measure impedance.
 * Gray
 * Orange
 * Blue
@@ -83,7 +83,9 @@ Driver (Power) Circuit, to Top Sensor Circuit.
 * Black (Ground)
 
 Note: The solder point for the black wire has two wires attached to it,
- as this is the 2 reference contacts that can be alternated.
+ as this is the 2 reference contacts that can be alternated. Reference
+ points do not measure EEG data, but rather the impedance of the surface
+ area its measuring. This is involved in measuring signal quality.<br><br>
  The images are missing a couple of wires, so this should show you the
  exact color code ordering.
 
