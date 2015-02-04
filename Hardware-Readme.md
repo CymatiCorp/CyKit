@@ -73,8 +73,8 @@ Bottom Circuit Board of Sensor Circuit.
 * Yellow
 
 Note: The solder point for the black wire has two wires attached to it,
- as this is the 2 reference points that can be alternated.
- The pictures are missing a couple of wires, so this should show you the
+ as this is the 2 reference contacts that can be alternated.
+ The images are missing a couple of wires, so this should show you the
  exact color code ordering.
 
 The Hardware
