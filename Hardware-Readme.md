@@ -50,7 +50,7 @@ with us. lets just say it didnt make it past step 5.
 Wiring Layout
 =============
 
-Top Circuit Board of Sensor Circuit, to Power Driver Circuit.
+Top Sensor Circuit, to Power Driver Circuit.
 
 * Black (Ground)
 * Red (Battery)
