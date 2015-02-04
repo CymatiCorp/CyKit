@@ -72,6 +72,16 @@ Bottom Circuit Board of Sensor Circuit.
 * Blue
 * Yellow
 
+Driver (Power) Circuit
+
+* Gray 
+* Yellow
+* Brown
+* Green
+* Blue
+* Red  (Battery)
+* Black (Ground)
+
 Note: The solder point for the black wire has two wires attached to it,
  as this is the 2 reference contacts that can be alternated.
  The images are missing a couple of wires, so this should show you the
