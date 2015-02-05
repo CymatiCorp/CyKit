@@ -18,6 +18,8 @@ https://github.com/CymatiCorp/CyKit/blob/master/Openvibe-Readme.md
 
 <img src='http://blueskynet.org/edu/openvibe/acquire8.png' width=37% height=31%></img>
 
+Hardware<br>
+https://github.com/CymatiCorp/CyKit/blob/master/Hardware-Readme.md
 
 Questions about the project?<br>
 Contact me at warrenarea@gmail.com
