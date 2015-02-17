@@ -12,7 +12,7 @@ OpenViBE 0.14.0
 
 Forum Link<br>
 
-    https://social.msdn.microsoft.com/Forums/en-US/3a77fb5c-4ef3-4fab-ba0a-91e0fe128f62/visual-c-studio-2008-express?forum=visualstudiogeneral
+https://social.msdn.microsoft.com/Forums/en-US/3a77fb5c-4ef3-4fab-ba0a-91e0fe128f62/visual-c-studio-2008-express?forum=visualstudiogeneral
 
 
 * Download Numpy 1.9.1 <br>
