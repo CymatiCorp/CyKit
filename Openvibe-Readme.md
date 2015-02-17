@@ -1,42 +1,59 @@
 OpenViBE 0.14.0 
 ===============
 
+
+
 (In Progress, Not a current working solution.)
 
-Install Microsoft Windows Visual C++ 9.0 (from iso)<br>
-http://download.microsoft.com/download/E/8/E/E8EEB394-7F42-4963-A2D8-29559B738298/VS2008ExpressWithSP1ENUX1504728.iso
+* Install Microsoft Windows Visual C++ 9.0 (from iso)<br>
+
+    http://download.microsoft.com/download/E/8/E/E8EEB394-7F42-4963-A2D8-29559B738298/VS2008ExpressWithSP1ENUX1504728.iso
+
 
 Forum Link<br>
-https://social.msdn.microsoft.com/Forums/en-US/3a77fb5c-4ef3-4fab-ba0a-91e0fe128f62/visual-c-studio-2008-express?forum=visualstudiogeneral
 
-Download Numpy 1.9.1 <br>
+    https://social.msdn.microsoft.com/Forums/en-US/3a77fb5c-4ef3-4fab-ba0a-91e0fe128f62/visual-c-studio-2008-express?forum=visualstudiogeneral
+
+
+* Download Numpy 1.9.1 <br>
 http://sourceforge.net/projects/numpy/files/latest/download?source=typ_redirect
+
 
 Open Command Prompt.
 
-Navigate to :<br>
+* Navigate to :<br> 
+```
        C:\Program Files\Microsoft Visual Studio 9.0\Common7\Tools\
-
-Run :<br>
+```
+* Run :<br> 
+```
        vsvars32.bat
+```
 
 This sets the environment path for the Visual Studio compiler(s) and libraries.
 
-Next. Run :<br>
+*  Next. Run :<br>
+```
        path > myNewPath.bat
-
-Edit your myNewPath.bat and add this :<br>
+```
+* Edit your myNewPath.bat and add this :<br>
+```
        C:\Python27\;C:\Python27\lib\;
+```
 
-Navigate to your Numpy1.9.1 folder and Run :<br>
+* Navigate to your Numpy1.9.1 folder and Run :<br>
+```
        python.exe setup.py build
+```
 
 This will set up and configure numpy with your python installation.
 
-To utilize numpy simply use:<br>
+* To utilize numpy simply use:<br>
+```
        import numpy
+```
 
-Consult the numpy reference for additional usage<br>
+Consult the numpy reference for additional usage.<br>
 http://docs.scipy.org/doc/numpy/reference/index.html
 
 
