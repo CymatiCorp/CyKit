@@ -36,9 +36,21 @@ This sets the environment path for the Visual Studio compiler(s) and libraries.
 ```
        path > myNewPath.bat
 ```
-* Edit your myNewPath.bat and add this :<br>
+* Type Path in Command Prompt and Make sure you have paths to your python folders.
+  (If you do not, then edit your myNewPath.bat and add this) :<br>
 ```
        C:\Python27\;C:\Python27\lib\;
+```
+Your paths should look something similar :
+```
+C:\Programming\numpy-1.9.1>path
+PATH=C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE;C:\Program Files\M
+icrosoft Visual Studio 9.0\VC\BIN;C:\Program Files\Microsoft Visual Studio 9.0\C
+ommon7\Tools;C:\Windows\Microsoft.NET\Framework\v3.5;C:\Windows\Microsoft.NET\Fr
+amework\v2.0.50727;C:\Program Files\Microsoft Visual Studio 9.0\VC\VCPackages;C:
+\Program Files\Microsoft SDKs\Windows\v6.0A\bin;C:\Windows\system32;C:\Windows;C
+:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\python27\
+;C:\python27\lib;
 ```
 
 * Navigate to your Numpy1.9.1 folder and Run :<br>
