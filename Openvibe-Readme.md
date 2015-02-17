@@ -60,7 +60,9 @@ amework\v2.0.50727;C:\Program Files\Microsoft Visual Studio 9.0\VC\VCPackages;C:
 
 This will set up and configure numpy with your python installation.
 
-* To utilize numpy simply use:<br>
+* Make sure you have paths to C:\Python27\;C:\Python27\lib; <br>
+  before importing numpy in python.exe <br>
+  Next, To utilize numpy simply use:<br>
 ```
        import numpy
 ```
