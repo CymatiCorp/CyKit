@@ -14,9 +14,9 @@ Reassembled my latest epoc headset.  The plastic was breaking down with minimal 
    next i attached an elastic headband to the sides of the unit, so when I place it on<br>
    my head, it is quite snug and there is less worry about the slightest movement<br>
    skewing any results. The device appears to work, however I think the contacts are<br>
-   a bit too close together for my liking.  I will post pictures soon.<br><br>
-   over all, i'm happy with my design, except I would have spread out the contacts<br>
-   more next time. I tested the signal quality in epoc control panel today and it<br>
+   a bit too close together for my liking. <br><br>
+   over all, i'm happy with my design, except I'd prefer to have spread out the contact.s<br>
+   I tested the signal quality in epoc control panel today and it<br>
    was green across the board. Still have some quandary's of what impact the<br>
    locations of the reference sensors are playing, and whether the proximity is<br>
    an issue.<br><br>
@@ -115,7 +115,7 @@ Epoc Headset Frame<br><br>
 <img src = http://blueskynet.org/edu/headset.JPG width=25% height=25% />
 <br><br>
 
-Modified Epoc Headset Frame
+Modified Epoc Headset Frame (1st)
 ===================================
 (Retired)<br><br>
 
@@ -124,3 +124,13 @@ Modified Epoc Headset Frame
 <img src = http://blueskynet.org/edu/i2.JPG width=25% height=25% />
 <br><br>
 
+Modified Epoc Headset Frame (2nd)
+===================================
+(Active)<br><br>
+
+<img src = http://blueskynet.org/edu/cy1.png width=25% height=25% />
+<br><br>
+<img src = http://blueskynet.org/edu/cy2.png width=25% height=25% />
+<br><br>
+<img src = http://blueskynet.org/edu/cy3.png width=25% height=25% />
+<br><br>
