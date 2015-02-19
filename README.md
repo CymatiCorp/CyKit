@@ -23,6 +23,12 @@ https://github.com/CymatiCorp/CyKit/blob/master/Hardware-Readme.md <br>
 <img src = http://blueskynet.org/edu/IMG_0004.JPG width=10% height=10% />
 <img src = http://blueskynet.org/edu/IMG_0015.JPG width=10% height=10% />
 
+Modified Hardware<br>
+<img src = http://blueskynet.org/edu/cy1.png width=10% height=10% />
+<img src = http://blueskynet.org/edu/cy2.png width=10% height=10% />
+<img src = http://blueskynet.org/edu/cy3.png width=10% height=10% />
+
+
 Questions about the project?<br>
 Contact me at warrenarea@gmail.com
 
