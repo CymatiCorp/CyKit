@@ -62,7 +62,7 @@ Figure F.
 
 1. Return to the "OpenVIBE acquisition server" and press "Play"
 
-<img src='http://blueskynet.org/edu/openvibe/acquire7.png' width=40% height=40%></img>
+<img src='http://blueskynet.org/edu/openvibe/acquire6.png' width=40% height=40%></img>
 
 
 1. A window will appear with your EEG stream.
