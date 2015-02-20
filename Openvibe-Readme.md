@@ -1,6 +1,11 @@
 OpenViBE 0.14.0 
 ===============
 
+Until I can sort out the issues with my CyKit's TCP server, <br>
+I will refer you to a solution utilized by the hemokit project. <br>
+(ie. emokit written in haskell).<br>
+https://github.com/nh2/hemokit <br><br>
+
 Download the latest version of hemokit-dump.exe 
 https://github.com/nh2/hemokit/releases
 
