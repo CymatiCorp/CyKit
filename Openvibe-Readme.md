@@ -27,7 +27,7 @@ Start the hemokit-dump with the following parameters.
      * `Number of channels`: `14`
      * `Sampling frequency`: `128`
      * `Telnet host name`: `localhost`
-     * `Telnet host port`: `21555` (what you've set in `hemokit-dump`)
+     * `Telnet host port`: `21555`
      * `Endianness`: `Big endian`
      * `Sample type`: `16 bits unsigned integer`
      * `Skip at start (bytes)`: `0`
@@ -39,7 +39,7 @@ Start the hemokit-dump with the following parameters.
 
 1. Run the following :
 ``` 
-hemokit-dump.exe --format sensorbytes --serve 127.0.0.1 4444
+hemokit-dump.exe --format sensorbytes --serve 127.0.0.1:21555
 ```
 2. Click "Connect" on the OpenVIBE Acquisition server.
 
