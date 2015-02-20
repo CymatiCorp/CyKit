@@ -36,8 +36,6 @@ Start the hemokit-dump with the following parameters.
      
    * Click `Connect`
    * Click `Play` (it should display `Sending...`)
-<img src='http://blueskynet.org/edu/openvibe/acqure1.png' width=100% height=100%></img>
-Figure A.
 
 1. Run the following :
 ``` 
@@ -45,9 +43,6 @@ hemokit-dump.exe --format sensorbytes --serve 127.0.0.1 4444
 ```
 2. Click "Connect" on the OpenVIBE Acquisition server.
 
-
-<img src='http://blueskynet.org/edu/openvibe/acquire4.png' width=100% height=100%></img>
-Figure D.
 
 1. Verify the Log will say "Connection succeeded!"
 2. Verify Data is being read from the Python stream.py server.
