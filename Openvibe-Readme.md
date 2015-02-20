@@ -1,7 +1,7 @@
 OpenViBE 0.14.0 
 ===============
 
-Install the latest version of hemokit-dump.exe 
+Download the latest version of hemokit-dump.exe 
 https://github.com/nh2/hemokit/releases
 
 Install OpenViBE
@@ -13,9 +13,11 @@ Start OpenViBE Designer.
 Open C:\Program files\OpenViBE\share\openvibe\applications\acquisition-server\interface.ui
 
 Navigate to line 53 and edit the '4' digit, to a '1'
- like so:
+ like so: <br><br>
+        ```
         <col id="0" translatable="yes">1</col>
-
+        ```
+<br><br>
 
 Start the hemokit-dump with the following parameters.
 
@@ -36,16 +38,6 @@ Start the hemokit-dump with the following parameters.
    * Click `Play` (it should display `Sending...`)
 <img src='http://blueskynet.org/edu/openvibe/acqure1.png' width=100% height=100%></img>
 Figure A.
-
-1. Select the "Generic Raw Telnet Reader" driver.
-2. Set the 'Connection port' to the port you want OpenVibe to use. (ie 4444)
-3. Set Sample block to 4 (mine only sends 1 sample and the picture says 16 samples)
-4. Click "Driver Properties"
-5. Number of Channels = 14
-6. Sampling frequency = 128
-7. Telnet hostname = localhost
-8. Sample type = 16 bits unsigned integer
-9. Apply.
 
 1. Run the following :
 ``` 
