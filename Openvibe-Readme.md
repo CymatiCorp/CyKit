@@ -19,7 +19,7 @@ Navigate to line 53 and edit the '4' digit, to a '1'
         ```
 <br><br>
 
-Start the hemokit-dump with the following parameters.
+Start the acquisition server with the following parameters.
 
    * As `Driver` choose `Generic Raw Telnet Reader`.
    * Set the `Connection port` as `4444` and `Sample count per sent block` as `1`.
@@ -41,11 +41,8 @@ Start the hemokit-dump with the following parameters.
 ``` 
 hemokit-dump.exe --format sensorbytes --serve 127.0.0.1:21555
 ```
-2. Click "Connect" on the OpenVIBE Acquisition server.
-
-
-1. Verify the Log will say "Connection succeeded!"
-2. Verify Data is being read from the Python stream.py server.
+1. Click "Connect" on the OpenVIBE Acquisition server.
+2. Verify the Log will say "Connection succeeded!"
 
 <img src='http://blueskynet.org/edu/openvibe/acquire5.png' width=100% height=100%></img>
 Figure E.
@@ -65,14 +62,8 @@ Figure F.
 
 1. Return to the "OpenVIBE acquisition server" and press "Play"
 
-<img src='http://blueskynet.org/edu/openvibe/acquire6.png' width=100% height=100%></img>
-Figure G.
-
-1. Return to the "OpenVIBE Designer" and press "Play"
-
 <img src='http://blueskynet.org/edu/openvibe/acquire7.png' width=40% height=40%></img>
 
-Figure H.
 
 1. A window will appear with your EEG stream.
 2. Press Stop when completed or making signal changes.
