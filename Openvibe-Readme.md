@@ -38,7 +38,10 @@ Start the acquisition server with the following parameters.
      * `Skip at start (bytes)`: `0`
      * `Skip at header (bytes)`: `0`
      * `Skip at footer (bytes)`: `0`
-     
+     * `Under Change channel names, make sure the channels 1 to 14 map to, in this order:`
+
+    `F3, FC5, AF3, F7, T7, P7, O1, O2, P8, T8, F8, AF4, FC6, F4`
+
    * Click `Connect`
    * Click `Play` (it should display `Sending...`)
 
