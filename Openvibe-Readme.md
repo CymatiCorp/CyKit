@@ -1,76 +1,39 @@
 OpenViBE 0.14.0 
 ===============
 
+Install the latest version of hemokit-dump.exe 
+https://github.com/nh2/hemokit/releases
+
+Install OpenViBE
+http://openvibe.inria.fr/downloads/
+
+Start Acquisition Server.
+Start OpenViBE Designer.
+
+Open C:\Program files\OpenViBE\share\openvibe\applications\acquisition-server\interface.ui
+
+Navigate to line 53 and edit the '4' digit, to a '1'
+ like so:
+        <col id="0" translatable="yes">1</col>
 
 
-(In Progress, Not a current working solution.)
+Start the hemokit-dump with the following parameters.
 
-* Install Microsoft Windows Visual C++ 9.0 (from iso)<br>
-
-    http://download.microsoft.com/download/E/8/E/E8EEB394-7F42-4963-A2D8-29559B738298/VS2008ExpressWithSP1ENUX1504728.iso
-
-
-Forum Link<br>
-
-https://social.msdn.microsoft.com/Forums/en-US/3a77fb5c-4ef3-4fab-ba0a-91e0fe128f62/visual-c-studio-2008-express?forum=visualstudiogeneral
-
-
-* Download Numpy 1.9.1 <br>
-http://sourceforge.net/projects/numpy/files/latest/download?source=typ_redirect
-
-
-Open Command Prompt.
-
-* Navigate to :<br> 
-```
-       C:\Program Files\Microsoft Visual Studio 9.0\Common7\Tools\
-```
-* Run :<br> 
-```
-       vsvars32.bat
-```
-
-This sets the environment path for the Visual Studio compiler(s) and libraries.
-
-*  Next. Run :<br>
-```
-       path > myNewPath.bat
-```
-* Type Path in Command Prompt and Make sure you have paths to your python folders.
-  (If you do not, then edit your myNewPath.bat and add this) :<br>
-```
-       C:\Python27\;C:\Python27\lib\;
-```
-Your paths should look something similar :
-```
-C:\Programming\numpy-1.9.1>path
-PATH=C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE;C:\Program Files\M
-icrosoft Visual Studio 9.0\VC\BIN;C:\Program Files\Microsoft Visual Studio 9.0\C
-ommon7\Tools;C:\Windows\Microsoft.NET\Framework\v3.5;C:\Windows\Microsoft.NET\Fr
-amework\v2.0.50727;C:\Program Files\Microsoft Visual Studio 9.0\VC\VCPackages;C:
-\Program Files\Microsoft SDKs\Windows\v6.0A\bin;C:\Windows\system32;C:\Windows;C
-:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\python27\
-;C:\python27\lib;
-```
-
-* Navigate to your Numpy1.9.1 folder and Run :<br>
-```
-       python.exe setup.py build
-```
-
-This will set up and configure numpy with your python installation.
-
-* Make sure you have paths to C:\Python27\;C:\Python27\lib; <br>
-  before importing numpy in python.exe <br>
-  Next, To utilize numpy simply use:<br>
-```
-       import numpy
-```
-
-Consult the numpy reference for additional usage.<br>
-http://docs.scipy.org/doc/numpy/reference/index.html
-
-
+   * As `Driver` choose `Generic Raw Telnet Reader`.
+   * Set the `Connection port` as `4444` and `Sample count per sent block` as `1`.
+   * In `Driver Properties`, set
+     * `Number of channels`: `14`
+     * `Sampling frequency`: `128`
+     * `Telnet host name`: `localhost`
+     * `Telnet host port`: `21555` (what you've set in `hemokit-dump`)
+     * `Endianness`: `Big endian`
+     * `Sample type`: `16 bits unsigned integer`
+     * `Skip at start (bytes)`: `0`
+     * `Skip at header (bytes)`: `0`
+     * `Skip at footer (bytes)`: `0`
+     
+   * Click `Connect`
+   * Click `Play` (it should display `Sending...`)
 <img src='http://blueskynet.org/edu/openvibe/acqure1.png' width=100% height=100%></img>
 Figure A.
 
@@ -84,17 +47,10 @@ Figure A.
 8. Sample type = 16 bits unsigned integer
 9. Apply.
 
-<img src='http://blueskynet.org/edu/openvibe/acquire2.png' width=100% height=100%></img>
-Figure B.
-
-1. Navigate to your CyKit\RunStream.bat file and set your own custom port. (IE 21555)
-2. Verify and Save.
-
-<img src='http://blueskynet.org/edu/openvibe/acquire3.png' width=100% height=100%></img>
-Figure C.
-
-1. RunRender.bat<br>
-   it should now say its connecting (or listening in this case.)
+1. Run the following :
+``` 
+hemokit-dump.exe --format sensorbytes --serve 127.0.0.1 4444
+```
 2. Click "Connect" on the OpenVIBE Acquisition server.
 
 
