@@ -2,7 +2,6 @@ import socket
 import gevent
 import sys
 import numpy as np
-import struct
 
 sys.path.insert(1, './Python/CyKit/')
 import emotiv
