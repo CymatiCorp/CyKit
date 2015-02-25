@@ -1,12 +1,7 @@
 OpenViBE 0.14.0 
 ===============
 
-Until I can sort out the issues with my CyKit's TCP server, <br>
-I will refer you to a solution utilized by the hemokit project. <br>
-(ie. emokit written in haskell).<br>
-https://github.com/nh2/hemokit <br><br>
-
-Download the latest version of hemokit-dump.exe 
+Install the latest version of hemokit-dump.exe 
 https://github.com/nh2/hemokit/releases
 
 Install OpenViBE
@@ -18,13 +13,11 @@ Start OpenViBE Designer.
 Open C:\Program files\OpenViBE\share\openvibe\applications\acquisition-server\interface.ui
 
 Navigate to line 53 and edit the '4' digit, to a '1'
- like so: <br><br>
-        ```
+ like so:
         <col id="0" translatable="yes">1</col>
-        ```
-<br><br>
 
-Start the acquisition server with the following parameters.
+
+Start the hemokit-dump with the following parameters.
 
    * As `Driver` choose `Generic Raw Telnet Reader`.
    * Set the `Connection port` as `4444` and `Sample count per sent block` as `1`.
@@ -32,25 +25,40 @@ Start the acquisition server with the following parameters.
      * `Number of channels`: `14`
      * `Sampling frequency`: `128`
      * `Telnet host name`: `localhost`
-     * `Telnet host port`: `21555`
+     * `Telnet host port`: `21555` (what you've set in `hemokit-dump`)
      * `Endianness`: `Big endian`
      * `Sample type`: `16 bits unsigned integer`
      * `Skip at start (bytes)`: `0`
      * `Skip at header (bytes)`: `0`
      * `Skip at footer (bytes)`: `0`
-     * `Under Change channel names, make sure the channels 1 to 14 map to, in this order:`
-
-    `F3, FC5, AF3, F7, T7, P7, O1, O2, P8, T8, F8, AF4, FC6, F4`
-
+     
    * Click `Connect`
    * Click `Play` (it should display `Sending...`)
+<img src='http://blueskynet.org/edu/openvibe/acqure1.png' width=100% height=100%></img>
+Figure A.
+
+1. Select the "Generic Raw Telnet Reader" driver.
+2. Set the 'Connection port' to the port you want OpenVibe to use. (ie 4444)
+3. Set Sample block to 4 (mine only sends 1 sample and the picture says 16 samples)
+4. Click "Driver Properties"
+5. Number of Channels = 14
+6. Sampling frequency = 128
+7. Telnet hostname = localhost
+8. Sample type = 16 bits unsigned integer
+9. Apply.
 
 1. Run the following :
 ``` 
-hemokit-dump.exe --format sensorbytes --serve 127.0.0.1:21555
+hemokit-dump.exe --format sensorbytes --serve 127.0.0.1 4444
 ```
-1. Click "Connect" on the OpenVIBE Acquisition server.
-2. Verify the Log will say "Connection succeeded!"
+2. Click "Connect" on the OpenVIBE Acquisition server.
+
+
+<img src='http://blueskynet.org/edu/openvibe/acquire4.png' width=100% height=100%></img>
+Figure D.
+
+1. Verify the Log will say "Connection succeeded!"
+2. Verify Data is being read from the Python cyos.py server.
 
 <img src='http://blueskynet.org/edu/openvibe/acquire5.png' width=100% height=100%></img>
 Figure E.
@@ -71,6 +79,9 @@ Figure F.
 1. Return to the "OpenVIBE acquisition server" and press "Play"
 
 <img src='http://blueskynet.org/edu/openvibe/acquire6.png' width=100% height=100%></img>
+Figure G.
+
+1. Return to the "OpenVIBE Designer" and press "Play"
 
 
 1. A window will appear with your EEG stream.
