@@ -1,8 +1,8 @@
 OpenViBE 0.14.0 
 ===============
 
-Install the latest version of hemokit-dump.exe 
-https://github.com/nh2/hemokit/releases
+Start Cyos.py
+ Python.exe Cyos.py 127.0.0.1 21555
 
 Install OpenViBE
 http://openvibe.inria.fr/downloads/
@@ -58,7 +58,7 @@ hemokit-dump.exe --format sensorbytes --serve 127.0.0.1 4444
 Figure D.
 
 1. Verify the Log will say "Connection succeeded!"
-2. Verify Data is being read from the Python cyos.py server.
+2. Verify Data is being read from the Python Cyos.py server.
 
 <img src='http://blueskynet.org/edu/openvibe/acquire5.png' width=100% height=100%></img>
 Figure E.
