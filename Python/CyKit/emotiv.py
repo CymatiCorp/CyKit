@@ -344,7 +344,7 @@ class EmotivPacket(object):
         return current_contact_quality
 
     def __repr__(self):
-        """
+        """z
         Returns custom string representation of the Emotiv Packet.
         """
         return 'EmotivPacket(counter=%i, battery=%i, gyro_x=%i, gyro_y=%i)' % (
@@ -388,6 +388,7 @@ class Emotiv(object):
             'Y': {'value': 0, 'quality': 0},
             'Unknown': {'value': 0, 'quality': 0}
         }
+        
         self.serial_number = serial_number  # You will need to set this manually for OS X.
         self.old_model = False
 
@@ -395,6 +396,7 @@ class Emotiv(object):
         """
         Runs setup function depending on platform.
         """
+        
         print system_platform + " detected."
         if system_platform == "Windows":
             self.setup_windows()
@@ -410,6 +412,11 @@ class Emotiv(object):
         devices = []
         try:
             for device in hid.find_all_hid_devices():
+                print "Product name " + device.product_name
+                print "device path " + device.device_path
+                print "instance id " + device.instance_id
+                print "\r\n"
+                
                 if device.vendor_id != 0x21A1 and device.vendor_id != 0xED02:
                     continue
                 if device.product_name == 'Brain Waves':
@@ -434,9 +441,11 @@ class Emotiv(object):
                     device.set_raw_data_handler(self.handler)
             crypto = gevent.spawn(self.setup_crypto, self.serial_number)
             console_updater = gevent.spawn(self.update_console)
+            raw_input("Press Enter to continue...")
             while self.running:
                 try:
                     gevent.sleep(0)
+                    
                 except KeyboardInterrupt:
                     self.running = False
         finally:
@@ -615,7 +624,7 @@ class Emotiv(object):
     def update_console(self):
         """
         Greenlet that outputs sensor, gyro and battery values once per second to the console.
-        """
+        """ 
         if self.display_output:
             while self.running:
                 if system_platform == "Windows":
@@ -628,7 +637,8 @@ class Emotiv(object):
                                  self.sensors[k[1]]['quality']) for k in enumerate(self.sensors)))
                 print "Battery: %i" % g_battery
                 gevent.sleep(.001)
-
+        
+         
 if __name__ == "__main__":
     a = Emotiv()
     try:
