@@ -2,6 +2,8 @@ import socket
 import gevent
 import sys
 import numpy as np
+import struct
+import binascii
 
 sys.path.insert(1, './Python/CyKit/')
 import emotiv
@@ -10,44 +12,28 @@ if len(sys.argv) < 3 or len(sys.argv) < 2:
    sys.argv = [sys.argv[0], "localhost", "55555"]
    print "Defaulting to localhost:55555"
 
- 
+
 def main():
 
     try:         
-         
-
          connectServer()
                   
     except Exception, e:
          print(e)
 
-    gevent.sleep(0.05)
+    gevent.sleep(0.1)
     try:
        while True: 
+            
              packet = headset.dequeue()
-             connbuffer = ""
              cbs = ""
-             x = np.array([ cval(packet.sensors['AF3']['value']),
-                                 cval(packet.sensors['F7']['value']),
-                                 cval(packet.sensors['F3']['value']),
-                                 cval(packet.sensors['FC5']['value']),
-                                 cval(packet.sensors['T7']['value']),
-                                 cval(packet.sensors['P7']['value']),
-                                 cval(packet.sensors['O1']['value']),
-                                 cval(packet.sensors['O2']['value']),
-                                 cval(packet.sensors['P8']['value']),
-                                 cval(packet.sensors['T8']['value']),
-                                 cval(packet.sensors['FC6']['value']),
-                                 cval(packet.sensors['F4']['value']),
-                                 cval(packet.sensors['F8']['value']),
-                                 cval(packet.sensors['AF4']['value']) ], dtype = ">u4")
-              
-             y = x.byteswap()
-             connbuffer = str(y.data)
-             cbs = connbuffer
-             cbs = connbuffer.replace('\x00', '')
-             cbs = '\x20\x20\x20\x20' + cbs
-             conn.sendall(cbs + '\r\n')
+             v = ""
+             for name in 'AF3 F7 F3 FC5 T7 P7 O1 O2 P8 T8 FC6 F4 F8 AF4'.split(' '):
+              v = abs(packet.sensors[name]['value'])
+              w = str(struct.pack('>I',v))
+              x = w[2:]
+              cbs += x
+             conn.sendall(cbs[:-1] + '\n')
              
     except Exception as msg:
              print 'Error: ' + str(msg)
