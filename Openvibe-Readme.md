@@ -1,28 +1,28 @@
 OpenViBE 0.14.0 
 ===============
 
-Updated February 25, 2015
-CyKit is now working please note that it sends Signed Integer data now.
-You will have to make the appropriate changes in the acquisition server.
-This is done to accomdate emotiv's potential of giving -8900 to 8900 integer data.
+Updated February 25, 2015<br>
+CyKit is now working please note that it sends Signed Integer data now.<br>
+You will have to make the appropriate changes in the acquisition server.<br>
+This is done to accomdate emotiv's potential of giving -8900 to 8900 integer data.<br>
 
-Start Cyos.py
+* Start Cyos.py
  Python.exe Cyos.py 127.0.0.1 21555
 
-Install OpenViBE
+* Install OpenViBE
 http://openvibe.inria.fr/downloads/
 
-Start Acquisition Server.
+* Start Acquisition Server.
 Start OpenViBE Designer.
 
-Open C:\Program files\OpenViBE\share\openvibe\applications\acquisition-server\interface.ui
+* Open C:\Program files\OpenViBE\share\openvibe\applications\acquisition-server\interface.ui
 
 Navigate to line 53 and edit the '4' digit, to a '1'
  like so:
         <col id="0" translatable="yes">1</col>
 
 
-Start the hemokit-dump with the following parameters.
+Edit Acquisition Server preferences with the following parameters.
 
    * As `Driver` choose `Generic Raw Telnet Reader`.
    * Set the `Connection port` as `4444` and `Sample count per sent block` as `1`. - Connects to OpenViBE port.
