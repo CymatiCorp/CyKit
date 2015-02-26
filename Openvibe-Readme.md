@@ -18,8 +18,8 @@ This is done to accomdate emotiv's potential of giving -8900 to 8900 integer dat
 * Open C:\Program files\OpenViBE\share\openvibe\applications\acquisition-server\interface.ui
 ```
 Navigate to line 53 and edit the '4' digit, to a '1'
- like so:
-       ``` <col id="0" translatable="yes">1</col> ```
+ like so:<br>
+       <col id="0" translatable="yes">1</col> 
 ```
 
 Edit Acquisition Server preferences with the following parameters.
