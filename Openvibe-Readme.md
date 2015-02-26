@@ -1,6 +1,11 @@
 OpenViBE 0.14.0 
 ===============
 
+Updated February 25, 2015
+CyKit is now working please note that it sends Signed Integer data now.
+You will have to make the appropriate changes in the acquisition server.
+This is done to accomdate emotiv's potential of giving -8900 to 8900 integer data.
+
 Start Cyos.py
  Python.exe Cyos.py 127.0.0.1 21555
 
@@ -20,14 +25,14 @@ Navigate to line 53 and edit the '4' digit, to a '1'
 Start the hemokit-dump with the following parameters.
 
    * As `Driver` choose `Generic Raw Telnet Reader`.
-   * Set the `Connection port` as `4444` and `Sample count per sent block` as `1`.
+   * Set the `Connection port` as `4444` and `Sample count per sent block` as `1`. - Connects to OpenViBE port.
    * In `Driver Properties`, set
      * `Number of channels`: `14`
      * `Sampling frequency`: `128`
      * `Telnet host name`: `localhost`
-     * `Telnet host port`: `21555` (what you've set in `hemokit-dump`)
+     * `Telnet host port`: `21555` - Connects to CyKit Port.
      * `Endianness`: `Big endian`
-     * `Sample type`: `16 bits unsigned integer`
+     * `Sample type`: `16 bits SIGNED integer`
      * `Skip at start (bytes)`: `0`
      * `Skip at header (bytes)`: `0`
      * `Skip at footer (bytes)`: `0`
