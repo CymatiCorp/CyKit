@@ -52,21 +52,17 @@ Figure A.
 8. Sample type = 16 bits unsigned integer
 9. Apply.
 
-1. Run the following :
-``` 
-hemokit-dump.exe --format sensorbytes --serve 127.0.0.1 4444
-```
-2. Click "Connect" on the OpenVIBE Acquisition server.
+Click "Connect" on the OpenVIBE Acquisition server.
 
 
 <img src='http://blueskynet.org/edu/openvibe/acquire4.png' width=100% height=100%></img>
-Figure D.
+Figure B.
 
 1. Verify the Log will say "Connection succeeded!"
 2. Verify Data is being read from the Python Cyos.py server.
 
 <img src='http://blueskynet.org/edu/openvibe/acquire5.png' width=100% height=100%></img>
-Figure E.
+Figure C.
 
 1. Run "OpenVIBE Designer"
 2. Drag and drop "Acquisition Client" from Boxes (on the right) to the white window space on the left.
@@ -79,12 +75,12 @@ Figure E.
 8. Apply.
 
 <img src='http://blueskynet.org/edu/openvibe/acquire55.png' width=100% height=100%></img>
-Figure F.
+Figure D.
 
 1. Return to the "OpenVIBE acquisition server" and press "Play"
 
 <img src='http://blueskynet.org/edu/openvibe/acquire6.png' width=100% height=100%></img>
-Figure G.
+Figure E.
 
 1. Return to the "OpenVIBE Designer" and press "Play"
 
@@ -93,9 +89,7 @@ Figure G.
 2. Press Stop when completed or making signal changes.
 
 <img src='http://blueskynet.org/edu/matrix.png' width=100% height=100%></img>
-
-
-Figure I.
+Figure F.
 
 Additionally, to smooth out your EEG data.
 
@@ -105,3 +99,4 @@ Additionally, to smooth out your EEG data.
 3. Drag and Drop.
 4. Connect the inputs as displayed.
 <img src='http://blueskynet.org/edu/openvibe/acquire8.png' width=100% height=100%></img>
+Figure G.
