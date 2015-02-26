@@ -28,15 +28,13 @@ def main():
        while True: 
             
              packet = headset.dequeue()
-             cbs = ""
-             v = ""
+             c = ""
+             y = ""
              for name in 'AF3 F7 F3 FC5 T7 P7 O1 O2 P8 T8 FC6 F4 F8 AF4'.split(' '):
-              v = abs(packet.sensors[name]['value'])
-              w = str(struct.pack('>I',v))
-              x = w[2:]
-              cbs += x
-             conn.sendall(cbs[:-1] + '\n')
-             
+              y = packet.sensors[name]['value']
+              c += str(struct.pack('>h',y))
+             conn.sendall(c[:-1] + '\n')
+
     except Exception as msg:
              print 'Error: ' + str(msg)
              conn.close()
