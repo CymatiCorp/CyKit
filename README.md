@@ -4,7 +4,7 @@ CyKit 1.0 for Python 2.7.6 (Windows x86) using Emotiv EPOC headset.<br><br>
 FAQ<br>
 https://github.com/CymatiCorp/CyKit/blob/master/FAQ.md <br>
 
-Wiki (Updated 2015)<br>
+Wiki (Updated Jan. 2015)<br>
 https://github.com/CymatiCorp/CyKit/wiki/EEG-CyKit-1.0-updates <br>
 
 <img src='http://blueskynet.org/edu/dash/particle.png' width=10% height=10%></img>
@@ -13,7 +13,7 @@ https://github.com/CymatiCorp/CyKit/wiki/EEG-CyKit-1.0-updates <br>
 <img src='http://blueskynet.org/edu/dash/particle32.png' width=10% height=10%></img>
 <br><br>
 
-OpenVIBE Setup<br>
+OpenVIBE Setup (Updated Feb 25 2015) <br>
 https://github.com/CymatiCorp/CyKit/blob/master/Openvibe-Readme.md
 
 <img src='http://blueskynet.org/edu/openvibe/acquire8.png' width=37% height=31%></img>
