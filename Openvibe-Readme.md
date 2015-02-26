@@ -6,14 +6,14 @@ CyKit is now working please note that it sends Signed Integer data now.<br>
 You will have to make the appropriate changes in the acquisition server.<br>
 This is done to accomdate emotiv's potential of giving -8900 to 8900 integer data.<br>
 
-* Start Cyos.py
- Python.exe Cyos.py 127.0.0.1 21555
+* Start Cyos.py <br>
+ `Python.exe Cyos.py 127.0.0.1 21555`
 
-* Install OpenViBE
-http://openvibe.inria.fr/downloads/
+* Install OpenViBE - http://openvibe.inria.fr/downloads/
 
 * Start Acquisition Server.
-Start OpenViBE Designer.
+
+* Start OpenViBE Designer.
 
 * Open C:\Program files\OpenViBE\share\openvibe\applications\acquisition-server\interface.ui
 
