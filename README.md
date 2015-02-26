@@ -16,7 +16,7 @@ https://github.com/CymatiCorp/CyKit/wiki/EEG-CyKit-1.0-updates <br>
 OpenVIBE Setup (Updated Feb 25 2015) <br>
 https://github.com/CymatiCorp/CyKit/blob/master/Openvibe-Readme.md
 
-<img src='http://blueskynet.org/edu/openvibe/acquire8.png' width=37% height=31%></img>
+<img src='http://blueskynet.org/edu/matrix.png' width=50% height=50%></img>
 
 Hardware<br>
 https://github.com/CymatiCorp/CyKit/blob/master/Hardware-Readme.md <br>
