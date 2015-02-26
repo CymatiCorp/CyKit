@@ -3,8 +3,9 @@
 #
 #    For use with "Generic RAW Telnet Stream" in OpenViBE Acquisition Server.
 #     14 channels of Signed 16-bit BIG-Endian Integers in non-delimited byte string.
-#     with Line-feed(\n) as the terminating character.
-#     [3 bytes][3 bytes][3 bytes][etc...][\n] (without the brackets)
+#     2 Bytes per Channel.
+#     with no CRLF terminating characters.
+
 
 import socket
 import gevent
@@ -32,12 +33,10 @@ def main():
        while True: 
             
              packet = headset.dequeue()
-             c = ""
-             y = ""
-             for name in 'AF3 F7 F3 FC5 T7 P7 O1 O2 P8 T8 FC6 F4 F8 AF4'.split(' '):
-              y = packet.sensors[name]['value']
-              c += str(struct.pack('>h',y))
-             conn.sendall(c[:-1] + '\n')
+             cy = ""
+             values = [packet.sensors[name]['value'] for name in 'AF3 F7 F3 FC5 T7 P7 O1 O2 P8 T8 FC6 F4 F8 AF4'.split(' ')]
+             cy = struct.pack('>' + str(len(values)) + 'h',*values)
+             conn.sendall(cy)
 
     except Exception as msg:
              print 'Error: ' + str(msg)
