@@ -92,7 +92,8 @@ Figure G.
 1. A window will appear with your EEG stream.
 2. Press Stop when completed or making signal changes.
 
-<img src='http://blueskynet.org/edu/openvibe/acquire8.png' width=100% height=100%></img>
+<img src='http://blueskynet.org/edu/matrix.png' width=100% height=100%></img>
+
 
 Figure I.
 
@@ -103,3 +104,4 @@ Additionally, to smooth out your EEG data.
 2. Find "Signal Processing > Averaging > Signal Average"
 3. Drag and Drop.
 4. Connect the inputs as displayed.
+<img src='http://blueskynet.org/edu/openvibe/acquire8.png' width=100% height=100%></img>
