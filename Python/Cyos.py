@@ -1,7 +1,11 @@
-#  Cykit OpenViBE Server
-#   For use with Generic RAW Telnet Stream through acquisition server.
-#   14 channels unsigned 16-bit integers in non-delimited byte string.
-#   with Line-feed(\n) terminating character.
+#
+#   Cykit OpenViBE Server
+#
+#    For use with "Generic RAW Telnet Stream" in OpenViBE Acquisition Server.
+#     14 channels of Signed 16-bit BIG-Endian Integers in non-delimited byte string.
+#     with Line-feed(\n) as the terminating character.
+#     [3 bytes][3 bytes][3 bytes][etc...][\n] (without the brackets)
+
 import socket
 import gevent
 import sys
