@@ -5,7 +5,7 @@
 #     14 channels of Signed 16-bit BIG-Endian Integers in non-delimited byte string.
 #     2 Bytes per Channel.
 #     with no CRLF terminating characters.
-
+#
 
 import socket
 import gevent
@@ -16,8 +16,8 @@ sys.path.insert(1, './Python/CyKit/')
 import emotiv
 if len(sys.argv) < 3 or len(sys.argv) < 2:
    print "Usage:  Python.exe stream.py IP Port"
-   sys.argv = [sys.argv[0], "localhost", "55555"]
-   print "Defaulting to localhost:55555"
+   sys.argv = [sys.argv[0], "localhost", "5555"]
+   print "Defaulting to localhost:5555"
 
 
 def main():
