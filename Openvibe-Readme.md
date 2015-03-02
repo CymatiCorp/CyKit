@@ -1,13 +1,18 @@
 OpenViBE 0.14.0 
 ===============
 
-Updated February 25, 2015<br>
-CyKit is now working please note that it sends Signed Integer data now.<br>
-You will have to make the appropriate changes in the acquisition server.<br>
-This is done to accomdate emotiv's potential of giving -8900 to 8900 integer data.<br>
+Cykit sends 14 channels of data in the range of -8900 to 8900.<br>
+As a Signed Integer Big-Endian format, in a continuous stream<br>
+with no terminating characters.<br>
 
 * Start Cyos.py (or RunCyos.bat)<br>
  `Python.exe Cyos.py 127.0.0.1 21555`
+
+``` or download and run win32 Executable here ```
+
+Cyos (OpenViBE TCP Server - Revision 1.0 - Win32 Executable)<br>
+http://blueskynet.org/edu/github/Cyos-0.1.0.win32.py2.7.zip <br>
+
 
 * Install OpenViBE - http://openvibe.inria.fr/downloads/
 
