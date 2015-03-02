@@ -3,10 +3,11 @@ OpenViBE 0.14.0
 
 Cykit sends 14 channels of data in the range of -8900 to 8900.<br>
 As a Signed Integer Big-Endian format, in a continuous stream<br>
-with no terminating characters.<br>
+with no terminating characters.<br><br>
+Connect to a localhost port above 1024 and below 32000<br>
 
 * Start Cyos.py (or RunCyos.bat)<br>
- `Python.exe Cyos.py 127.0.0.1 21555`
+ `Python.exe Cyos.py 127.0.0.1 5555`
 
 ``` or download and run win32 Executable here ```
 
@@ -35,7 +36,7 @@ Edit Acquisition Server preferences with the following parameters.
      * `Number of channels`: `14`
      * `Sampling frequency`: `128`
      * `Telnet host name`: `localhost`
-     * `Telnet host port`: `21555` - Connects to CyKit Port.
+     * `Telnet host port`: `5555` - Connects to CyKit Port.
      * `Endianness`: `Big endian`
      * `Sample type`: `16 bits SIGNED integer`
      * `Skip at start (bytes)`: `0`
