@@ -48,16 +48,6 @@ Edit Acquisition Server preferences with the following parameters.
 <img src='http://blueskynet.org/edu/openvibe/acqure1.png' width=100% height=100%></img>
 Figure A.
 
-1. Select the "Generic Raw Telnet Reader" driver.
-2. Set the 'Connection port' to the port you want OpenVibe to use. (ie 4444)
-3. Set Sample block to 4 (mine only sends 1 sample and the picture says 16 samples)
-4. Click "Driver Properties"
-5. Number of Channels = 14
-6. Sampling frequency = 128
-7. Telnet hostname = localhost
-8. Sample type = 16 bits unsigned integer
-9. Apply.
-
 Click "Connect" on the OpenVIBE Acquisition server.
 
 
