@@ -16,7 +16,10 @@ https://github.com/CymatiCorp/CyKit/wiki/EEG-CyKit-1.0-updates <br>
 OpenVIBE Setup (Updated Feb 25 2015) <br>
 https://github.com/CymatiCorp/CyKit/blob/master/Openvibe-Readme.md
 
-<img src='http://blueskynet.org/edu/matrix.png' width=50% height=50%></img>
+<img src='http://blueskynet.org/edu/matrix.png' width=50% height=50%></img><br>
+
+Cyos (OpenViBE TCP Server - Revision 1.0 - Win32 Executable)<br>
+http://blueskynet.org/edu/github/Cyos-0.1.0.win32.py2.7.zip <br>
 
 Hardware<br>
 https://github.com/CymatiCorp/CyKit/blob/master/Hardware-Readme.md <br>
