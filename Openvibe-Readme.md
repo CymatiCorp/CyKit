@@ -45,20 +45,14 @@ Edit Acquisition Server preferences with the following parameters.
      
    * Click `Connect`
    * Click `Play` (it should display `Sending...`)
-<img src='http://blueskynet.org/edu/openvibe/acqure1.png' width=100% height=100%></img>
-Figure A.
 
 Click "Connect" on the OpenVIBE Acquisition server.
-
-
-<img src='http://blueskynet.org/edu/openvibe/acquire4.png' width=100% height=100%></img>
-Figure B.
 
 1. Verify the Log will say "Connection succeeded!"
 2. Verify Data is being read from the Python Cyos.py server.
 
 <img src='http://blueskynet.org/edu/openvibe/acquire5.png' width=100% height=100%></img>
-Figure C.
+Figure A.
 
 1. Run "OpenVIBE Designer"
 2. Drag and drop "Acquisition Client" from Boxes (on the right) to the white window space on the left.
@@ -70,13 +64,11 @@ Figure C.
 7. Replace server port with your designated OpenVIBE port. (IE 4444)
 8. Apply.
 
-<img src='http://blueskynet.org/edu/openvibe/acquire55.png' width=100% height=100%></img>
-Figure D.
 
-1. Return to the "OpenVIBE acquisition server" and press "Play"
+* Return to the "OpenVIBE acquisition server" and press "Play"
 
 <img src='http://blueskynet.org/edu/openvibe/acquire6.png' width=100% height=100%></img>
-Figure E.
+Figure B.
 
 1. Return to the "OpenVIBE Designer" and press "Play"
 
@@ -85,7 +77,7 @@ Figure E.
 2. Press Stop when completed or making signal changes.
 
 <img src='http://blueskynet.org/edu/matrix.png' width=100% height=100%></img>
-Figure F.
+Figure C.
 
 Additionally, to smooth out your EEG data.
 
@@ -95,4 +87,4 @@ Additionally, to smooth out your EEG data.
 3. Drag and Drop.
 4. Connect the inputs as displayed.
 <img src='http://blueskynet.org/edu/openvibe/acquire8.png' width=100% height=100%></img>
-Figure G.
+Figure D.
