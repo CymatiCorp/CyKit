@@ -1,5 +1,5 @@
 
-<img src="http://blueskynet.org/edu/cykit4.png" width=25% height=25% ><br>
+<img src="http://cymaticorp.com/edu/cykit4.png" width=25% height=25% ><br>
 CyKit 1.0 for Python 2.7.6 (Windows x86) using Emotiv EPOC headset.<br><br>
 FAQ<br>
 https://github.com/CymatiCorp/CyKit/blob/master/FAQ.md <br>
@@ -7,29 +7,29 @@ https://github.com/CymatiCorp/CyKit/blob/master/FAQ.md <br>
 Wiki (Updated Jan. 2015)<br>
 https://github.com/CymatiCorp/CyKit/wiki/EEG-CyKit-1.0-updates <br>
 
-<img src='http://blueskynet.org/edu/dash/particle.png' width=10% height=10%></img>
-<img src='http://blueskynet.org/edu/dash/particle2.png' width=10% height=10%></img>
-<img src='http://blueskynet.org/edu/dash/particle3.png' width=10% height=10%></img>
-<img src='http://blueskynet.org/edu/dash/particle32.png' width=10% height=10%></img>
+<img src='http://cymaticorp.com/edu/dash/particle.png' width=10% height=10%></img>
+<img src='http://cymaticorp.com/edu/dash/particle2.png' width=10% height=10%></img>
+<img src='http://cymaticorp.com/edu/dash/particle3.png' width=10% height=10%></img>
+<img src='http://cymaticorp.com/edu/dash/particle32.png' width=10% height=10%></img>
 <br><br>
 
 OpenVIBE Setup (Updated Feb 25 2015) <br>
 https://github.com/CymatiCorp/CyKit/blob/master/Openvibe-Readme.md
 
-<img src='http://blueskynet.org/edu/matrix.png' width=50% height=50%></img><br>
+<img src='http://cymaticorp.com/edu/matrix.png' width=50% height=50%></img><br>
 
 Cyos (OpenViBE TCP Server - Revision 1.0 - Win32 Executable)<br>
-http://blueskynet.org/edu/github/Cyos-0.1.0.win32.py2.7.zip <br>
+http://cymaticorp.com/edu/github/Cyos-0.1.0.win32.py2.7.zip <br>
 
 Hardware<br>
 https://github.com/CymatiCorp/CyKit/blob/master/Hardware-Readme.md <br>
-<img src = http://blueskynet.org/edu/IMG_0004.JPG width=10% height=10% />
-<img src = http://blueskynet.org/edu/IMG_0015.JPG width=10% height=10% />
+<img src = http://cymaticorp.com/edu/IMG_0004.JPG width=10% height=10% />
+<img src = http://cymaticorp.com/edu/IMG_0015.JPG width=10% height=10% />
 
 Modified Hardware<br>
-<img src = http://blueskynet.org/edu/cy1.png width=10% height=10% />
-<img src = http://blueskynet.org/edu/cy2.png width=10% height=10% />
-<img src = http://blueskynet.org/edu/cy3.png width=10% height=10% />
+<img src = http://cymaticorp.com/edu/cy1.png width=10% height=10% />
+<img src = http://cymaticorp.com/edu/cy2.png width=10% height=10% />
+<img src = http://cymaticorp.com/edu/cy3.png width=10% height=10% />
 
 
 Questions about the project?<br>
@@ -41,7 +41,7 @@ CyKit 1.0 is specifically for Python development in Windows to<br>
 give access to the raw data stream from the Emotiv EPOC headset.  <br>
 CyKit 1.0 is an unofficial branch to the OpenYou emoKit, check it out here<br>
  https://github.com/openyou/emokit <br><br>
-<img src='http://blueskynet.org/edu/render11.png' width=27% height=21%></img>
+<img src='http://cymaticorp.com/edu/render11.png' width=27% height=21%></img>
 
 
 CyKit Dependencies
@@ -180,7 +180,7 @@ Type RunStream.bat
 
 mIRC Support
 =============
-<img src='http://blueskynet.org/edu/emotKit1.png' width=40% height=40%></img>
+<img src='http://cymaticorp.com/edu/emotKit1.png' width=40% height=40%></img>
 
 
 Added a mIRC script that will connect to the TCP server and display
