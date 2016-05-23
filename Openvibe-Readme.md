@@ -12,7 +12,7 @@ Connect to a localhost port above 1024 and below 32000<br>
 ``` or download and run win32 Executable here ```
 
 Cyos (OpenViBE TCP Server - Revision 1.0 - Win32 Executable)<br>
-http://blueskynet.org/edu/github/Cyos-0.1.0.win32.py2.7.zip <br>
+http://cymaticorp.com/edu/github/Cyos-0.1.0.win32.py2.7.zip <br>
 
 
 * Install OpenViBE - http://openvibe.inria.fr/downloads/
@@ -51,7 +51,7 @@ Click "Connect" on the OpenVIBE Acquisition server.
 1. Verify the Log will say "Connection succeeded!"
 2. Verify Data is being read from the Python Cyos.py server.
 
-<img src='http://blueskynet.org/edu/openvibe/acquire5.png' width=100% height=100%></img>
+<img src='http://cymaticorp.com/edu/openvibe/acquire5.png' width=100% height=100%></img>
 Figure A.
 
 1. Run "OpenVIBE Designer"
@@ -67,7 +67,7 @@ Figure A.
 
 * Return to the "OpenVIBE acquisition server" and press "Play"
 
-<img src='http://blueskynet.org/edu/openvibe/acquire6.png' width=100% height=100%></img>
+<img src='http://cymaticorp.com/edu/openvibe/acquire6.png' width=100% height=100%></img>
 Figure B.
 
 1. Return to the "OpenVIBE Designer" and press "Play"
@@ -76,7 +76,7 @@ Figure B.
 1. A window will appear with your EEG stream.
 2. Press Stop when completed or making signal changes.
 
-<img src='http://blueskynet.org/edu/matrix.png' width=100% height=100%></img>
+<img src='http://cymaticorp.com/edu/matrix.png' width=100% height=100%></img>
 Figure C.
 
 Additionally, to smooth out your EEG data.
@@ -86,5 +86,5 @@ Additionally, to smooth out your EEG data.
 2. Find "Signal Processing > Averaging > Signal Average"
 3. Drag and Drop.
 4. Connect the inputs as displayed.
-<img src='http://blueskynet.org/edu/openvibe/acquire8.png' width=100% height=100%></img>
+<img src='http://cymaticorp.com/edu/openvibe/acquire8.png' width=100% height=100%></img>
 Figure D.
