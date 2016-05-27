@@ -1,32 +1,63 @@
 on *:signal:Cy-EEG: {
 
+  if ($calc($ticks - %lastTick) > 10) { 
+    set %lastTick $ticks
+    return 
+  }
+
+  set %lastTick $ticks
+
+
   inc %Cy.X
 
   if (%Cy.X > 500) { 
     dec %Cy.X %Cy.X
-    drawrect -f @Cy 1 1 0 0 $window(@Cy).w $window(@Cy).h 
+    drawrect -fr @Cy $rgb(25,25,25) 1 0 0 $window(@Cy).w $window(@Cy).h 
 
   }
+
+
   var %Cy.index 0
   var %Cy.str = $gettok($1-,0,46)
 
   while (%Cy.index < %Cy.str) {
     inc %Cy.index
 
-    var %order $calc(%Cy.index * 30)
+    var %order $calc((%cy.index * 40) + 10);
 
-    var %Cy.data = $gettok($1-,%Cy.index,46)
-    var %Cy.newY = $abs($calc(%Cy.data / 3.1))
-    var %Cy.oldY = $abs($calc($gettok(%Cy.oldData,%Cy.index,46) / 3.1))
+    set %Cy.data. [ $+ [ %cy.index ] ] $abs($gettok($1-,%Cy.index,46))
+    set %Cy.DataOld. [ $+ [ %cy.index ] ] $abs($gettok(%Cy.OldData,%Cy.index,46))
 
-    inc %Cy.newY %order
-    inc %Cy.oldY %order
+    set %Cy.sel $abs(%Cy.data. [ $+ [ %cy.index ] ])
+    set %Cy.SelOld $abs(%Cy.DataOld. [ $+ [ %cy.index ] ])
 
-    drawline -i @Cy %cy.index 1 %Cy.X %Cy.newY %Cy.X %Cy.oldY
-    ;  titlebar @cy %cy.index 1 %Cy.X %Cy.newY %Cy.X %Cy.oldY
+    dec %Cy.sel %cy.avg. [ $+ [ %cy.index ] ]
+    dec %Cy.selOld %cy.avg. [ $+ [ %cy.index ] ]
+
+    var %Cy.newY = $calc(%Cy.sel / 3.1))
+    var %Cy.oldY = $calc(%Cy.SelOld / 3.1))
+
+    inc %cy.newY %order
+    inc %cy.oldY %order
+
+
+    drawline  @Cy %cy.index 1 %Cy.X %Cy.newY %Cy.X %Cy.oldY
+    ; drawdot -i @Cy %cy.index 1 %Cy.X %Cy.newY 
+    
 
   }
-  set %Cy.oldData $1-
+  set %Cy.OldData $1-
   drawdot @Cy
+  ;set_baseline
+}
 
+alias set_baseline {
+  var %cy.index 0
+  while (%cy.index < 14) {
+    inc %cy.index
+
+    inc  %cy.avg. [ $+ [ %cy.index ] ] %cy.data. [ $+ [ %cy.index ] ]
+    ;  inc  %cy.avg. [ $+ [ %cy.index ] ] %cy.dataold. [ $+ [ %cy.index ] ]
+    set  %cy.avg. [ $+ [ %cy.index ] ] $calc(%cy.avg. [ $+ [ %cy.index ] ] /2)
+  }
 }
