@@ -10,7 +10,7 @@ on *:signal:Cy-EEG: {
 
   inc %Cy.X
 
-  if (%Cy.X > 500) { 
+  if (%Cy.X > $calc($window(@Cy).w - 20)) { 
     dec %Cy.X %Cy.X
     drawrect -fr @Cy $rgb(25,25,25) 1 0 0 $window(@Cy).w $window(@Cy).h 
 
@@ -43,14 +43,13 @@ on *:signal:Cy-EEG: {
 
     drawline  @Cy %cy.index 1 %Cy.X %Cy.newY %Cy.X %Cy.oldY
     ; drawdot -i @Cy %cy.index 1 %Cy.X %Cy.newY 
-    
+
 
   }
   set %Cy.OldData $1-
   drawdot @Cy
   ;set_baseline
 }
-
 alias set_baseline {
   var %cy.index 0
   while (%cy.index < 14) {
