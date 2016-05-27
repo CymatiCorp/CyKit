@@ -14,51 +14,42 @@
 ;
 ;      /load -rs CyClient.mrc
 ;      /load -rs CySignal.mrc
-;
-;  * To Start:
 ; 
-;    /eeg 
+;  * /eeg 
 ; 
 menu status  {
   EEG: eeg
+  Reset Baseline: .timer 20 3 set_baseline
 }
 
-alias eeg { 
-  set %Cy.X 0
+alias eeg {
   window -p @Cy -1 -1 500 700
-  Cy 
-  .enable #Cy-EEG
-}
+  clear @Cy
 
-; /Cy 5555
-alias Cy {
-  set %Cy.FPS 1023
-
-  .disable #Cy-EEG
+  unset %cy.*
+  set %Cy.X 0
 
   if ($sock(CyKit)) { 
     echo -s ::: Socket in Use.
     return
   }
-  sockopen CyKit 127.0.0.1 $iif($1 == $null,5555,$1)
+  sockopen CyKit 127.0.0.1 5555
 }
 
 on *:sockopen:CyKit: {
-  echo -s ::: Connected!
+  echo -s ::: CyKit ::: Connected.
+  .timer 20 3 set_baseline
 }
-
+on *:sockclose:CyKit: {
+  echo -s ::: CyKit ::: Disconnected.
+}
 on *:sockread:CyKit: {
   sockread -f %Cy.read
-  var %Cy.Segment $calc($gettok(%Cy.read,0,32) /14)
-  var %Cy.i 0
-  while (%Cy.i < %Cy.Segment) {
-    inc %Cy.i 
-    var %Cy.a = $calc(14 * (%Cy.i -1) +1) 
-    var %Cy.b = $calc(14 * (%Cy.i -1) +14)
-    var %Cy.c = $gettok(%Cy.read, %Cy.a - %Cy.b ,32) 
-    ; --- Module Calls ---
-    .signal -n Cy-EEG %Cy.c
-  }
+    .signal -n Cy-EEG %Cy.read
+}
+on *:close:@Cy: {
+  sockclose CyKit
+  echo -s ::: CyKit ::: Disconnected.
 }
 
 on *:unload: { 
