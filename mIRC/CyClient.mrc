@@ -14,9 +14,14 @@
 ;
 ;      /load -rs CyClient.mrc
 ;      /load -rs CySignal.mrc
+;
+;  * To Start:
 ; 
-;  * /eeg 
+;    /eeg 
 ; 
+menu status  {
+  EEG: eeg
+}
 
 alias eeg { 
   set %Cy.X 0
@@ -24,6 +29,8 @@ alias eeg {
   Cy 
   .enable #Cy-EEG
 }
+
+; /Cy 5555
 alias Cy {
   set %Cy.FPS 1023
 
@@ -33,7 +40,7 @@ alias Cy {
     echo -s ::: Socket in Use.
     return
   }
-  sockopen CyKit 127.0.0.1 16031
+  sockopen CyKit 127.0.0.1 $iif($1 == $null,5555,$1)
 }
 
 on *:sockopen:CyKit: {
