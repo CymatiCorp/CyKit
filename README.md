@@ -180,8 +180,7 @@ Type RunStream.bat
 
 mIRC Support
 =============
-<img src='http://cymaticorp.com/edu/emotKit1.png' width=40% height=40%></img>
-
+<img src='http://cymaticorp.com/edu/emotKit1.png' width=40% height=40%></img> 
 
 Added a mIRC script that will connect to the TCP server and display
 in a simple graph the activity of the sensors. 
@@ -201,7 +200,19 @@ then in "Status Window" type.
 CyClient.mrc - Connects to the socket server and breaks large packets into smaller ones.
 CySignal.mrc - Receives the smaller packets and handles displaying EEG results.
 
-     /Cy
+     /EEG
+       or Popup Menu: EEG
+       
+
+<img src='http://cymaticorp.com/edu/cykit-mirc-1.png' width=40% height=40%></img>
+
+Updated mIRC so that it averages out the data, creating baselines for each data 
+channel.  This means, no matter what signal variance or whether the data has a 
+positive or negative sign, the data displayed can then be placed equally from
+one another on seperate lines. Setting a baseline only needs to occur once per
+EEG run. It will do it automatically when your device is connected to the stream, 
+but you can optionally initiate a baseline reset manually in your status pop-up window.
+
 
 
 Credits & Original Code
