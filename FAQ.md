@@ -24,10 +24,10 @@ Battery Questions
 
 * What measurement of voltage from the mind am I getting back from the data?<br>
     The (LSB)least-significant-bit (1st binary digit, ie the far right place of a binary number)<br>
-    of a fourteen-bit value is equivelant to 0.31 to 0.51µV<br>
+    of a fourteen-bit value is equivelant to 0.13 to 0.51µV<br>
     
     developer headset is equivelant to 0.51µV (microvolts).<br>
-    scientific headset & insight models are equivelant to 0.31µV (microvolts).
+    scientific headset & insight models are equivelant to 0.13µV (microvolts).
 
 
 Sensor Questions
