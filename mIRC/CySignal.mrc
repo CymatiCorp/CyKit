@@ -34,29 +34,28 @@ on *:signal:Cy-EEG: {
     dec %Cy.sel %cy.avg. [ $+ [ %cy.index ] ]
     dec %Cy.selOld %cy.avg. [ $+ [ %cy.index ] ]
 
-    var %Cy.newY = $calc(%Cy.sel / 3.1))
-    var %Cy.oldY = $calc(%Cy.SelOld / 3.1))
+    var %Cy.newY = $calc(%Cy.sel /4))
+    var %Cy.oldY = $calc(%Cy.SelOld /4))
 
     inc %cy.newY %order
     inc %cy.oldY %order
 
 
-    drawline  @Cy %cy.index 1 %Cy.X %Cy.newY %Cy.X %Cy.oldY
+    drawline @Cy %cy.index 1 %Cy.X %Cy.newY %Cy.X %Cy.oldY
     ; drawdot -i @Cy %cy.index 1 %Cy.X %Cy.newY 
 
 
   }
   set %Cy.OldData $1-
   drawdot @Cy
-  ;set_baseline
 }
+
 alias set_baseline {
   var %cy.index 0
   while (%cy.index < 14) {
     inc %cy.index
 
     inc  %cy.avg. [ $+ [ %cy.index ] ] %cy.data. [ $+ [ %cy.index ] ]
-    ;  inc  %cy.avg. [ $+ [ %cy.index ] ] %cy.dataold. [ $+ [ %cy.index ] ]
     set  %cy.avg. [ $+ [ %cy.index ] ] $calc(%cy.avg. [ $+ [ %cy.index ] ] /2)
   }
 }
