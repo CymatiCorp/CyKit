@@ -195,18 +195,22 @@ Programming Questions
     F3 FC5 AF3 F7 T7 P7 O1 O2 P8 T8 F8 AF4 FC6 F4
     example packet.AF3
 
-Python 3.4.2 Support
+Python 3 Support
 ===================
 
+https://github.com/CymatiCorp/CyKit-Python-3.3
+
+Is a Windows Port for Python 3.3
+
 the changes to emotiv.py and dependancies are a simple fix of changing
-print function syntax and Exception syntax. Cosmetic changes to crypto
-may need to be done, particularly when calling AES.
+print function syntax and Exception syntax. 
 
-However gevent is a bit more complicated, as the project hasn't been 
-updated to support it.  Particularly hub.py and perhaps the greenlet.py
-needs some work, i believe hub.py has some legacy import issues. which
-is compounded by the way it is dynamically importing.  I may try to mess
-with it in the future, but for the time being it seems fairly time 
-consuming for possibly little gain.
+gevent / greenlet, has now been updated to support Python 3
 
-      
+The most difficult part of porting to Python 3, is that Python 3 is
+stricter about string formatting and defining the UTF setup.
+
+There is really no benefit or improvement that I can tell to moving to
+Python 3, other than having the most current up to date software.
+With no real speed improvements, the only reason that it might be beneficial
+is if you might want to make take advantage of newer gevent/greenlet functions.
