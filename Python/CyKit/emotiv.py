@@ -411,46 +411,75 @@ class Emotiv(object):
         """
         devices = []
         try:
+            devicesUsed = 0
             for device in hid.find_all_hid_devices():
                 print "Product name " + device.product_name
                 print "device path " + device.device_path
                 print "instance id " + device.instance_id
                 print "\r\n"
-                
+                useDevice = ""
+                  
                 if device.vendor_id != 0x21A1 and device.vendor_id != 0xED02:
                     continue
+                    
                 if device.product_name == 'Brain Waves':
-                    devices.append(device)
-                    device.open()
-                    self.serial_number = device.serial_number
-                    device.set_raw_data_handler(self.handler)
+                    
+                    print "\n" + device.product_name + " Found!\n"
+                    useDevice = raw_input("Use this device? [Y]es? ")
+                   
+                    if useDevice.upper() == "Y":                   
+                         devicesUsed += 1             
+                         devices.append(device)
+                         device.open()
+                         self.serial_number = device.serial_number
+                         device.set_raw_data_handler(self.handler)
                 elif device.product_name == 'EPOC BCI':
-                    devices.append(device)
-                    device.open()
-                    self.serial_number = device.serial_number
-                    device.set_raw_data_handler(self.handler)
+                    
+                    print "\n" + device.product_name + " Found!\n"
+                    useDevice = raw_input("Use this device? [Y]es? ")
+                    if useDevice.upper() == "Y":                   
+                         devicesUsed += 1
+                         devices.append(device)
+                         device.open()
+                         self.serial_number = device.serial_number
+                         device.set_raw_data_handler(self.handler)
                 elif device.product_name == '00000000000':
-                    devices.append(device)
-                    device.open()
-                    self.serial_number = device.serial_number
-                    device.set_raw_data_handler(self.handler)
+                    
+                    print "\n" + device.product_name + " Found!\n" 
+                    useDevice = raw_input("Use this device? [Y]es? ")
+
+                    if useDevice.upper() == "Y":
+                         devicesUsed += 1
+                         devices.append(device)
+                         device.open()
+                         self.serial_number = device.serial_number
+                         device.set_raw_data_handler(self.handler)
                 elif device.product_name == 'Emotiv RAW DATA':
-                    devices.append(device)
-                    device.open()
-                    self.serial_number = device.serial_number
-                    device.set_raw_data_handler(self.handler)
+                    
+                    print "\n" + device.product_name + " Found!\n" 
+                    useDevice = raw_input("Use this device? [Y]es? ")
+
+                    if useDevice.upper() == "Y":
+                         devicesUsed += 1
+                         devices.append(device)
+                         device.open()
+                         self.serial_number = device.serial_number
+                         device.set_raw_data_handler(self.handler)
+                         
+            print "\n\n Devices Selected: " + str(devicesUsed)
             crypto = gevent.spawn(self.setup_crypto, self.serial_number)
             console_updater = gevent.spawn(self.update_console)
             raw_input("Press Enter to continue...")
             while self.running:
                 try:
                     gevent.sleep(0)
-                    
+
                 except KeyboardInterrupt:
                     self.running = False
         finally:
             for device in devices:
                 device.close()
+            
             gevent.kill(crypto, KeyboardInterrupt)
             gevent.kill(console_updater, KeyboardInterrupt)
 
