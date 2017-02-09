@@ -53,6 +53,11 @@ CyKit Dependencies
 * pygame 1.9.1 (Only required if you want to use render.py
    which shows the EEG graph)
 
+```
+Note: All of the necessary files, listed below as dependancies,
+       are included in the \InstallFiles directory of this repository.
+```
+
 Direct links for Windows(x86) Dependencies
 ------------------------------------------
 * pywinusb - https://pypi.python.org/packages/source/p/pywinusb/pywinusb-0.2.9.zip
