@@ -67,9 +67,10 @@ Direct links for Windows(x86) Dependencies
 * Pygame(optional) - http://pygame.org/ftp/pygame-1.9.1.win32-py2.7.msi
 
 ```
-Note:  I have an alternate version to work with Python 3.3 <br>
-       See https://github.com/CymatiCorp/CyKit-Python-3.3 ( -Experimental- not heavily tested.)<br><br>
-```       
+Note:  There is an alternate version of CyKit to work with Python 3.3 
+```
+ See https://github.com/CymatiCorp/CyKit-Python-3.3 ( -Experimental- not heavily tested. ) <br><br>
+
        
 
 Installation Instructions (Using Windows binaries)
