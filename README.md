@@ -49,43 +49,21 @@ CyKit Dependencies
 * pywinusb 0.2.9
 * pycrypto 2.6
 * gevent 1.0.1
-* greenlet 0.4.2 (or Newest 0.4.5)
+* greenlet 0.4.2 
 * pygame 1.9.1 (Only required if you want to use render.py
    which shows the EEG graph)
-
-Python Usage
-------------
-  Code:
-  
-    import emotiv
-    import gevent
-
-    if __name__ == "__main__":
-      headset = emotiv.Emotiv()    
-      gevent.spawn(headset.setup)
-      gevent.sleep(1)
-      try:
-        while True:
-          packet = headset.dequeue()
-          # packet.byteCode --- See Byte Codes below. 
-          print packet.gyroX, packet.gyroY
-          gevent.sleep(0)
-      except KeyboardInterrupt:
-        headset.close()
-      finally:
-        headset.close()
-
 
 Direct links for Windows(x86) Dependencies
 ------------------------------------------
 * pywinusb - https://pypi.python.org/packages/source/p/pywinusb/pywinusb-0.2.9.zip
 * pycrypto - http://www.voidspace.org.uk/downloads/pycrypto26/pycrypto-2.6.win32-py2.7.exe
-* gevent   - www.lfd.uci.edu/~gohlke/pythonlibs/#gevent ->  gevent‑1.0.1.win32‑py2.7.exe
+* gevent   - https://dl.yooooo.us/build/windows/python/gevent-1.0.1.win32-py2.7.exe 
 * greenlet -  https://pypi.python.org/packages/2.7/g/greenlet/greenlet-0.4.2.win32-py2.7.exe#md5=0ea8f5a14f8554919e1a136bc042d76c
 * Pygame(optional) - http://pygame.org/ftp/pygame-1.9.1.win32-py2.7.msi
 
-Note: Python 3.4.2 is not supported as gevent has not been updated to support it.<br>
-       please see the FAQ [here](https://github.com/CymatiCorp/CyKit/blob/master/FAQ.md#Python) for more information.
+Note:  I have an alternate version to work with Pyton 3.3 <br>
+       See https://github.com/CymatiCorp/CyKit-Python-3.3 ( -Experimental- not heavily tested.)<br><br>
+       
        
 
 Installation Instructions (Using Windows binaries)
@@ -125,49 +103,6 @@ If your Emotiv USB dongle is not connected it will throw several errors ending w
 
 Connect the EPOC USB dongle and run again, and it should begin streaming you data.
 
-
-   
-Alternate Installation (Using the PIP package installer)
---------------------------------------------------------
-
-* Install Python 2.7.6 https://www.python.org/ftp/python/2.7.6/python-2.7.6.msi
- 
-Extract pywinusb to any folder,  and copy the folder
-
-                                       \pywinusb 
-                                       
-                                  from folder \pywinusb-0.2.9 to
-                                        
-                                 Drive:\Python27\Lib\site-packages
-                                       
- 
- Install pycrypto 2.6
- 
- Download PIP from its website:  https://bootstrap.pypa.io/get-pip.py <br>
-  (Place get-pip.py in your Python folder.)
-
-Run:
-
-                         python.exe get-pip.py
-                         python.exe -m pip install greenlet
-                         python.exe -m easy_install greenlet
-                         python.exe -m pip install gevent
-
-PIP downloads the latest versions of these projects.
- Current versions:
- 
-                       greenlet 0.4.5
-                       gevent 1.0.1
-
-
-
-
-Byte Codes
-----------
-This is a list of the byte names you can receive through packet.
-( For example print packet.AF4 )
-
-  F3  FC5  AF3  F7  T7  P7  O1  O2  P8  T8  F8  AF4  FC6  F4
 
 Server Support
 ==============
