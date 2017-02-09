@@ -66,7 +66,7 @@ Direct links for Windows(x86) Dependencies
 * greenlet -  https://pypi.python.org/packages/2.7/g/greenlet/greenlet-0.4.2.win32-py2.7.exe#md5=0ea8f5a14f8554919e1a136bc042d76c
 * Pygame(optional) - http://pygame.org/ftp/pygame-1.9.1.win32-py2.7.msi
 
-Note:  I have an alternate version to work with Pyton 3.3 <br>
+Note:  I have an alternate version to work with Python 3.3 <br>
        See https://github.com/CymatiCorp/CyKit-Python-3.3 ( -Experimental- not heavily tested.)<br><br>
        
        
