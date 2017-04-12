@@ -623,6 +623,9 @@ class Emotiv(object):
         cipher = AES.new(key, AES.MODE_ECB, iv)
         for i in k:
             print "0x%.02x " % (ord(i))
+        
+        raw_input("")
+        
         while self.running:
             while not tasks.empty():
                 task = tasks.get()
