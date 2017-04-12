@@ -31,12 +31,12 @@ https://github.com/CymatiCorp/CyKit/blob/master/Hardware-Readme.md <br>
 <img src = http://cymaticorp.com/edu/IMG_0031.JPG width=10% height=10% />
 
 Modified Hardware<br>
-v1
+v1<br>
 <img src = http://cymaticorp.com/edu/headset2.JPG width=10% height=10% />
 <img src = http://cymaticorp.com/edu/i1.JPG width=10% height=10% />
 <img src = http://cymaticorp.com/edu/i2.JPG width=10% height=10% />
 
-v2
+v2<br>
 <img src = http://cymaticorp.com/edu/cy1.png width=10% height=10% />
 <img src = http://cymaticorp.com/edu/cy2.png width=10% height=10% />
 <img src = http://cymaticorp.com/edu/cy3.png width=10% height=10% />
