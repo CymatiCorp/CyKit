@@ -32,7 +32,6 @@ https://github.com/CymatiCorp/CyKit/blob/master/Hardware-Readme.md <br>
 
 Modified Hardware<br>
 <img src = http://cymaticorp.com/edu/headset2.JPG width=10% height=10% />
-<img src = http://cymaticorp.com/edu/i2.JPG width=10% height=10% />
 <img src = http://cymaticorp.com/edu/i1.JPG width=10% height=10% />
 <img src = http://cymaticorp.com/edu/i2.JPG width=10% height=10% />
 <img src = http://cymaticorp.com/edu/cy1.png width=10% height=10% />
