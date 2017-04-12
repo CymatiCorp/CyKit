@@ -23,7 +23,7 @@ http://cymaticorp.com/edu/github/Cyos-0.1.0.win32.py2.7.zip <br>
 
 Hardware<br>
 https://github.com/CymatiCorp/CyKit/blob/master/Hardware-Readme.md <br>
-<img src = http://cymaticorp.com/edu/headset.png width=10% height=10% />
+<img src = http://cymaticorp.com/edu/headset.JPG width=10% height=10% />
 <img src = http://cymaticorp.com/edu/IMG_0004.JPG width=10% height=10% />
 <img src = http://cymaticorp.com/edu/IMG_0015.JPG width=10% height=10% />
 <img src = http://cymaticorp.com/edu/IMG_0017.JPG width=10% height=10% />
@@ -31,10 +31,10 @@ https://github.com/CymatiCorp/CyKit/blob/master/Hardware-Readme.md <br>
 <img src = http://cymaticorp.com/edu/IMG_0031.JPG width=10% height=10% />
 
 Modified Hardware<br>
-<img src = http://cymaticorp.com/edu/headset2.png width=10% height=10% />
-<img src = http://cymaticorp.com/edu/i2.png width=10% height=10% />
-<img src = http://cymaticorp.com/edu/i1.png width=10% height=10% />
-<img src = http://cymaticorp.com/edu/i2.png width=10% height=10% />
+<img src = http://cymaticorp.com/edu/headset2.JPG width=10% height=10% />
+<img src = http://cymaticorp.com/edu/i2.JPG width=10% height=10% />
+<img src = http://cymaticorp.com/edu/i1.JPG width=10% height=10% />
+<img src = http://cymaticorp.com/edu/i2.JPG width=10% height=10% />
 <img src = http://cymaticorp.com/edu/cy1.png width=10% height=10% />
 <img src = http://cymaticorp.com/edu/cy2.png width=10% height=10% />
 <img src = http://cymaticorp.com/edu/cy3.png width=10% height=10% />
