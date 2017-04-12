@@ -21,7 +21,7 @@ https://github.com/CymatiCorp/CyKit/blob/master/Openvibe-Readme.md
 Cyos (OpenViBE TCP Server - Revision 1.0 - Win32 Executable)<br>
 http://cymaticorp.com/edu/github/Cyos-0.1.0.win32.py2.7.zip <br>
 
-Hardware<br>
+Hardware<br><br>
 https://github.com/CymatiCorp/CyKit/blob/master/Hardware-Readme.md <br>
 <img src = http://cymaticorp.com/edu/headset.JPG width=10% height=10% />
 <img src = http://cymaticorp.com/edu/IMG_0004.JPG width=10% height=10% />
