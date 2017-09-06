@@ -16,7 +16,7 @@ sys.path.insert(1, './Python/CyKit/')
 import emotiv
 if len(sys.argv) < 3 or len(sys.argv) < 2:
    print "Usage:  Python.exe stream.py IP Port"
-   sys.argv = [sys.argv[0], "localhost", "5555"]
+   sys.argv = [sys.argv[0], "localhost", "55555"]
    print "Defaulting to localhost:5555"
 
 
