@@ -1,5 +1,5 @@
 <img src="http://cymaticorp.com/edu/CyKITv2-/CyKITv2.png" width=25% height=25% ><br>
-(New Version) https://github.com/CymatiCorp/CyKITv2
+(New BETA Version) https://github.com/CymatiCorp/CyKITv2
 
 <img src="http://cymaticorp.com/edu/cykit4.png" width=25% height=25% ><br>
 CyKit 1.0 for Python 2.7.6 (Windows x86) using Emotiv EPOC headset.<br><br>
