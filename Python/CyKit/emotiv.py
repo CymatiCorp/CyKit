@@ -418,10 +418,7 @@ class Emotiv(object):
                 print "instance id " + device.instance_id
                 print "\r\n"
                 useDevice = ""
-                  
-                if device.vendor_id != 0x21A1 and device.vendor_id != 0xED02:
-                    continue
-                    
+                     
                 if device.product_name == 'Brain Waves':
                     
                     print "\n" + device.product_name + " Found!\n"
