@@ -1,0 +1,319 @@
+<!-- 
+      CyKIT  2018.Dec.26
+     ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+     CyKIT.html       
+     Written by Warren
+    
+     HTML Access for CyKIT.py
+     ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+-->
+
+<html>
+    <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>CyKITv2 (EEG handler for Python)</title>
+    <link rel="stylesheet" href="./Themes/w3.css"> 
+    <link rel="stylesheet" type="text/css" class="theme_css" href="./Themes/cyBlue.css" id="theme_css"> 
+    <script src="CySocketClient.js" charset="utf-8"></script>
+    
+    <!--- <script src="CyLoader.js"></script> --->
+    </head>
+    <img src="./images/graph.png" id="graphImage" width="25px" height="50px"  />
+    <body>
+         <div id = "connectBar"> 
+            <div id="innerBar">
+              <div id="hostPort">
+                Host <input id="cyHost" type="text" value="127.0.0.1" /> 
+                Port <input id="cyPort" type="text" maxlength="5" size="5" value="54123"/> 
+                <div id="connectButtons">
+                 <input id="cyConnect" class="w3-bar-item w3-black  w3-hover-blue" type="button" value="Connect" />
+                 <input id="cyDisconnect" class="w3-bar-item w3-black w3-hover-red" type="button" value="Disconnect" />
+                </div>
+               </div>                               
+            </div>
+        </div>
+        
+        <div style="position:absolute; right: 10%; top:50px; height: 0px; font-size:12; color:#ababab; width:20px;" >
+        <div id="theme.1" style="position:relative; padding: 0px 4px; top: 20px; width:15px; height:20px; left: 2px; min-width:20px; border-radius:15px; border: 1px solid #aaa;"><label>1</label></div>
+        <div id="theme.2" style="position:absolute; padding: 0px 4px; width:15px; height:20px; left: 30px; min-width:20px; border-radius:15px; border: 1px solid #aaa;"><label>2</label></div>
+        <div id="theme.3" style="position:absolute; padding: 0px 4px; width:15px; height:20px; left: 60px; min-width:20px; border-radius:15px; border: 1px solid #aaa;"><label>3</label></div>
+        
+        </div>
+        
+        <div class="tooltip" id="CyKIT-picture" > 
+            <span style="position:absolute; left:70px; top: 5px; height:50px;" class="tooltiptext">
+                CyKIT Version: 2018.APR.20
+            </span>
+        </div>
+        
+        <div id="leftPanel">
+            <div id="glossy">
+                <div id="innerLeftPanel" >
+                    Status: <label id="CyStatus">Not Connected.</label> <br><br>
+                    Controller: <label id="CyHeadset">None.</label> <br>
+                    <div id="convertFormat" style="display: none;"> <br>
+                    Convert Format: &nbsp <select id="CyFormat"> 
+                        <option id="format-0">Floating Point</option>
+                        <option id="format-1">Raw Data</option>
+                    </select> 
+                    <div class="tooltip"> &nbsp ( ? ) 
+                        <span class="tooltiptext"> Selects whether Python or Javascript converts the data. </span>
+                    </div>
+                    <br>
+                    </div>
+                    <br>
+                    <input id="CyScroll" type="checkbox"> &nbsp Scroll</input><br>
+                    <div id="cyManual" style="visibility:visible;">
+                    <br>View Sensor: &nbsp <select id="CySelect"></select> <br><br>
+                    </div>
+                    EEG Resolution: <br><br>
+                    <div class="eeg_resolution">
+                        <div class="tooltip">
+                        <input id="myRange" type="range" min="1" max="100" value="50" class="slider"">
+                            <label id="CyRes" class="tooltiptext" style="position:relative; margin-left: 30px; top: -50px;" > &nbsp&nbsp 50 % &nbsp&nbsp</label>
+                        </div>
+                    </div>
+                                        
+                    <br><br>
+
+                    <div id="cyInfo">
+                        <div id="cyInfoText">
+                            USB Name: <label id="CyDevice">N/A</label> <br><br>
+                            USB Serial: <label id="CySerial">N/A</label> <br><br>
+                            Key Model #: <label id="CyKeyModel">N/A</label> <br><br>
+                            Battery Level: <label id="CyBattery">N/A</label> <br><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="qualityPanel">
+        </div>
+        
+        <div id="taskBar" class="w3-bar w3-black" style="position:absolute; left:21%; top:110px;">
+            <button class="w3-bar-item w3-button w3-hover-blue" id="tab.0">EEG</button>
+            <button class="w3-bar-item w3-button w3-hover-blue" id="tab.1">Calibration</button>
+            <button class="w3-bar-item w3-button w3-hover-blue" id="tab.2">Gyro</button>
+            <button class="w3-bar-item w3-button w3-hover-blue" disabled id="tab.3">Epoc+ Settings</button>
+            <button class="w3-bar-item w3-button w3-hover-blue" id="tab.4">Recording</button>
+            <button class="w3-bar-item w3-button w3-hover-blue" id="tab.5">Game</button>
+            <button class="w3-bar-item w3-button w3-hover-blue" id="tab.6">Training</button>
+            <button class="w3-bar-item w3-button w3-hover-blue" id="tab.7">Resources</button>
+        </div>
+        <div id="EEG" class="tabs">
+            <div id="eegData" style="position: absolute; width:100px; left:20.5%; top:150px;"></div>
+            <div id="canvasPane" >
+                <canvas id="cyCanvas"></canvas>
+                <div id="manualSelection">
+                <div id="gyroData" style="position:absolute; left:10px; top:102%; width:100%; display: block;"></div>
+                    <div id="sensorPane">
+                        <div id="selectEpocSensor">
+                            <form action="">
+                                <input id="e.ALL" type="checkbox" checked>(ALL)</input> &nbsp <br><Br>
+                                <!--- <input id="e.COUNTER" type="checkbox" checked>COUNTER</input> &nbsp <br><br> --->
+                                <input id="e.AF3" type="checkbox" checked>AF3</input> &nbsp
+                                <input id="e.F7"  type="checkbox" checked>F7</input> &nbsp
+                                <input id="e.F3"  type="checkbox" checked>F3</input> &nbsp &nbsp
+                                <input id="e.FC5" type="checkbox" checked>FC5</input> &nbsp &nbsp
+                                <input id="e.T7"  type="checkbox" checked>T7</input> &nbsp &nbsp
+                                <input id="e.P7"  type="checkbox" checked>P7</input> &nbsp &nbsp
+                                <input id="e.O1"  type="checkbox" checked>O1</input> <br><br>
+                                <input id="e.O2"  type="checkbox" checked>O2</input> &nbsp &nbsp
+                                <input id="e.P8"  type="checkbox" checked>P8</input> &nbsp
+                                <input id="e.T8"  type="checkbox" checked>T8</input> &nbsp &nbsp
+                                <input id="e.FC6" type="checkbox" checked>FC6</input> &nbsp &nbsp
+                                <input id="e.F4"  type="checkbox" checked>F4</input> &nbsp &nbsp
+                                <input id="e.F8"  type="checkbox" checked>F8</input> &nbsp &nbsp
+                                <input id="e.AF4" type="checkbox" checked>AF4</input> &nbsp &nbsp
+                            </form>
+                        </div>
+                        
+                        <br>
+                        <div id="selectInsightSensor">
+                            <form action="">
+                                <input id="i.AF3" type="checkbox" checked>AF3</input> &nbsp
+                                <input id="i.T7"  type="checkbox" checked>T7</input> &nbsp &nbsp
+                                <input id="i.Pz"  type="checkbox" checked>Pz</input> &nbsp &nbsp
+                                <input id="i.T8"  type="checkbox" checked>T8</input> &nbsp &nbsp
+                                <input id="i.AF4" type="checkbox" checked>AF4</input> &nbsp &nbsp
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="Calibration" class="tabs" style="display:none;">
+            
+            
+            <div id="empty" style="position:absolute; top:10%; width:45%;" >
+                
+            </div>
+            
+            <div id="calibrationPane" style="position:absolute; left:75%;">
+                <div id="calibrationText">
+                    <label id="boldLabel">&nbspCalibration</label><hr id="boldLabel" style="width:55%; margin-top:1px;">
+                    <input id="CyBaseline" type="checkbox" checked> &nbsp <button id="resetBaseline">Reset Baseline</button></input><br><br>
+                    <input id="PyBaseline" type="checkbox"> &nbsp <label>Python Baseline</label></input><br><br>                 <!--- <input id="CyPeaks" type="checkbox"> &nbsp Find Peaks</input><br><br><br> --->
+                    
+                    <label id="boldLabel">&nbspDisplay Data</label><hr id="boldLabel" font-size: 12; style="width:55%; margin-top:1px;">
+                    Select Mode: <br> <select id="dataMode">  <br>
+                        <option id="datamode-1">EEG Data</option>
+                        <option id="datamode-2">Gyro Data</option>
+                    </select>
+                    <div class="tooltip"> &nbsp ( ? ) 
+                        <span class="tooltiptext"> Selects which data channel to stream to web browser. </span>
+                    </div>
+                    <br><br>
+                    <input id="enable-EEG-View" type="checkbox" checked> &nbsp <label>EEG Data (microvolts) </label></input><br><br>
+                    <input id="enable-Gyro-View" type="checkbox" checked> &nbsp <label>Gyro Data</label></input><br><br>
+                    <input id="enable-singleWave" type="checkbox"> &nbsp <label>Single Wave</label></input><br><br>
+                    <input id="enable-boldWave" type="checkbox"> &nbsp <label>Bold Line</label></input>
+                    <br><br><br>
+                    
+                    
+                    <label id="boldLabel">&nbspAdvanced</label><hr id="boldLabel" font-size: 12; style="width:55%; margin-top:1px;">
+                    
+                    <input id="setMask" type="checkbox" style=" color:#aaaaaa;"> &nbsp Masking</input><br><br>
+                    
+                </div>
+            </div>
+            
+            <div id="maskView">
+         <font color="White">Mask</font> <select id="CyMask" style="visibility: hidden;">
+                        <option id="0">0</option>
+                        <option id="1">1</option>
+                        <option id="2">2</option>
+                        <option id="3">3</option>
+                        <option id="4">4</option>
+                        <option id="5">5</option>
+                        <option id="6">6</option>
+                        <option id="7">7</option>
+                        <option id="8">8</option>
+                        <option id="9">9</option>
+                        <option id="10">10</option>
+                        <option id="11">11</option>
+                        <option id="12">12</option>
+                        <option id="13">13</option>
+                        
+                    </select> 
+                <input id="newMask" type="text" maxlength="60" size="60" style="visibility:hidden;" value="10,11,12,13,14,15,0,1,2,3,4,5,6,7"/>
+                <input id="maskChange" type="button" value="Change Mask" style="visibility:hidden;" /><br><br> 
+                </div>
+        </div>
+        
+        <div id="Settings" class="tabs" style="display:none;">
+            <form id="settingsForm" action="">
+                <div id="settingsFormText">
+                    <label>Mode:</label> &nbsp
+                    <select id="CyMode">
+                        <option id="mode-EPOC">Epoc</option>
+                        <option id="mode-EPOC_PLUS">Epoc+</option>
+                    </select> <br><br>
+                    
+                    <label>Data Sample Rate:</label> &nbsp
+                    <select id="CySample">
+                        <option id="mode-EPOC">128 Hz (samples a second)</option>
+                        <option id="mode-EPOC_PLUS">256 Hz (samples a second)</option>
+                    </select> <br><br>
+                    
+                    <label>Gyro Sample Rate:</label> &nbsp
+                    <select id="CyGyro">
+                        <option id="mode-EPOC">OFF</option>
+                        <option id="mode-EPOC">32 Hz</option>
+                        <option id="mode-EPOC_PLUS">64 Hz</option>
+                        <option id="mode-EPOC_PLUS">128 Hz</option>
+                    </select> <br><br>
+                    
+                    
+                    <input id="cyUpdateSetting" class="w3-bar-item w3-black  w3-hover-blue" type="button" value="Update Settings"></input> &nbsp&nbsp
+                </div>
+            </form>
+        </div>
+        <div id="Recording" class="tabs" style="display:none;">
+            <form id="recordingForm" action="">
+                <div style="position:relative; top:20px;  margin-left:52px;">
+                    <br>
+                    <label><b>Record</b></label><hr id="boldLabel" style="width:50%; margin-top:1px;">
+                    <label style="color:#aaaaaa;">Filename</label> 
+                    <input id="cyRecordFile" type="text" style="width:35%" value="EEG-recording_1" ></input> <br><br>
+                    <input id="cyStartRecord" class="w3-bar-item w3-black  w3-hover-gray" type="button" value="Record"></input> &nbsp&nbsp
+                    <input id="cyStopRecord" class="w3-bar-item w3-black  w3-hover-gray" type="button" value="Stop" /></input>
+                    <br><br><br><br>
+                    </form>
+                    <form id="playbackForm" action="">
+                    <label><b>Playback </b> (not implemented)</label><hr id="boldLabel" style="width:50%; margin-top:1px;">
+                    <label style="color:#aaaaaa;">Filename</label> 
+                    <input id="cyPlayFile" type="text" style="width:35%" value="EEG_recording_1" ></input> <br><br>
+                    <input id="cyPlaybackStart" class="w3-bar-item w3-black  w3-hover-gray" type="button" value="Play"></input> &nbsp&nbsp
+                    <input id="cyPlaybackPause" class="w3-bar-item w3-black  w3-hover-gray" type="button" value="Pause" /></input> &nbsp&nbsp
+                    <input id="cyPlaybackSTOP" class="w3-bar-item w3-black  w3-hover-gray" type="button" value="Stop" /></input>
+                    </form>
+                    <div id="logWindow" style="position:absolute; right: 10px; top: 10px; width:45%; height:95%;"></div>
+                </div>
+        </div>
+
+        <div id="Gyro" class="tabs" style="display:none;">
+            <div id="gyroPane" style="overflow:hidden;">
+                <div id="gyro-frame1">
+                <center><p id="bgText" style="position:absolute; left: 30%; top:-13px; font-family:'arial black'; font-size:20px; width:180px;">Gyro</p></center>
+                </div>
+                <div id="gyro-frame2">
+                <center><p id="bgText" style="position:absolute; left: 30%; top:-13px; font-family:'arial black'; font-size:20px; width:180px;">Accelerometer</p></center>
+                </div>
+                <div id="gyro-frame3">
+                <center><p id="bgText" style="position:absolute; left: 30%; top:-13px; font-family:'arial black'; font-size:20px; width:180px;">Magnetometer</p></center>
+                </div>
+                
+                <!--- <input id="balanceGyro" type="checkbox" checked> &nbsp Balance Gyro Data </input><br> !--->
+                <div id="gyro-range" style="position:absolute; left:0px; top:80px; width: 100%; min-height:250px; ">
+                </div>
+            </div>
+            <div id="Triggers" class="regularText" style="position:relative; left:350px; top:160px; width: 250px;"> 
+                <input id="RangeTriggers" type="checkbox" checked> &nbsp&nbsp Enable Range Triggers </input>
+            </div>
+
+        </div>
+        <div id="Game" class="tabs" style="display:none;">
+            <div id="gamePane">
+                <div id="gameInterface" >
+                     <input style="position:absolute; left:40%; top: 45%; width: 150px; height: 35px; " id="gameStart" class="w3-bar-item w3-black  w3-hover-blue" type="button" value="Start" />
+                    <div id="player_ready" style="position:absolute; top:5px; left:48%; font-size:25px;"></div>
+                    <div id="player_1_score" style="position:absolute; top: 5px; left:30%; font-size:25px;">0</div>
+                    <div id="player_2_score" style="position:absolute; top: 5px; right:30%; font-size:25px;">0</div>
+                </div>
+            </div>
+            <div id="game-sync" class="regularText" style="position:relative; left:350px; top:160px; width: 280px;"> 
+                <input id="gameSync" type="checkbox" checked> &nbsp&nbsp Synchronize with Gyro Triggers</input>
+            </div>
+        </div>
+
+        <div id="Training" class="tabs" style="display:none;">
+            <div id="trainingPane">
+            <label> Under Construction. </label>
+            </div>
+        </div>
+                
+        <div id="Resources" class="tabs" style="display:none;">
+            <div id="resourcePane">
+            <!---
+            <iframe src="./Resources/FAQ/FAQ.html" style="scrolling: yes; width:30%; height: 100%;">
+                <link type="text/css" rel="Stylesheet" href="./Resources/Q.css" />
+            </iframe>
+            !--->
+            <iframe src="./Resources/Main.html" style="scrolling: yes;left: 31%; width:100%; height: 100%;">
+            </iframe>
+            
+            </div>
+        </div>
+        
+    <script src="themes.js"    charset="utf-8"></script>    
+    <script src="graphics.js"    charset="utf-8"></script>    
+    <script src="script_loader.js"    charset="utf-8"></script>    
+    <script src="play_sound.js"       charset="utf-8"></script>    
+    <script src="pong_game.js"        charset="utf-8"></script>    
+    <script src="" id="model_script"  charset="utf-8"></script>    
+    <script src="CyInterface.js"      charset="utf-8"></script>
+
+    </body>
+</html>

@@ -1,0 +1,369 @@
+ Emokit F.A.Q
+===============
+
+* What is EEG?
+----------------
+
+    Electroencephalography (EEG) is an electrophysiological monitoring method to record electrical activity of the brain.
+	
+    
+* How do I get the actual time of a sample?
+-------------------------------------------
+	
+	For CSV format:
+	REAL TIME =timestamp started (ms)+ TIME_STAMP_s*1000 + TIME_STAMP_ms
+
+* What is a unit in emotiv?
+---------------------------
+
+    (As seen in csv)
+	units:emotiv
+	
+	measurement units - one emotiv unit is almost exactly one microvolt.
+	
+	
+* What is the 'recorded' csv format?
+--------------------------------------------
+
+	recorded:28.07.15 11.14.10
+
+	[Year]-[Month]-[Day] [Hours].[Minutes].[Seconds]
+	
+	Note: a session begins (for emotiv csv) when the headset connects to the application, not when a recording begins
+	
+	For CyKIT / emokit csv, a session begins when the recording begins.
+	
+
+* What is the 'timestamp started' csv format?
+--------------------------------------------
+	
+	timestamp started: 2017-07-04T11:55:54.734969+07:00
+
+	ISO time when the session was started and the timestamps began, to the nearest millisecond.
+
+	[Year]-[Month]-[Day]T[Hours]:[Minutes]:[Seconds]+[hours from GMT]
+	
+
+* What is an RMS voltage value ?
+---------------------------------
+RMS voltage value is a measurement to convert a sinusoidal waveform into the equivelant DC voltage.
+Where a sinusoidal wave (AC) would be plotted as alternating between positive and negative, an RMS 
+value would be a steady straight line, representing the average power produced by the AC, in DC format.
+<img src="./Images/rms1.gif" />
+
+    
+* Is it possible to restore 50 and 60hz?
+------------------------------------------
+
+    Yes. With an ‘inverse filter’ function it may be possible to restore some of the signal 
+    in the 50 and 60Hz zones. Matlab may be required to located and delete mains exclusively.
+
+    The inverse filter method works. However the dynamic range of the signal is compressed 
+    because the signal is pushed to a very low value, where the remaining bits are noisy 
+    with the notch frequencies.  Most of the unfiltered signal can be recovered, with exception
+    to 1 or 2 Hz around the mains frequency.  
+
+
+* Does emokit work with all emotiv headsets?
+----------------------------------------------
+
+    We are currently developing for all headsets.  
+
+    
+* What is the 'Mains' ?
+-------------------------
+
+    Mains harmonic measurement. 
+    AC power to homes, factories and offices is normally delivered at a frequency of 50 or 60 Hz, 
+    depending on the region of the world where you live. ... Harmonics are a distortion of the 
+    normal electrical current waveform.
+    
+    
+* How does the 'Mains harmonic measurement' effect my EEG signal?
+-------------------------------------------------------------------
+
+    the 120Hz second harmonic of the 60Hz mains gets folded back into the data as an 8Hz spike 
+    (100Hz folds back at 28Hz, and so on). You will need a higher-end system and decent screening 
+    to get meaningful data above 64Hz at this stage.
+
+    
+* How is EEG measured?
+------------------------    
+
+    EEG is measured in volts. For more precise measurements, microvolts. 
+    Expressed as: µV (or uV)
+    
+    
+* What are brain wave rhythms?
+--------------------------------
+    
+    There are four distinct periodic rhythms, identified by frequency in Hz (hertz) / or cycles per second. 
+    also identified by amplitude.  
+    
+    
+* What are the types of brain wave rhythms are there?
+-------------------------------------------------------
+
+    The four basic rhythms have been associated with various states.
+
+    Alpha 
+    -------
+     8 - 3 Hz
+     20-200 uV
+    
+    Beta 
+    ------
+     13 - 30 Hz 
+     5 - 10 uV
+    
+    Delta
+    -------
+     1 - 5 Hz
+     20 - 200 uV
+    
+    Theta 
+    -------
+     4 - 8 Hz
+     10 uV
+    
+    
+* How many volts is a microvolt?
+----------------------------------
+    
+    1 / 1,000,0000 of a volt.
+
+    
+* What is the circumplex model?
+---------------------------------
+The circumplex model of affect proposes that all affective states arise from cognitive interpretations of core neural sensations that are the product of two independent neurophysiological systems. This model stands in contrast to theories of basic emotions, which posit that a discrete and independent neural system subserves every emotion. We propose that basic emotion theories no longer explain adequately the vast number of empirical observations from studies in affective neuroscience, and we suggest that a conceptual shift is needed in the empirical approaches taken to the study of emotion and affective psychopathologies. The circumplex model of affect is more consistent with many recent findings from behavioral, cognitive neuroscience, neuroimaging, and developmental studies of affect. Moreover, the model offers new theoretical and empirical approaches to studying the development of affective disorders as well as the genetic and cognitive underpinnings of affective processing within the central nervous system.
+ 
+  the circumplex model of affect, proposes that all affective states arise from two fundamental neurophysiological systems, one related to valence (a pleasure–displeasure continuum) and the other to arousal, or alertness
+ 
+ Each emotion can be understood as a linear combination of these two dimensions, or as varying degrees of both valence and arousal (see Figure 1). Joy, for example, is conceptualized as an emotional state that is the product of strong activation in the neural systems associated with positive valence or pleasure together with moderate activation in the neural systems associated with arousal. Affective states other than joy likewise arise from the same two neurophysiological systems but differ in the degree or extent of activation. Specific emotions therefore arise out of patterns of activation within these two neurophysiological systems, together with cognitive interpretations and labeling of these core physiological experiences.
+ 
+* What is the mesolimbic system?
+----------------------------------
+ 
+ The mesolimbic system. The mesolimbic system commences in the ventral tegmental area (VTA) with dopaminergic projections to the nucleus accumbens (NA). The NA has reciprocal connections to the amygdala (A), hippocampus (HC), caudate nucleus (C), and prefrontal cortex (PFC).
+ 
+  Defenitions.
+ ===============
+ 
+ Brain Wave Rhythm Descriptions
+---------------------------------
+    
+    Alpha Wave: 
+    
+     Alpha rhythm is the prominent EEG wave pattern of an adult who is awake but relaxed with eyes closed. 
+     Each region of the brain has a characteristic alpha rhythm but alpha waves of the greatest amplitude 
+     are recorded from the occipital and parietal regions of the cerebral cortex. 
+     
+     In general, amplitudes of alpha waves diminish when subjects open their eyes and are attentive to 
+     external stimuli although some subjects trained in relaxation techniques can maintain high alpha 
+     amplitudes even with their eyes open.
+
+    Beta: 
+     
+     Beta rhythms occur in individuals who are alert and attentive to external stimuli or exert specific 
+     mental effort, or paradoxically, beta rhythms also occur during deep sleep, REM (Rapid Eye Movement) 
+     sleep when the eyes switch back and forth.  This does not mean that there is less electrical activity, 
+     rather that the “positive” and “negative” activities are starting to counterbalance so that the sum of 
+     the electrical activity is less.  Thus, instead of getting the wave-like synchronized pattern of alpha 
+     waves, desynchronization or alpha block occurs.  So, the beta wave represents arousal of the cortex to 
+     a higher state of alertness or tension.  It may also be associated with “remembering” or retrieving memories.
+
+    Delta and Theta: 
+    
+     Delta and theta rhythms are low-frequency EEG patterns that increase during sleep in the normal adult.  
+     As people move from lighter to deeper stages of sleep (prior to REM sleep), the occurrence of alpha waves 
+     diminish and is gradually replaced by the lower frequency theta and then delta frequency rhythms.
+
+     
+ Spectrograph 
+ -------------
+ Filtering the data to get spectral information requires several steps. 
+ 1. Remove the background offset – use a 0.16Hz high-pass filter or other 
+ similar background removal method. 
+ 
+ 2. Pick a sensible sample length – 
+ a power of 2 is good, containing more than 10 cycles of the lowest frequency of interest, 
+ so if you want 0.5Hz you need a sample length of 5 seconds (5×128 = 940 samples, so go for
+ 1024 as the next highest power of 2). 
+ 
+ 3. Apply a window function which simply multiplies the 
+ sample by one near the middle, tapering to zero at the ends (Hanning window is a good one). 
+ 
+ 4. Now calculate your FFT at calculate the POWER within each frequency bin by multiplying the 
+ FFT with its complex conjugate (generally FFT will return a complex number), then you can add 
+ up the power bins across each frequency range of interest. Instead of all of this, you can run
+ real-time notch filters to pass say 10Hz-13Hz or whatever – but then you need to take the RMS 
+ value of a specific window to convert to a usable number (actually the square of the RMS value
+ is proportional to band power)
+
+Electrode Positions
+---------------------
+
+    Electrode positions have been named according to the brain region below the area of the scalp.
+    
+    frontal, 
+    central (sulcus), 
+    parietal, 
+    temporal, 
+    and 
+    occipital. 
+    
+What is the bipolar method?
+=============================
+
+    In the bipolar method, the EEG is measured from a pair of scalp electrodes. 
+    The pair of electrodes measures the difference in electrical potential (voltage) 
+    between their two positions above the brain.  
+    
+    A third electrode is put on the earlobe as a point of reference, ‘ground’, of the body’s 
+    baseline voltage due to other electrical activities within the body.
+
+
+The bispectrum is a statistic used to search for nonlinear interactions. The Fourier transform of the second-order cumulant, i.e., the autocorrelation function, is the traditional power spectrum.
+    
+    
+ low frequency bands are affected from small drifts, eye blinks, cardiac, and respiration cycle and so on, whereas muscle artifacts and channels with low impedance affect higher frequencies. 
+    
+    nested oscillations 
+    cross spectral coupling 
+    Beamforming is a process that allows you to focus 
+ 
+    hemodynamic signal 
+    
+    Microscopic current flow 
+(~ 5×10 -5 nAm)
+ 
+ 
+ 
+    
+    Abbreviations
+AM
+amplitude-modulated.
+
+BCI
+brain-computer interface.
+
+CCA
+canonical correlation analysis.
+
+CPM
+characters per minute.
+
+CPU
+central processing unit.
+
+c-VEP
+code-modulated VEP.
+
+DC
+direct current.
+
+DFT
+discrete Fourier transform.
+
+DLL
+dynamic-link library.
+
+DSB
+double-sideband suppressed carrier.
+
+EEG
+electroencephalogram.
+
+EP
+evoked potential.
+
+ERD
+event-related desynchronization.
+
+ERP
+event-related potential.
+
+ErrP
+error-related potential.
+
+FFT
+fast Fourier transform.
+
+FIFO
+First in, First Out.
+
+FPGA
+field-programmable gate array.
+
+FVEP
+flash VEP.
+
+IIR
+infinite impulse response.
+
+Acronyms
+ITR
+information transfer rate.
+
+LCD
+liquid crystal display.
+
+LDA
+linear discriminant analysis.
+
+LED
+light-emitting diode.
+
+MEC
+minimum energy combination.
+
+MEG
+magnetoencephalography.
+
+OCSVM
+one class support vector machine.
+
+PBR
+practical bit rate.
+
+PIC
+primary inclusion criteria.
+
+PSD
+power spectral density.
+
+PSDA
+power spectral density analysis.
+
+QC
+quality criteria.
+
+SDK
+software development kit.
+
+SIC
+secondary inclusion criteria.
+
+SLR
+structured literature review.
+
+SMR
+sensorimotor rhythm.
+
+SNR
+signal-to-noise ratio.
+
+sCCA 
+sparse Canonical Correlation Analysis
+
+SSVEP
+steady state visually evoked potential.
+
+SVM
+support vector machine.
+
+t-VEP
+time-modulated VEP.
+
+VEP
+visual evoked potential.

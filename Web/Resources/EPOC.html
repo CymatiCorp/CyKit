@@ -1,0 +1,103 @@
+<html>
+<head>
+<script>
+  function img_info() {
+    return "EPOC+_"  }
+</script>
+</head>
+<body id="epocpage" style="width:100%; height:100%; overflow: hidden; overflow-y: auto;">
+    <div style="position:absolute; left:0px; top:0px; width:80px; height:80px; z-index: 1;" >
+        <a href="Main.html"><img width=50px height=50px src="./Images/arrow_left.png" ></a>
+    </div>
+    
+    <div style="position:absolute; left:0%; top:0px; height:550px; width:100%;  ">
+
+        <div style="position:relative; left:23%; top:50px; height:550px; width:25%;  ">
+            <p style="position:relative; left:78%; font-family:'arial black'; font-size:20px;"> <u>Hardware Features</u> </p>
+            <img style="position:absolute; left:80px;" width=620px height=400px src="./Images/EPOC/EPOC_2.png" />
+        </div>
+
+        
+        <div style="position:relative; left:30%; top:80px; height:100%;">
+            <p style="position:relative; left:15%; font-family:'arial black'; font-size:20px;"> <u>EPOC Package</u> </p>
+            <img src="./Images/EPOC/EPOC_5.png" />
+        </div>
+        
+        <div style="position:relative; left:30%; top: 120px; height:80%;">
+            <p style="position:relative; left:15%;  font-family:'arial black'; font-size:20px;"> <u> Video Tutorial </u></p>
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/OQ8sgKc65i8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>    
+        </div><Br>
+
+        <div style="position:relative; left:7%; top:120px; height:100%;">
+            <p style="position:relative; left:36%;  font-family:'arial black'; font-size:20px;"> <u>Specifications</u> </p>
+            <img id ="SPECIFICATION" style="position:absolute; left:10%;" src="" />
+        </div>
+
+        <div style="position:relative; left:20%; top:200px; height:100%;">
+            <p style="position:relative; left:23%; font-family:'arial black'; font-size:20px;"> <u> Sensor Layout </u> </p>
+            <img style="position:absolute; left:9%;" src="./Images/EPOC/EPOC_4.png" />
+        </div>
+        
+        <div style="position:relative; left:8%; top:260px; height:100%;">
+            <p style="position:relative; left:34%;  font-family:'arial black'; font-size:20px;"> <u> Light Indicators </u></p>
+            <img style="position:absolute; left:18%; width: 750px; height:820px;" src="./Images/EPOC/EPOC_10.png" />
+        </div>
+        
+        <div style="position:relative; left:15%; top: 604px; height:100%;">
+            <p style="position:relative; left:30%; top: 0px; font-family:'arial black'; font-size:20px;"> <u> Device Setup </u></p>
+            <img width=65% height=75% style="position:absolute; left:2%;" src="./Images/EPOC/EPOC_7.png" />
+        </div>
+        
+        <div style="position:relative; left:15%; top:590px; height:100%;">
+            <img width=65% height=85% style="position:absolute; left:2%;" src="./Images/EPOC/EPOC_8.png" />
+        </div>
+        <div style="position:relative; left:1%; top:560px; height:100%;">
+            <p style="position:relative; left:42%;  font-family:'arial black'; font-size:20px;"> <u> Device Usage </u></p>
+            <img style="position:absolute; left:8%;" src="./Images/EPOC/EPOC_6.png" />
+        </div>       
+        <div style="position:relative; left:0px; top:660px; height:100%;">
+            <p style="position:relative; left:38%;  font-family:'arial black'; font-size:20px;"> <u> Sensor Repair or Troubleshooting </u></p>
+            <img style="position:absolute; left:14%; width:960px; height: 1120px; " src="./Images/EPOC/EPOC_3.png" />
+        </div>
+        
+        <div style="position:relative; left:3%; top:1360px; height:100%;">
+            <p style="position:relative; left:42%;  font-family:'arial black'; font-size:20px; "> <u> Device Design </u></p>
+            <img style="position:absolute; left:12%; width:950px; height: 500px; " src="./Images/EPOC/EPOC_left.png" />
+            
+        </div>       
+        
+        <div style="position:relative; left:3%; top:1360px; height:100%;">
+            <p style="position:relative; left:42%;  font-family:'arial black'; font-size:20px; color:#aaa;"> (Left Enclosure) </p>        
+            <img style="position:absolute; left:12%; width:950px; height: 500px; " src="./Images/EPOC/EPOC_right.png" />
+            
+            </div>       
+        <div style="position:relative; left:3%; top:1362px; height:100%;">
+        <p style="position:relative; left:42%;  font-family:'arial black'; font-size:20px; color:#aaa;"> (Right Enclosure) </p>        
+            <img style="position:absolute; left:12%; width: 900px; height:120px;  " src="./Images/EPOC/EPOC_15.png" />
+            
+        </div>
+        <div style="position:relative; left:0px; top:979px; width:80px; height:80px; z-index: 1;" >
+            <a href="Main.html"><img width=50px height=50px src="./Images/arrow_left.png" ></a>
+        </div>
+    </div>
+    <script>
+            var pageHash = location.hash;
+            if (pageHash == null) { pageHash = "#epoc"; }
+            var specs = document.getElementById("SPECIFICATION");
+                if (specs != null) {
+                    specs.src = "./Images/" + pageHash.toUpperCase().substr(1) + "_SPEC.png";
+                    console.log(pageHash);
+                    if (pageHash == "#epoc") {
+                        specs.style.left = "10%";
+                    }
+                    else {
+                        specs.style.left = "0%";
+                    }
+                }
+                
+            
+    </script>
+    
+</body>
+
+<html>
