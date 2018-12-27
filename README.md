@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/CymatiCorp/CyKit/git-images/Images/CyKIT-1.png" />
+<img src="https://raw.githubusercontent.com/CymatiCorp/CyKit/git-images/Images/CyKIT-1.png" width=25% height=25%  />
 CyKIT 3.0 for Python 3.7 (Windows)
 =
 <hr />
@@ -8,6 +8,8 @@ Python 3+ will be the focus. please upgrade accordingly.
 
  [ December 27, 2018 - 1:00pm ]
 
+Chat Discussion: https://discordapp.com/invite/gTYNWc7
+(Do not need discord app, just click for browser chat)
 
 ```
 
