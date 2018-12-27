@@ -1,4 +1,4 @@
-CyKIT 3.0
+CyKIT 3.0 for Python 3.7 (Windows)
 =
 <hr />
 
