@@ -8,6 +8,8 @@ Last Updated: [ December 27, 2018 - 1:00pm ]
 Chat Discussion: https://discordapp.com/invite/gTYNWc7 <br>
 (Do not need discord app, just click for browser chat)
 
+Python Support
+----------------
 ```
 
 Supported Python 3 Versions
@@ -24,4 +26,6 @@ Python 2.7.6 support will now be limited.
 Python 3+ will be the focus. (Please upgrade accordingly.)
 ```
 Program Flowchart
+-------------------
+
 <img src="https://raw.githubusercontent.com/CymatiCorp/CyKit/git-images/Images/CyKIT-Flowchart.png" />
