@@ -1,6 +1,8 @@
-<img src="https://raw.githubusercontent.com/CymatiCorp/CyKit/git-images/Images/CyKIT-1.png" width=25% height=25%  />
+<img src="https://raw.githubusercontent.com/CymatiCorp/CyKit/git-images/Images/CyKIT-1.png" width=34% height=34%  />
+
 CyKIT 3.0 for Python 3.7 (Windows)
 =
+
 <hr />
 
 Python 2.7.6 support will now be limited. <br>
