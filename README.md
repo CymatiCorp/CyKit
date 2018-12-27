@@ -25,13 +25,14 @@ Python 3.7  (64-BIT)
 Python 2.7.6 support will now be limited.
 Python 3+ will be the focus. (Please upgrade accordingly.)
 ```
-Browser Interface
--------------------
-
-<img src="https://raw.githubusercontent.com/CymatiCorp/CyKit/git-images/Images/CyKIT-Preview.png" />
-
 
 Program Flowchart
 -------------------
 
 <img src="https://raw.githubusercontent.com/CymatiCorp/CyKit/git-images/Images/CyKIT-Flowchart.png" />
+
+
+Browser Interface
+-------------------
+
+<img src="https://raw.githubusercontent.com/CymatiCorp/CyKit/git-images/Images/CyKIT-Preview.png" />
