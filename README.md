@@ -3,12 +3,11 @@
 CyKIT 3.0 for Python 3.7 (Windows)
 =
 
-<hr />
+Last Updated: [ December 27, 2018 - 1:00pm ]
 
-Python 2.7.6 support will now be limited. <br>
-Python 3+ will be the focus. please upgrade accordingly.
+`Python 2.7.6 support will now be limited.` <br><br>
+`Python 3+ will be the focus. please upgrade accordingly.`
 
- [ December 27, 2018 - 1:00pm ]
 
 Chat Discussion: https://discordapp.com/invite/gTYNWc7
 (Do not need discord app, just click for browser chat)
