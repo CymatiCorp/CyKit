@@ -24,7 +24,7 @@ Program Flowchart
 -------------------
 
 <img src="https://raw.githubusercontent.com/CymatiCorp/CyKit/git-images/Images/CyKIT-Flowchart.png" />
-
+(MATLAB/Unity3D plugins have been created, but currently not included in repository)
 
 Browser Interface
 -------------------
