@@ -12,12 +12,9 @@ Python Support
 Supported Python 3 Versions
 ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
 
-Python 3.4  (32-BIT)
-Python 3.4  (64-BIT)
-Python 3.6  (32-BIT)
-Python 3.6  (64-BIT)
-Python 3.7  (32-BIT)
-Python 3.7  (64-BIT)
+Python 3.4  (32-bit or 64-bit)
+Python 3.6  (32-bit or 64-bit)
+Python 3.7  (32-bit or 64-bit)
 
 Python 2.7.6 support will now be limited.
 Python 3+ will be the focus. (Please upgrade accordingly.)
