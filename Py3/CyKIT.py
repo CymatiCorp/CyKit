@@ -1,7 +1,7 @@
 # -*- coding: utf8 -*-
 #
-#  CyKIT   2018.Dec.26
-# ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+#  CyKIT   2018.Dec.27
+# ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
 #  CyKIT.py 
 #  Written by Warren
 # 
@@ -31,8 +31,9 @@ def mirror(custom_string):
 
 if arg_count == 1 or arg_count > 5 or sys.argv[1] == "help" or sys.argv[1] == "--help" or sys.argv[1] == "/?":
     mirror("\r\n")
-    mirror(" (Version: CyKITv2:2018.Apr.20) -- Python 3.x on (Win32 or Win64) \r\n")
-    mirror("\r\n Usage:  Python.exe CyKITv2.py <IP> <Port> <Model#(1-6)> [config] \r\n")
+    mirror(" (Version: CyKIT 3.0:2018.Dec.26) for Python 3.x on (Win32 or Win64) \r\n")
+    mirror("\r\n Usage:  Python.exe .\\CyKIT.py <IP> <Port> <Model#(1-6)> [config] \r\n\r\n")
+    mirror(" Must be launched from the CyKIT directory, do not use py launcher.\r\n")
     mirror(" " + "═" * 100 + "\r\n")
     mirror(" <IP> <PORT> for CyKIT to listen on. \r\n")
     mirror(" " + ("═" * 100) + "\r\n")
@@ -66,8 +67,6 @@ if arg_count == 1 or arg_count > 5 or sys.argv[1] == "help" or sys.argv[1] == "-
     mirror("  'ovdelay'             Stream sending delay. (999 maximum) Works as a multiplier, in the format: ovdelay:001 \r\n\r\n")
     mirror("  'ovsamples'           Changes openvibe sample rate. Format: ovsamples:001 \r\n\r\n")
     mirror("  'integer'             Changes format from float to integer. Works with other flags. Including openvibe. \r\n\r\n")
-    mirror("  'noeeg'               Outputs only Gyro data.\r\n\r\n")
-    mirror("  'nogyro'              Outputs only EEG data.\r\n\r\n")
     mirror("  'baseline'            Averages data and sends the baseline value to socket.\r\n\r\n")
     mirror("  'path'                Prints the Python paths used to acquire modules.\r\n\r\n")
     mirror("  'filter'              When used with baseline, subtracts the data value from baseline and sends to sockets.\r\n\r\n")
@@ -77,15 +76,16 @@ if arg_count == 1 or arg_count > 5 or sys.argv[1] == "help" or sys.argv[1] == "-
     mirror("  'pywinusb'            Specifies to use the pywinusb libraries to connect to the USB device.\r\n\r\n")
     mirror("                         Defaults to using libusb libraries.\r\n\r\n")
     mirror("  'noweb'               Displays data. (without requiring a TCP connection.)\r\n\r\n")
-    mirror("  'bluetooth=xxxxxxxx'  Connect to bluetooth device, use the hex digit found in the devices pairing name.\r\n\r\n")
+    mirror("  'bluetooth'  Attempt to AUTO-DETECT an already paired bluetooth device.\r\n\r\n")
+    mirror("  'bluetooth=xxxxxxxx'  Connect to an already paired bluetooth device, use the hex digit found in the devices pairing name.\r\n\r\n")
     mirror("                         The pairing name can easily be found in Windows Bluetooth settings.\r\n\r\n")
     mirror("   Join these options (in any order), using a + separator. \r\n")
     mirror("   (e.g  info+confirm ) \r\n\r\n")
     mirror(" " + "═" * 100 + "\r\n")
     mirror("  Example Usage: \r\n")
-    mirror("  Python.exe CyKITv2.py 127.0.0.1 54123 1 info+confirm \r\n\r\n")
+    mirror("  Python.exe .\\CyKIT.py 127.0.0.1 54123 1 info+confirm \r\n\r\n")
     mirror("  Example Usage: \r\n")
-    mirror("  Python.exe CyKITv2.py 127.0.0.1 54123 6 openvibe+generic+nocounter++noheader+nobattery+ovdelay:100+integer+ovsamples:004 \r\n\r\n")
+    mirror("  Python.exe .\\CyKIT.py 127.0.0.1 5555 6 openvibe+generic+nocounter+noheader+nobattery+ovdelay:100+integer+ovsamples:004 \r\n\r\n")
     mirror(" " + "═" * 100 + "\r\n")
     sys.argv = [sys.argv[0], "127.0.0.1", "54123", "1", ""]
     
