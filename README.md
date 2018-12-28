@@ -5,7 +5,7 @@ CyKIT 3.0 for Python 3.7 (Windows)
 
 Last Updated: [ December 27, 2018 - 1:00pm ]
 
-Python Support
+Language Support (Python 3.x)
 ----------------
 ```
 
