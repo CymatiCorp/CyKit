@@ -1,9 +1,3 @@
-CyKIT 3.0
-=
-<hr />
+This branch is for CyKIT related files and images.
 
-Python 2.7.6 support will now be limited. <br>
-Python 3+ will be the focus. please upgrade accordingly.
-
- [ December 27, 2018 - 1:00pm ]
- 
+Please see the master branch for the latest Revision: https://github.com/CymatiCorp/CyKit
