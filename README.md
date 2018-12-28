@@ -5,9 +5,6 @@ CyKIT 3.0 for Python 3.7 (Windows)
 
 Last Updated: [ December 27, 2018 - 1:00pm ]
 
-Chat Discussion: https://discordapp.com/invite/gTYNWc7 <br>
-(Do not need discord app, just click for browser chat)
-
 Python Support
 ----------------
 ```
@@ -36,3 +33,8 @@ Browser Interface
 -------------------
 
 <img src="https://raw.githubusercontent.com/CymatiCorp/CyKit/git-images/Images/CyKIT-Preview.png" />
+
+Communication
+-
+Chat Discussion: https://discordapp.com/invite/gTYNWc7 <br>
+(Do not need discord app, just click for browser chat)
