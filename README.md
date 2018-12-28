@@ -1,6 +1,6 @@
 <img src="https://raw.githubusercontent.com/CymatiCorp/CyKit/git-images/Images/CyKIT-1.png" width=34% height=34%  />
 
-CyKIT 3.0 for Python 3.7 (Windows)
+CyKIT 3.0 for Python 3.7.x (Windows 32-bit/64-bit)
 =
 
 Last Updated: [ December 27, 2018 - 1:00pm ]
