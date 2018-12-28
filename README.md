@@ -35,3 +35,9 @@ Communication
 -
 Chat Discussion: https://discordapp.com/invite/gTYNWc7 <br>
 (Do not need discord app, just click for browser chat)
+
+Version History
+-
+Deprecated CyKIT versions can be found here:
+https://github.com/CymatiCorp/CyKit/tree/git-images/History
+
