@@ -39,9 +39,10 @@ Chat Discussion: https://discordapp.com/invite/gTYNWc7 <br>
 Version History
 -
 Deprecated CyKIT versions can be found here: <br>
-[(CyKIT Version History)](https://github.com/CymatiCorp/CyKit/tree/git-images/History/) <br><br>
-	```
-	CyKIT v1.0 python 2.7.6 (2014)
-	CyKIT v1.0 python 3.3.x (2015)
-	CyKIT v2.0 Python 2.7.6 (2018.Jan.29)
-        ```
+[(CyKIT Version History)](https://github.com/CymatiCorp/CyKit/tree/git-images/History/) <br>
+
+```
+CyKIT v1.0 python 2.7.6 (2014)
+CyKIT v1.0 python 3.3.x (2015)
+CyKIT v2.0 Python 2.7.6 (2018.Jan.29)
+```
