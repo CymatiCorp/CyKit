@@ -31,6 +31,17 @@ Browser Interface
 
 <img src="https://raw.githubusercontent.com/CymatiCorp/CyKit/git-images/Images/CyKIT-Preview.png" />
 
+Documentation
+-------------------
+```
+Introduction
+```
+* [CyKIT 3.0 (wikipage)](https://github.com/CymatiCorp/CyKit/wiki/CyKIT-3.0-Documentation)
+```
+Software (How To)
+```
+* [How to Install CyKIT](https://github.com/CymatiCorp/CyKit/wiki/How-to-Install-CyKIT)
+
 Communication
 -
 Chat Discussion: https://discordapp.com/invite/gTYNWc7 <br>
