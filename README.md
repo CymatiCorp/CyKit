@@ -41,6 +41,7 @@ Introduction
 Software (How To)
 ```
 * [How to Install CyKIT](https://github.com/CymatiCorp/CyKit/wiki/How-to-Install-CyKIT)
+* [How to Stream Data to OpenViBE](https://github.com/CymatiCorp/CyKit/wiki/How-to-Stream-Data-to-OpenViBE)
 
 Communication
 -
