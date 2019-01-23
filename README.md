@@ -43,6 +43,8 @@ Software (How To)
 * [How to Install CyKIT](https://github.com/CymatiCorp/CyKit/wiki/How-to-Install-CyKIT)
 * [How to Stream Data to OpenViBE](https://github.com/CymatiCorp/CyKit/wiki/How-to-Stream-Data-to-OpenViBE)
 * [How to Pair USB device](https://github.com/CymatiCorp/CyKit/wiki/How-to-Pair-USB-device)
+* [How to Change EPOC+ hertz modes](https://github.com/CymatiCorp/CyKit/wiki//How-to-Change-EPOC(plus)--modes)  
+
 
 Communication
 -
