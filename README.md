@@ -5,7 +5,8 @@ CyKIT 3.0 for Python 3.x (Linux)
 =
 Until MAC/Linux support can be integrated into this repository, <br>
 Please see this branch for MAC/Linux support. <br>
-https://github.com/hugofloresgarcia/CyKit
+https://github.com/hugofloresgarcia/CyKit   or,
+https://github.com/tahesse/CyKITv2
 
 CyKIT 3.0 for Python 3.7.x (Windows)
 =
