@@ -1,5 +1,12 @@
 <img src="https://raw.githubusercontent.com/CymatiCorp/CyKit/git-images/Images/CyKIT-1.png" width=34% height=34%  />
 
+
+CyKIT 3.0 for Python 3.x (Linux)
+=
+Until MAC/Linux support can be integrated into this repository, <br>
+Please see this branch for MAC/Linux support. <br>
+https://github.com/hugofloresgarcia/CyKit
+
 CyKIT 3.0 for Python 3.7.x (Windows)
 =
 
