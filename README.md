@@ -72,7 +72,8 @@ CyKIT v2.0 Python 2.7.6 (2018.Jan.29)
 
 Documentation
 -
-```Bluetooth Development Documentation``` <br>
-https://github.com/CymatiCorp/CyKit/blob/git-images/Documentation/Bluetooth_Development-Epoc.pdf
+
+[Bluetooth Development Documentation](https://github.com/CymatiCorp/CyKit/blob/git-images/Documentation/Bluetooth_Development-Epoc.pdf)
+
 
 <br><br>
