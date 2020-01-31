@@ -1545,13 +1545,17 @@ class EEG(object):
                     #  Epoc. 
                     # ¯¯¯¯¯¯¯¯
                     if self.KeyModel == 2:
-                        counter_data = str(data[0]) + self.delimiter
-
+                        
+                        if self.nocounter == True:
+                            counter_data = ""
+                        else:
+                            counter_data = str(data[0]) + self.delimiter
+                        
                         # ~Format-0: (Default) 
                         # ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
                         if self.format < 1:
                             for i in range(0,14):
-                                packet_data = packet_data + str(self.convertEPOC(data, self.mask[i])) + self.delimiter
+                                packet_data = packet_data + str(self.convertEPOC(data[1:], self.mask[i])) + self.delimiter
                             if cyIO.isRecording() == True:
                                 cyIO.startRecord(counter_data + packet_data)
                             if self.outputdata == True:
