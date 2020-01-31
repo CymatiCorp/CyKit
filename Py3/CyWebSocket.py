@@ -325,28 +325,31 @@ class socketIO():
     
     def sendOVint(self, text):
         try:
-            ov_split = str(text).split(",")        
+            ov_split = str(text).split(",")[:-1]
             
             if self.ov_packetCount >= self.ovsamples:
+                if self.con == None:
+                    return
                 self.con.sendall(self.ovData) 
                 self.ovData = bytes()
                 self.ov_packetCount = 0
             
-            #ov_floats = map((lambda x: float("%.11f" % float(x))), ov_split)
-            ov_ints = list(map(lambda x: int(float(x)), ov_split))
+            ov_ints = list(map(lambda x: int(x), ov_split))
             self.ovData += b''.join((struct.pack('>h', val) for val in ov_ints))
             self.ov_packetCount += 1
-        
-        except OSError as e:
+            
+        except Exception as e:
             self.socketThreadRunning = False
             self.onClose("3")
             return
-        
+            
     def sendOVfloat(self, text):
         try:          
-            ov_split = str(text).split(",")
+            ov_split = str(text).split(",")[:-1]
             
             if self.ov_packetCount >= self.ovsamples:
+                if self.con == None:
+                    return
                 self.con.sendall(self.ovData)
                 self.ovData = bytes()
                 self.ov_packetCount = 0
@@ -356,7 +359,7 @@ class socketIO():
             self.ovData += b''.join((struct.pack('>f', val) for val in ov_floats))
             self.ov_packetCount += 1
             
-        except OSError as e:
+        except Exception as e:
             self.socketThreadRunning = False
             self.onClose("3")
             return
