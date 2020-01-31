@@ -1,6 +1,6 @@
 # -*- coding: utf8 -*-
 #
-#  ♦ CyKIT ♦  2018.Dec.26
+#  ♦ CyKIT ♦  2020.Jan.31
 # ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
 #  eeg.py
 #  Written by Warren
