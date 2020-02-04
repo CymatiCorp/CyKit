@@ -1556,6 +1556,7 @@ class EEG(object):
                         if self.format < 1:
                             for i in range(0,14):
                                 packet_data = packet_data + str(self.convertEPOC(data[1:], self.mask[i])) + self.delimiter
+                            packet_data = packet_data[:-len(self.delimiter)] # Remove extra delimiter.
                             if cyIO.isRecording() == True:
                                 cyIO.startRecord(counter_data + packet_data)
                             if self.outputdata == True:
@@ -1567,7 +1568,7 @@ class EEG(object):
                         if self.format == 1:
                             for i in range(1, len(data)):
                                 packet_data = packet_data + str(data[i]) + self.delimiter
-                            packet_data = packet_data[:-len(self.delimiter)]
+                            packet_data = packet_data[:-len(self.delimiter)] # Remove extra delimiter.
                             if cyIO.isRecording() == True:
                                 cyIO.startRecord(counter_data + packet_data)
                             if self.outputdata == True:
@@ -1577,8 +1578,12 @@ class EEG(object):
                     #  Insight.
                     # ¯¯¯¯¯¯¯¯¯¯¯
                     if self.KeyModel == 4 or self.KeyModel == 7:
-                        counter_data = str(data[0]) + self.delimiter
-                                                
+
+                        if self.nocounter == True:
+                            counter_data = ""
+                        else:
+                            counter_data = str(data[0]) + self.delimiter
+                            
                         # ~Format-0: (Default) (Decodes to Floating Point) 
                         # ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
                         
@@ -1603,6 +1608,8 @@ class EEG(object):
                                 
                                 packet_data = packet_data + str(int(eval(v_1))) + self.delimiter + str(int(eval(v_2))) + self.delimiter
                             
+                            packet_data = packet_data[:-len(self.delimiter)] # Remove extra delimter
+                                                        
                             if self.outputdata == True:
                                 if self.channel != None:
                                     mirror.text(str(counter_data) + self.delimiter + str(packet_data.split(self.delimiter)[int(self.channel)]))
@@ -1639,19 +1646,30 @@ class EEG(object):
                                 v_2 = '0b' + z[(i_2):(i_2+6)]
                                 packet_data = packet_data + str(int(eval(v_1))) + self.delimiter + str(int(eval(v_2))) + self.delimiter
                             
+                            packet_data = packet_data[:-len(self.delimiter)]
                             
                             if self.outputdata == True:
                                 mirror.text(str(counter_data + packet_data))
                         
                         if self.format < 1:
-                            for i in range(2,16,2):
+                            for i in range(1,16,2):
+                                #print(str(data[0]) + "-" + str(data[1]) + " " + str(i))
                                 packet_data = packet_data + str(self.convertEPOC_PLUS(str(data[i]), str(data[i+1]))) + self.delimiter
                             
                             for i in range(18,len(data),2):
                                 packet_data = packet_data + str(self.convertEPOC_PLUS(str(data[i]), str(data[i+1]))) + self.delimiter
 
                             packet_data = packet_data[:-len(self.delimiter)]
-                            
+                            """ Insight not currently supported for openvibe.  
+                                Will need to select the channels necessary. Will update in next revision.
+                            if self.openvibe == True and self.nocounter == True:
+                                ov_data = [float(x) for x in packet_data.split(self.delimiter)][0:5]
+                                ov_data = str(ov_data)
+                                ov_data = ov_data[1:]
+                                ov_data = ov_data[:-1]
+                                packet_data = str(ov_data)
+                                print(str(ov_data))
+                            """ 
                             if cyIO.isRecording() == True:
                                 cyIO.startRecord(counter_data + packet_data)
                             if self.outputdata == True:
@@ -1698,7 +1716,7 @@ class EEG(object):
                             for i in range(18,len(data),2):
                                 packet_data = packet_data + str(self.convertEPOC_PLUS(str(data[i]), str(data[i+1]))) + self.delimiter
 
-                            packet_data = packet_data[:-len(self.delimiter)]
+                            packet_data = packet_data[:-len(self.delimiter)] # Remove extra delimiter.
 
                             #  Averages Signal Data and Sends to Client.
                             # ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
@@ -1757,7 +1775,6 @@ class EEG(object):
                             if cyIO.isRecording() == True:
                                 record_data = packet_data
                                 if self.blankcsv == True:
-
                                     emptyCSV = ("0" + self.delimiter) * int(self.channels - (16 + abs((self.nobattery & 1) *-2)))
 
                                     emptyCSV = emptyCSV[:-2]
@@ -1845,6 +1862,3 @@ class EEG(object):
                     print_format = "{}: Exception in line: {}, message: {}"
                     mirror.text(" ¯¯¯¯ eegThread.run() Error Formatting Data.")
                     mirror.text(" =E.8: " + print_format.format(exc_type.__name__, line_number, ex))    
-
-                    #  So Long. Merci for the <)))<.
-                    # ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
