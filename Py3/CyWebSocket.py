@@ -325,7 +325,7 @@ class socketIO():
     
     def sendOVint(self, text):
         try:
-            ov_split = str(text).split(",")[:-1]
+            ov_split = str(text).split(",")
             
             if self.ov_packetCount >= self.ovsamples:
                 if self.con == None:
@@ -345,7 +345,7 @@ class socketIO():
             
     def sendOVfloat(self, text):
         try:          
-            ov_split = str(text).split(",")[:-1]
+            ov_split = str(text).split(",")
             
             if self.ov_packetCount >= self.ovsamples:
                 if self.con == None:
