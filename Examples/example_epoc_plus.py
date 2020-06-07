@@ -1,6 +1,6 @@
 # -*- coding: utf8 -*-
 #
-#  CyKIT 3.3  2020.06.05
+#  CyKIT  2020.06.05
 #  ________________________
 #  example_epoc_plus.py       
 #  
