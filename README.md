@@ -29,7 +29,8 @@ Python 3+ will be the focus. (Please upgrade accordingly.)
 
 Headset Support
 ----------------
-Does not currently work with Epoc X or Flex.
+Does not currently work with Epoc X
+See Discord for details about Flex. 
 
 Program Flowchart
 -------------------
