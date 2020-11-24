@@ -27,6 +27,10 @@ Python 2.7.6 support will now be limited.
 Python 3+ will be the focus. (Please upgrade accordingly.)
 ```
 
+Headset Support
+----------------
+Does not currently work with Epoc X or Flex.
+
 Program Flowchart
 -------------------
 
