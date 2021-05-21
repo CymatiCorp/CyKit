@@ -16,20 +16,25 @@ Language Support (Python 3.x)
 ----------------
 ```
 
-Supported Python 3 Versions
-¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+ Supported Python 3 Versions
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
 
-Python 3.4  (32-bit or 64-bit)
-Python 3.6  (32-bit or 64-bit)
-Python 3.7  (32-bit or 64-bit)
+Python 3.4.x  (32-bit or 64-bit)
+Python 3.6.x  (32-bit or 64-bit) 
+Python 3.7.x  (32-bit or 64-bit) 
+Python 3.8.x  (32-bit or 64-bit) 
+Python 3.9.x  (32-bit or 64-bit)
+
+Latest Python Build: Python 3.9.5
 
 Python 2.7.6 support will now be limited.
 Python 3+ will be the focus. (Please upgrade accordingly.)
+
 ```
 
 Headset Support
 ----------------
-Does not currently work with Epoc X  <br>
+Does not currently work with Epoc-X  <br>
 See Discord for details about Flex. 
 
 Program Flowchart
