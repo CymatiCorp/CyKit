@@ -1,7 +1,7 @@
 # -*- coding: utf8 -*-
 #
-#  ♦ CyKIT ♦  2020.Jan.31
-# ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+#  CyKIT 2021.Nov.10
+# ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
 #  eeg.py
 #  Written by Warren
 #
@@ -1410,7 +1410,7 @@ class EEG(object):
                     #mirror.text(str(list(task))
                     # 0x60
                     task = self.device.read(0x82, 32, 100)
-                    tasks.put(task.tostring())
+                    tasks.put(task.tobytes())
                     
                 except Exception as e:
                     
@@ -1453,7 +1453,7 @@ class EEG(object):
                     if self.blankdata == False:
                         try:
                             task = self.device.read(0x82, 32, 500)
-                            tasks.put(task.tostring())
+                            tasks.put(task.tobytes())
                         except Exception as e:
                             if str(e.errno) != "10060":
                                 mirror.text("Error.eeg() = " + str(e.errno))
