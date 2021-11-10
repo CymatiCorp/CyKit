@@ -194,7 +194,7 @@ def main(CyINIT):
 
             check_threads = 0
             
-            t_array = str(list(map(lambda x: x.getName(), threading.enumerate())))
+            t_array = str(list(map(lambda x: x.name, threading.enumerate())))
             #if eval(cy_IO.getInfo("verbose")) == True:
             #    mirror(" Active Threads :{ " + str(t_array) + " } ")
             #time.sleep(15)
@@ -224,21 +224,21 @@ def main(CyINIT):
                     time.sleep(0)
                     threadMax = 0
                     for t in threading.enumerate():
-                        if "eegThread" in t.getName():
+                        if "eegThread" in t.name:
                             cy_IO.setInfo("status","False")
-                            #mirror(t.getName())
-                        if "ioThread" in t.getName():
-                            #mirror(t.getName())
+                            #mirror(t.name)
+                        if "ioThread" in t.name:
+                            #mirror(t.name)
                             CyWebSocket.socketIO.stopThread(ioTHREAD)
                         
-                        if "Thread-" in t.getName():
-                            #mirror(t.getName())
+                        if "Thread-" in t.name:
+                            #mirror(t.name)
                             threadMax += 1
                             try:
                                 t.abort()
                             except:
                                 continue
-                t_array = str(list(map(lambda x: x.getName(), threading.enumerate())))
+                t_array = str(list(map(lambda x: x.name, threading.enumerate())))
                 #mirror(str(t_array))
                 ioTHREAD.onClose("CyKIT.main() 1")
                 mirror("*** Reseting . . .")
