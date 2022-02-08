@@ -307,7 +307,7 @@ class ControllerIO():
                         pathFinder = cyPath + "/EEG-Logs/" + self.recordFile + ".csv"
                         if eval(self.getInfo("verbose")) == True:
                             mirror.text("[Record: File exists. Changing to: " + self.recordFile + ".csv ]")
-                except Exceptiona as msg:
+                except Exception as msg:
                     mirror.text("File Selection Error: " + str(msg))
                     return
                 
