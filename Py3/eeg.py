@@ -1609,13 +1609,7 @@ class EEG(object):
                                 packet_data = packet_data + str(int(eval(v_1))) + self.delimiter + str(int(eval(v_2))) + self.delimiter
                             
                             packet_data = packet_data[:-len(self.delimiter)] # Remove extra delimter
-                                                        
-                            if self.outputdata == True:
-                                if self.channel != None:
-                                    mirror.text(str(counter_data) + self.delimiter + str(packet_data.split(self.delimiter)[int(self.channel)]))
-                                else:
-                                    mirror.text(str(counter_data + packet_data))
-                        
+
                         #Bluetooth Formatting.
                         if self.format == 3:                           
                             # Every 14 Bits of first 10 Bytes are split up into 8 bit + 6 bits.
@@ -1635,8 +1629,6 @@ class EEG(object):
                                 i_1 = self.insight_1[(i-2)]
                                 i_2 = self.insight_1[(i-1)]
                                 
-                                #mirror.text(str(i_1) + ":" + str(i_2) + " - " + str(i_2) + ":" + str((i_2+6)))
-                                
                                 if i_2 > len(z):
                                     i = len(self.insight_1)
 
@@ -1648,12 +1640,8 @@ class EEG(object):
                             
                             packet_data = packet_data[:-len(self.delimiter)]
                             
-                            if self.outputdata == True:
-                                mirror.text(str(counter_data + packet_data))
-                        
                         if self.format < 1:
                             for i in range(1,16,2):
-                                #print(str(data[0]) + "-" + str(data[1]) + " " + str(i))
                                 packet_data = packet_data + str(self.convertEPOC_PLUS(str(data[i]), str(data[i+1]))) + self.delimiter
                             
                             for i in range(18,len(data),2):
@@ -1669,12 +1657,7 @@ class EEG(object):
                                 ov_data = ov_data[:-1]
                                 packet_data = str(ov_data)
                                 print(str(ov_data))
-                            """ 
-                            if cyIO.isRecording() == True:
-                                cyIO.startRecord(counter_data + packet_data)
-                            if self.outputdata == True:
-                                mirror.text(str(counter_data + packet_data))
-                        
+                            """                         
                             if self.nobattery == False:
                                 packet_data = packet_data + self.delimiter + str(data[16]) + str(self.delimiter) + str(data[17]) 
                                 
@@ -1684,10 +1667,11 @@ class EEG(object):
                             for i in range(1,len(data)):
                                 packet_data = packet_data + str(data[i]) + self.delimiter
                             packet_data = packet_data[:-len(self.delimiter)]
-                            if cyIO.isRecording() == True:
-                                cyIO.startRecord(counter_data + packet_data)
-                            if self.outputdata == True:
-                                mirror.text(str(counter_data + packet_data))
+
+                        if self.outputdata == True:
+                            mirror.text(str(counter_data + packet_data))
+                        if cyIO.isRecording() == True:
+                            cyIO.startRecord(counter_data + packet_data)
                         
                     #  Epoc+
                     # ¯¯¯¯¯¯¯¯
