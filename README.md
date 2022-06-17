@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/CymatiCorp/CyKit/git-images/Images/CyKIT-1.png" width=34% height=34%  />
+<img src="https://raw.githubusercontent.com/CymatiCorp/CyKit/git-images/Images/CyKIT5.png" width=34% height=34%  />
 
 
 CyKIT 3.0 for Python 3.x (Linux)
