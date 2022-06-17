@@ -1544,7 +1544,7 @@ class EEG(object):
 
                     #  Epoc. 
                     # ¯¯¯¯¯¯¯¯
-                    if self.KeyModel == 2:
+                    if self.KeyModel == 2 or self.KeyModel == 1:
                         
                         if self.nocounter == True:
                             counter_data = ""
