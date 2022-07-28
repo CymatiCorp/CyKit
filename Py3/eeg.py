@@ -1,6 +1,6 @@
 # -*- coding: utf8 -*-
 #
-#  CyKIT 2021.Nov.10
+#  CyKIT 2022.July.27
 # ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
 #  eeg.py
 #  Written by Warren
@@ -941,7 +941,7 @@ class EEG(object):
        
         #  Additional Product Names. (Not used for Data)
         # 'EPOC BCI', 'Brain Waves', 'Brain Computer Interface USB Receiver/Dongle', 'Receiver Dongle L01'
-        deviceList  = ['EPOC+','EEG Signals', '00000000000', 'Emotiv RAW DATA',]
+        deviceList  = ['EPOC+','EEG Signals', '00000000000', 'Emotiv RAW DATA', "FLEX"]
         DEVICE_UUID = "{81072f40-9f3d-11e3-a9dc-0002a5d5c51b}"
         DATA_UUID   = "{81072f41-9f3d-11e3-a9dc-0002a5d5c51b}"
         MEMS_UUID   = "{81072f42-9f3d-11e3-a9dc-0002a5d5c51b}"
