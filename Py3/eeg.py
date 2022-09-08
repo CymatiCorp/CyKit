@@ -946,6 +946,18 @@ class EEG(object):
         DATA_UUID   = "{81072f41-9f3d-11e3-a9dc-0002a5d5c51b}"
         MEMS_UUID   = "{81072f42-9f3d-11e3-a9dc-0002a5d5c51b}"
 
+                
+        eegDLL.get_bluetooth_id.restype     =  c_wchar_p  # Result   type: C-style character pointer. 
+        
+        eegDLL.btle_init.argtypes           = [c_wchar_p] # Argument type: C-style character pointer.    
+        eegDLL.btle_init.restype            =  c_void_p   # Argument type: C-style pointer.
+
+        eegDLL.set_callback_func.argtypes   = [c_void_p]  # Pointer for callback function.
+        eegDLL.set_callback_func.restype    =  c_void_p   # Pointer for device handle.
+        
+        eegDLL.run_data_collection.argtypes = [ c_void_p, POINTER(c_wchar_p * 2) ] # Pointer, Pointer to UUID array.
+        eegDLL.run_data_collection.restype  =   c_void_p                           # Pointer.
+        
         devicesUsed = 0        
         threadMax = 0
         detail_info = None
@@ -970,6 +982,9 @@ class EEG(object):
             try:
                 global _CB_FUNC_
                 global cb
+                
+                
+                
                 self.device = eegDLL.btle_init(DEVICE_UUID) # Open.
                 cb = _CB_FUNC_(DataCallback)                    # Set Handler.
                 eegDLL.set_callback_func(cb)             
@@ -1614,31 +1629,16 @@ class EEG(object):
                         if self.format == 3:                           
                             # Every 14 Bits of first 10 Bytes are split up into 8 bit + 6 bits.
                             
-                            z = ''
-                            for i in range(1,len(data)):
-                                #if i == 16:
-                                #    continue
-                                z = z + format(data[i],'08b')
+                            bit_array = []
+                            c_bits = ''.join(list(map(lambda x: format(x, '08b'), data[1:])))
+                            print(str(len(c_bits)))
+                            for i in range(0, int(len(c_bits)), 14):
+                                bits_8 = '0b' + c_bits[i:i+8]
+                                bits_6 = '0b' + c_bits[i+8:i+13]
+                                bit_array.append(int(eval(bits_8)))
+                                bit_array.append(int(eval(bits_6)))
                             
-                            insight_bt_index = 15
-                            for i in range(2,(len(self.insight_1) ),2):
-                                #if i == 14:
-                                #    packet_data = packet_data + str(data[14]) + self.delimiter + str(data[15]) + self.delimiter
-                                #    continue
-                                
-                                i_1 = self.insight_1[(i-2)]
-                                i_2 = self.insight_1[(i-1)]
-                                
-                                if i_2 > len(z):
-                                    i = len(self.insight_1)
-
-                                # Get 2 halves of 14bytes (8byte + 6byte)
-                                v_1 = '0b' + z[(i_1):(i_2)]
-                                
-                                v_2 = '0b' + z[(i_2):(i_2+6)]
-                                packet_data = packet_data + str(int(eval(v_1))) + self.delimiter + str(int(eval(v_2))) + self.delimiter
-                            
-                            packet_data = packet_data[:-len(self.delimiter)]
+                            packet_data = str(bit_array)[:-1][1:]
                             
                         if self.format < 1:
                             for i in range(1,16,2):
