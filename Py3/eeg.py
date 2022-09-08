@@ -975,15 +975,13 @@ class EEG(object):
             
             BT_manualkey = globals()['BT_manualkey']
             
-            uuid_list = [DATA_UUID]
+            uuid_list = [str(DATA_UUID), str(MEMS_UUID)]
             uuid_clist = (c_wchar_p * len(uuid_list))()
             uuid_clist[:] = uuid_list
 
             try:
                 global _CB_FUNC_
                 global cb
-                
-                
                 
                 self.device = eegDLL.btle_init(DEVICE_UUID) # Open.
                 cb = _CB_FUNC_(DataCallback)                    # Set Handler.
@@ -1631,7 +1629,7 @@ class EEG(object):
                             
                             bit_array = []
                             c_bits = ''.join(list(map(lambda x: format(x, '08b'), data[1:])))
-                            print(str(len(c_bits)))
+
                             for i in range(0, int(len(c_bits)), 14):
                                 bits_8 = '0b' + c_bits[i:i+8]
                                 bits_6 = '0b' + c_bits[i+8:i+13]
