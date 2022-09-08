@@ -656,7 +656,7 @@ function changeFormat(format) {
     // Format 3 (Data is reformatted (strung together as binary and broken apart as 7 bits))
     var CyFormat = document.getElementById("CyFormat").value;
     if (CyFormat == "Floating Point") {
-        if (selected_model == 4) {
+        if (selected_model == 4 || selected_model == 7) {
             if (bluetooth == "bt") {
                 formatType = 3;
             }
