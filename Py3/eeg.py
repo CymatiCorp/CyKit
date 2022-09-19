@@ -942,22 +942,7 @@ class EEG(object):
         #  Additional Product Names. (Not used for Data)
         # 'EPOC BCI', 'Brain Waves', 'Brain Computer Interface USB Receiver/Dongle', 'Receiver Dongle L01'
         deviceList  = ['EPOC+','EEG Signals', '00000000000', 'Emotiv RAW DATA', "FLEX"]
-        DEVICE_UUID = "{81072f40-9f3d-11e3-a9dc-0002a5d5c51b}"
-        DATA_UUID   = "{81072f41-9f3d-11e3-a9dc-0002a5d5c51b}"
-        MEMS_UUID   = "{81072f42-9f3d-11e3-a9dc-0002a5d5c51b}"
 
-                
-        eegDLL.get_bluetooth_id.restype     =  c_wchar_p  # Result   type: C-style character pointer. 
-        
-        eegDLL.btle_init.argtypes           = [c_wchar_p] # Argument type: C-style character pointer.    
-        eegDLL.btle_init.restype            =  c_void_p   # Argument type: C-style pointer.
-
-        eegDLL.set_callback_func.argtypes   = [c_void_p]  # Pointer for callback function.
-        eegDLL.set_callback_func.restype    =  c_void_p   # Pointer for device handle.
-        
-        eegDLL.run_data_collection.argtypes = [ c_void_p, POINTER(c_wchar_p * 2) ] # Pointer, Pointer to UUID array.
-        eegDLL.run_data_collection.restype  =   c_void_p                           # Pointer.
-        
         devicesUsed = 0        
         threadMax = 0
         detail_info = None
@@ -973,6 +958,21 @@ class EEG(object):
         # ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
         if eeg_driver == "bluetooth":
             
+            DEVICE_UUID = "{81072f40-9f3d-11e3-a9dc-0002a5d5c51b}"
+            DATA_UUID   = "{81072f41-9f3d-11e3-a9dc-0002a5d5c51b}"
+            MEMS_UUID   = "{81072f42-9f3d-11e3-a9dc-0002a5d5c51b}"
+
+            eegDLL.get_bluetooth_id.restype     =  c_wchar_p  # Result   type: C-style character pointer. 
+
+            eegDLL.btle_init.argtypes           = [c_wchar_p] # Argument type: C-style character pointer.    
+            eegDLL.btle_init.restype            =  c_void_p   # Argument type: C-style pointer.
+
+            eegDLL.set_callback_func.argtypes   = [c_void_p]  # Pointer for callback function.
+            eegDLL.set_callback_func.restype    =  c_void_p   # Pointer for device handle.
+
+            eegDLL.run_data_collection.argtypes = [ c_void_p, POINTER(c_wchar_p * 2) ] # Pointer, Pointer to UUID array.
+            eegDLL.run_data_collection.restype  =   c_void_p                           # Pointer.
+
             BT_manualkey = globals()['BT_manualkey']
             
             uuid_list = [str(DATA_UUID), str(MEMS_UUID)]
