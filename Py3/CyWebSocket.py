@@ -184,6 +184,8 @@ class socketIO():
                                 header[unit[0]] = unit[1]
                         secKey = header['Sec-WebSocket-Key']
                         resKey = base64.b64encode(hashlib.new("sha1",(secKey+"258EAFA5-E914-47DA-95CA-C5AB0DC85B11").encode('utf-8')).digest())
+                        resKey = resKey.decode()  # bytes object, back to str.
+
                         response = '''HTTP/1.1 101 Switching Protocols\r\n'''
                         response += '''Upgrade: websocket\r\n'''
                         response += '''Connection: Upgrade\r\n'''
