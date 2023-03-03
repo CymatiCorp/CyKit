@@ -1062,7 +1062,8 @@ class EEG(object):
                                         detail_report = self.device.find_input_reports()
                                         detail_info   = detail_report[0].get()
                                         mirror.text(str(detail_info))
-                                        device_firmware = "0x" + str(hex(detail_info[3]))[2:] +  str(hex(detail_info[4])[2:])
+                                        device_firmware   = "0x" + str(hex(detail_info[3]))[2:] + str(hex(detail_info[4])[2:])
+                                        software_firmware = "0x" + str(hex(detail_info[5]))[2:] + str(hex(detail_info[6])[2:])
                                     if eval(self.cyIO.getInfo("verbose")) == True:
                                         mirror.text(" USB Dongle Firmware = " + device_firmware)
                                         
