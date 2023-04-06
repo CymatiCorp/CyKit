@@ -1336,8 +1336,8 @@ class EEG(object):
                 cyIO.sendInfo("device")
                 cyIO.sendInfo("serial")
 
-                firmware = cyIO.getInfo("softFirmware")[2:5]          # Auto-Detect firmware for EPOC+
-                if int(firmware[0]) ==  6:
+                firmware = cyIO.getInfo("softFirmware") # Auto-Detect firmware for EPOC+
+                if "0x6" in firmware:
                     cyIO.sendData(1,"CyKITv2:::Info:::keymodel:::6")
                 else:
                     cyIO.sendInfo("keymodel")
