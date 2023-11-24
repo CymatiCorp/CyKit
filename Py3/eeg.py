@@ -592,7 +592,11 @@ def settings_menu(device, sIO, intf):
             mirror.text("   Software Firmware: " + software_firmware)
             mirror.text("\r\n Until it is concluded to be safe to update via CyKIT, ")
             mirror.text("  it is recommended you use an Emotiv program to make mode changes.")
-            
+            os._exit(0)
+    else:
+        print("> Use +pyusb config flag to change EPOC+ mode. \r\n")
+        os._exit(0) 
+        
     if eeg_driver == "pywinusb":
         successReport = device.find_input_reports()
         
